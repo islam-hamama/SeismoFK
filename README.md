@@ -39,9 +39,10 @@ SeismoFK is built primarily for **infrasound array monitoring** — for example,
 
 ## Screenshots
 
-| Main analysis window | XML Creator / Editor | Event database |
-|---|---|---|
-| ![Main window](screenshots/01_main_window.png) | ![XML Creator](screenshots/02_xml_creator.png) | ![Event database](screenshots/03_event_database.png) |
+| | | | |
+|:---:|:---:|:---:|:---:|
+| ![Main window](screenshots/01_main_window.png)<br>**Main analysis window** | ![XML Creator](screenshots/02_xml_creator.png)<br>**XML Creator / Editor** | ![Event Database](screenshots/03_event_database.png)<br>**Event Database** | ![Waveform viewer](screenshots/04_waveform_viewer.jpg)<br>**Waveform viewer & time-picker** |
+| ![Spectrogram window](screenshots/05_spectrogram.jpg)<br>**Spectrogram window** *(new)* | ![Event Database notes](screenshots/06_event_database_notes.jpg)<br>**Event Database — Note column** | ![Edit event dialog](screenshots/07_event_database_edit.jpg)<br>**Edit event dialog** | ![FK analysis result](screenshots/08_fk_result_artemis.png)<br>**FK result — Artemis II re-entry** |
 
 ---
 
