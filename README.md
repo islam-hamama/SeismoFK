@@ -1,6 +1,6 @@
 # SeismoFK
 
-**SeismoFK** is a desktop application for **frequency–wavenumber (FK) array analysis** of infrasound and seismic array data. It provides an interactive PyQt5 interface for loading MiniSEED waveforms, removing instrument response, running FK / beamforming array processing, visualising the results, and archiving classified events in a local database.
+**SeismoFK** is a desktop application for **frequency–wavenumber (FK) array analysis** of infrasound data. It provides an interactive PyQt5 interface for loading MiniSEED waveforms, removing instrument response, running FK / beamforming array processing, visualising the results, and archiving classified events in a local database.
 
 ---
 
@@ -9,7 +9,7 @@
 When a wave (an infrasound signal, a seismic phase, an explosion's acoustic arrival) crosses an **array** of closely spaced sensors, it reaches each element at a slightly different time. By measuring those tiny time delays across the array, FK (frequency–wavenumber) analysis estimates two key properties of the incoming wavefield:
 
 - **Back-azimuth** — the direction the signal arrives *from*.
-- **Apparent (trace) velocity** / **slowness** — how fast the wavefront sweeps across the array, which constrains the wave type and the elevation angle of arrival.
+- **Apparent (trace) velocity** / **slowness** how fast the wavefront sweeps across the array, which constrains the wave type and the elevation angle of arrival.
 
 SeismoFK runs FK analysis in sliding time windows and reports, per window, the **semblance** (a 0–1 measure of how coherently the array sees the signal), the **Fisher ratio**, the **FK power**, the estimated **back-azimuth**, and the **apparent velocity**. It also forms a **delay-and-sum beam** steered to the dominant detected direction, and compares the measured back-azimuth against the back-azimuth expected from a user-supplied source location.
 
