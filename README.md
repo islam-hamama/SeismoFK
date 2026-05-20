@@ -169,7 +169,7 @@ Released under the **MIT License** — see [LICENSE](LICENSE).
 
 If you use SeismoFK in your research, please cite it. Citation metadata is provided in [`CITATION.cff`](CITATION.cff) (Citation File Format 1.2.0); GitHub renders this as a *"Cite this repository"* button.
 
-> **At first release:** archive the tagged GitHub release through [Zenodo](https://zenodo.org) to mint a DOI, then fill that DOI into the `doi:` field of `CITATION.cff` and add a DOI badge near the top of this README.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20301796.svg)](https://doi.org/10.5281/zenodo.20301796)
 
 ---
 
