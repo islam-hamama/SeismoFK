@@ -1,0 +1,6 @@
+PyQt5>=5.15,<6.0
+numpy>=1.24,<3.0
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+obspy>=1.4,<2.0

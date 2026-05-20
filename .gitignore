@@ -1,0 +1,76 @@
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environments ───────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Generated analysis outputs ────────────────────────────────────────────
+Output_*.csv
+FK_*.jpg
+*.pdf
+*.svg
+
+# ── Events database (user data) ───────────────────────────────────────────
+fk_events.db
+
+# ── Raw waveform files (large binary) ────────────────────────────────────
+*.mseed
+*.msd
+*.ms
+*.1
+waveform_*
+
+# ── Scratch / local figures ───────────────────────────────────────────────
+filtered_waveforms_*.png
+spectrogram_*.png
+spectrogram_exports/
+tmp_mplconfig/
+Map_Backazimuths_lines.jpg
+output.png
+
+# ── Station XML files (not bundled — users provide their own) ────────────
+# IMS station XMLs are subject to CTBTO/IRIS data policies.
+# Generate them yourself with: python convert_ims.py (requires all_IMS_sts.xml)
+# Or create custom station XMLs using the built-in XML Creator tool.
+XML_IM/
+XML/
+all_IMS_sts.xml
+
+# ── macOS metadata ────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Editor / IDE ──────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Output directory (Docker volume mount) ────────────────────────────────
+output/
+
+# ── Claude Code session ───────────────────────────────────────────────────
+.claude/
+
+# ── Agent team scaffolding (development only) ────────────────────────────
+claude-nexus-hyper-agent-team-main 2/
+agents/
+hooks/
+tests/
+agent-memory/
+shared-protocol.md
+ARCHITECTURE_DIAGRAMS.md
+
+# ── Claude Code tooling / local archives (not part of the project) ──────
+settings.json
+settings.local.json
+SeismoFK_v1.zip
+*.zip
