@@ -172,6 +172,8 @@ If you use SeismoFK in your research, please cite it. Citation metadata is provi
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20301796.svg)](https://doi.org/10.5281/zenodo.20301796)
 
+Hamama, I. (2026). SeismoFK (v1.2.0). Zenodo. https://doi.org/10.5281/zenodo.20301796
+
 ---
 
 ## Author
