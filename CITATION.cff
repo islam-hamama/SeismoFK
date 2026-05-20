@@ -19,4 +19,4 @@ license: MIT
 repository-code: "https://github.com/islam-hamama/SeismoFK"
 # TODO: replace with the Zenodo DOI minted for the first tagged GitHub
 # release (the DOI does not exist until the release is archived).
-# doi: "10.5281/zenodo.XXXXXXX"
+ doi: "10.5281/zenodo.20301796"
