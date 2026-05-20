@@ -14,7 +14,7 @@ authors:
     email: "islam.hamama@nriag.sci.eg"
     affiliation: "National Research Institute of Astronomy and Geophysics (NRIAG), Egypt"
     # TODO: add the author's ORCID iD here once available, e.g.
-    orcid: "https://orcid.org/my-orcid?orcid=0000-0001-9296-412X"
+    orcid: "https://orcid.org/0000-0001-9296-412X"
 license: MIT
 repository-code: "https://github.com/islam-hamama/SeismoFK"
 # TODO: replace with the Zenodo DOI minted for the first tagged GitHub
