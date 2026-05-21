@@ -27,7 +27,7 @@ SeismoFK is built primarily for **infrasound array monitoring** — for example,
 - **FK / beamforming array processing** (built on `obspy.signal.array_analysis.array_processing`) reporting semblance, Fisher ratio, FK power, back-azimuth, slowness and apparent velocity per window.
 - **Delay-and-sum beam** steered to the dominant detected back-azimuth and apparent velocity.
 - **Expected back-azimuth** computed from a user-supplied source latitude/longitude for direct comparison with the measurement.
-- **Optional event physics** — supply a known origin time and a celerity (typical infrasound range ~300–360 m/s) to overlay the expected infrasound arrival on the beam waveform.
+- **Optional event physics** — supply a known origin time and a celerity (typical infrasound range ~220–340 m/s) to overlay the expected infrasound arrival on the beam waveform.
 - **Mixed sampling-rate handling** — traces at different sample rates are resampled to a common rate before processing.
 - **Results window** with high-resolution figure export (300 DPI; PNG / PDF / SVG).
 - **Event database** — classify and archive each analysis in a local SQLite database (`fk_events.db`), with a built-in browser to review, edit and delete records, and CSV export. The analysis figure is stored alongside the metadata.
