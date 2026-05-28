@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I08H1" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-16.215230</Latitude>
+            <Longitude>-68.453450</Longitude>
+            <Elevation>4.09566</Elevation>
+            <Site>
+                <Name>I08BO LA PAZ H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.215230</Latitude>
+                <Longitude>-68.453450</Longitude>
+                <Elevation>4.09566</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2000-01-03T00:00:00" endDate="2002-08-14T00:00:00">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.215000</Latitude>
+                <Longitude>-68.453300</Longitude>
+                <Elevation>4131.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-08-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.215200</Latitude>
+                <Longitude>-68.453500</Longitude>
+                <Elevation>4095.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I08H2" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-16.202380</Latitude>
+            <Longitude>-68.456120</Longitude>
+            <Elevation>4.08496</Elevation>
+            <Site>
+                <Name>I08BO LA PAZ H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.202380</Latitude>
+                <Longitude>-68.456120</Longitude>
+                <Elevation>4.08496</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2000-01-03T00:00:00" endDate="2002-08-14T00:00:00">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.202200</Latitude>
+                <Longitude>-68.455900</Longitude>
+                <Elevation>4121</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-08-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.202400</Latitude>
+                <Longitude>-68.456100</Longitude>
+                <Elevation>4085</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I08H3" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-16.217500</Latitude>
+            <Longitude>-68.442900</Longitude>
+            <Elevation>4.12419</Elevation>
+            <Site>
+                <Name>I08BO LA PAZ H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.217500</Latitude>
+                <Longitude>-68.442900</Longitude>
+                <Elevation>4.12419</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2000-01-03T00:00:00" endDate="2002-08-14T00:00:00">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.217300</Latitude>
+                <Longitude>-68.442700</Longitude>
+                <Elevation>4160</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-08-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.217500</Latitude>
+                <Longitude>-68.442900</Longitude>
+                <Elevation>4124.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I08H4" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-16.221680</Latitude>
+            <Longitude>-68.463780</Longitude>
+            <Elevation>4.0705</Elevation>
+            <Site>
+                <Name>I08BO LA PAZ H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2000-01-03T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.221680</Latitude>
+                <Longitude>-68.463780</Longitude>
+                <Elevation>4.0705</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-02-09T08:50:00" endDate="2017-02-13T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.221680</Latitude>
+                <Longitude>-68.463780</Longitude>
+                <Elevation>4.0705</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>331345</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2000-01-03T00:00:00" endDate="2002-08-14T00:00:00">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.221500</Latitude>
+                <Longitude>-68.463600</Longitude>
+                <Elevation>4106</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-08-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I08BO LA PAZ</Description>
+                </Sensor>
+                <Latitude>-16.221700</Latitude>
+                <Longitude>-68.463800</Longitude>
+                <Elevation>4070.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

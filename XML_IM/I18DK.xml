@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>20</TotalNumberStations>
+        <Station code="I18H1" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.476250</Latitude>
+            <Longitude>-69.291100</Longitude>
+            <Elevation>0.0729</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ INFRASONIC H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476250</Latitude>
+                <Longitude>-69.291100</Longitude>
+                <Elevation>0.0729</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2016-12-06T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476250</Latitude>
+                <Longitude>-69.291030</Longitude>
+                <Elevation>0.053</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-12-05T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476250</Latitude>
+                <Longitude>-69.291030</Longitude>
+                <Elevation>0.053</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-08-31T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476300</Latitude>
+                <Longitude>-69.291000</Longitude>
+                <Elevation>53</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-09-01T00:00:00" endDate="2022-09-21T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476300</Latitude>
+                <Longitude>-69.291100</Longitude>
+                <Elevation>72.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476300</Latitude>
+                <Longitude>-69.291100</Longitude>
+                <Elevation>72.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18H2" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.476020</Latitude>
+            <Longitude>-69.284490</Longitude>
+            <Elevation>0.0741</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ INFRASONIC H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476020</Latitude>
+                <Longitude>-69.284490</Longitude>
+                <Elevation>0.0741</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2016-12-06T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475990</Latitude>
+                <Longitude>-69.284420</Longitude>
+                <Elevation>0.071</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-12-05T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475990</Latitude>
+                <Longitude>-69.284420</Longitude>
+                <Elevation>0.071</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-08-31T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476000</Latitude>
+                <Longitude>-69.284400</Longitude>
+                <Elevation>71</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-09-01T00:00:00" endDate="2022-09-21T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476000</Latitude>
+                <Longitude>-69.284500</Longitude>
+                <Elevation>74.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.476000</Latitude>
+                <Longitude>-69.284500</Longitude>
+                <Elevation>74.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18H3" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.474780</Latitude>
+            <Longitude>-69.285120</Longitude>
+            <Elevation>0.0626</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ INFRASONIC H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474780</Latitude>
+                <Longitude>-69.285120</Longitude>
+                <Elevation>0.0626</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2016-12-06T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474710</Latitude>
+                <Longitude>-69.285120</Longitude>
+                <Elevation>0.046</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-12-05T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474710</Latitude>
+                <Longitude>-69.285120</Longitude>
+                <Elevation>0.046</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-08-31T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474700</Latitude>
+                <Longitude>-69.285100</Longitude>
+                <Elevation>46</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-09-01T00:00:00" endDate="2022-09-21T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474800</Latitude>
+                <Longitude>-69.285100</Longitude>
+                <Elevation>62.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474800</Latitude>
+                <Longitude>-69.285100</Longitude>
+                <Elevation>62.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18H4" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.474970</Latitude>
+            <Longitude>-69.291160</Longitude>
+            <Elevation>0.0647</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ INFRASONIC H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474970</Latitude>
+                <Longitude>-69.291160</Longitude>
+                <Elevation>0.0647</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2016-12-06T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474870</Latitude>
+                <Longitude>-69.291080</Longitude>
+                <Elevation>0.05</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-12-05T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474870</Latitude>
+                <Longitude>-69.291080</Longitude>
+                <Elevation>0.05</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-08-31T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.474900</Latitude>
+                <Longitude>-69.291100</Longitude>
+                <Elevation>50</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-09-01T00:00:00" endDate="2022-09-21T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475000</Latitude>
+                <Longitude>-69.291200</Longitude>
+                <Elevation>64.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475000</Latitude>
+                <Longitude>-69.291200</Longitude>
+                <Elevation>64.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18L1" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.475560</Latitude>
+            <Longitude>-69.287710</Longitude>
+            <Elevation>0.0693</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ INFRASONIC L1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475560</Latitude>
+                <Longitude>-69.287710</Longitude>
+                <Elevation>0.0693</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2016-12-06T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475560</Latitude>
+                <Longitude>-69.287760</Longitude>
+                <Elevation>0.0875</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-12-05T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475560</Latitude>
+                <Longitude>-69.287760</Longitude>
+                <Elevation>0.0875</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-08-31T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475600</Latitude>
+                <Longitude>-69.287800</Longitude>
+                <Elevation>87.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-09-01T00:00:00" endDate="2022-09-21T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475600</Latitude>
+                <Longitude>-69.287700</Longitude>
+                <Elevation>69.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18L2" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.480650</Latitude>
+            <Longitude>-69.279950</Longitude>
+            <Elevation>0.1343</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ INFRASONIC L2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.480650</Latitude>
+                <Longitude>-69.279950</Longitude>
+                <Elevation>0.1343</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2016-12-06T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.480680</Latitude>
+                <Longitude>-69.279890</Longitude>
+                <Elevation>0.14</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-12-05T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.480680</Latitude>
+                <Longitude>-69.279890</Longitude>
+                <Elevation>0.14</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-08-31T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.480700</Latitude>
+                <Longitude>-69.279900</Longitude>
+                <Elevation>140</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-09-01T00:00:00" endDate="2022-09-21T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.480700</Latitude>
+                <Longitude>-69.280000</Longitude>
+                <Elevation>134.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18L3" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.471770</Latitude>
+            <Longitude>-69.271060</Longitude>
+            <Elevation>0.0314</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ INFRASONIC L3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.471770</Latitude>
+                <Longitude>-69.271060</Longitude>
+                <Elevation>0.0314</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2016-12-06T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.471740</Latitude>
+                <Longitude>-69.271120</Longitude>
+                <Elevation>0.03</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-12-05T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.471740</Latitude>
+                <Longitude>-69.271120</Longitude>
+                <Elevation>0.03</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-08-31T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.471700</Latitude>
+                <Longitude>-69.271100</Longitude>
+                <Elevation>30</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-09-01T00:00:00" endDate="2022-09-21T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.471800</Latitude>
+                <Longitude>-69.271100</Longitude>
+                <Elevation>31.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18L4" startDate="2002-09-05T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.475240</Latitude>
+            <Longitude>-69.316550</Longitude>
+            <Elevation>0.048</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ INFRASONIC L4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475240</Latitude>
+                <Longitude>-69.316550</Longitude>
+                <Elevation>0.048</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-12-06T00:00:00" endDate="2016-12-06T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475210</Latitude>
+                <Longitude>-69.316690</Longitude>
+                <Elevation>0.047</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10482.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-12-05T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475210</Latitude>
+                <Longitude>-69.316690</Longitude>
+                <Elevation>0.047</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2002-09-05T00:00:00" endDate="2016-08-31T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475200</Latitude>
+                <Longitude>-69.316700</Longitude>
+                <Elevation>47</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2016-09-01T00:00:00" endDate="2022-09-21T00:00:00">
+                <Sensor>
+                    <Description>I18DK QAANAAQ INFRASONIC</Description>
+                </Sensor>
+                <Latitude>77.475200</Latitude>
+                <Longitude>-69.316600</Longitude>
+                <Elevation>48</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18C1" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.476300</Latitude>
+            <Longitude>-69.291100</Longitude>
+            <Elevation>72.9</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND C1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.476300</Latitude>
+                <Longitude>-69.291100</Longitude>
+                <Elevation>72.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18C2" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.476000</Latitude>
+            <Longitude>-69.284500</Longitude>
+            <Elevation>74.1</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND C2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.476000</Latitude>
+                <Longitude>-69.284500</Longitude>
+                <Elevation>74.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18C3" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.474800</Latitude>
+            <Longitude>-69.285100</Longitude>
+            <Elevation>62.6</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND C3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.474800</Latitude>
+                <Longitude>-69.285100</Longitude>
+                <Elevation>62.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18C4" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.475000</Latitude>
+            <Longitude>-69.291200</Longitude>
+            <Elevation>64.7</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND C4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.475000</Latitude>
+                <Longitude>-69.291200</Longitude>
+                <Elevation>64.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18C5" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.475600</Latitude>
+            <Longitude>-69.287700</Longitude>
+            <Elevation>69.3</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND C5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.475600</Latitude>
+                <Longitude>-69.287700</Longitude>
+                <Elevation>69.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18C6" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.480700</Latitude>
+            <Longitude>-69.280000</Longitude>
+            <Elevation>134.3</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND C6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.480700</Latitude>
+                <Longitude>-69.280000</Longitude>
+                <Elevation>134.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18C7" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.471800</Latitude>
+            <Longitude>-69.271100</Longitude>
+            <Elevation>31.4</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND C7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.471800</Latitude>
+                <Longitude>-69.271100</Longitude>
+                <Elevation>31.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18C8" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.475200</Latitude>
+            <Longitude>-69.316600</Longitude>
+            <Elevation>48</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND C8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.475200</Latitude>
+                <Longitude>-69.316600</Longitude>
+                <Elevation>48</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18H5" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.475600</Latitude>
+            <Longitude>-69.287700</Longitude>
+            <Elevation>69.3</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.475600</Latitude>
+                <Longitude>-69.287700</Longitude>
+                <Elevation>69.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18H6" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.480700</Latitude>
+            <Longitude>-69.280000</Longitude>
+            <Elevation>134.3</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.480700</Latitude>
+                <Longitude>-69.280000</Longitude>
+                <Elevation>134.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18H7" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.471800</Latitude>
+            <Longitude>-69.271100</Longitude>
+            <Elevation>31.4</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.471800</Latitude>
+                <Longitude>-69.271100</Longitude>
+                <Elevation>31.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I18H8" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>77.475200</Latitude>
+            <Longitude>-69.316600</Longitude>
+            <Elevation>48</Elevation>
+            <Site>
+                <Name>I18DK QAANAAQ GREENLAND H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-09-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I18DK QAANAAQ GREENLAND</Description>
+                </Sensor>
+                <Latitude>77.475200</Latitude>
+                <Longitude>-69.316600</Longitude>
+                <Elevation>48</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

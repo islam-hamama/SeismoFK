@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>24</TotalNumberStations>
+        <Station code="I19L1" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.474010</Latitude>
+            <Longitude>43.173080</Longitude>
+            <Elevation>0.02121</Elevation>
+            <Site>
+                <Name>I19DJ L1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.474010</Latitude>
+                <Longitude>43.173080</Longitude>
+                <Elevation>0.02121</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19L2" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.471690</Latitude>
+            <Longitude>43.173790</Longitude>
+            <Elevation>0.02018</Elevation>
+            <Site>
+                <Name>I19DJ L2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.471690</Latitude>
+                <Longitude>43.173790</Longitude>
+                <Elevation>0.02018</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19L3" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.472020</Latitude>
+            <Longitude>43.171760</Longitude>
+            <Elevation>0.02062</Elevation>
+            <Site>
+                <Name>I19DJ L3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.472020</Latitude>
+                <Longitude>43.171760</Longitude>
+                <Elevation>0.02062</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19L4" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.479870</Latitude>
+            <Longitude>43.179400</Longitude>
+            <Elevation>0.00821</Elevation>
+            <Site>
+                <Name>I19DJ L4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.479870</Latitude>
+                <Longitude>43.179400</Longitude>
+                <Elevation>0.00821</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19L5" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.469180</Latitude>
+            <Longitude>43.182540</Longitude>
+            <Elevation>0.02305</Elevation>
+            <Site>
+                <Name>I19DJ L5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.469180</Latitude>
+                <Longitude>43.182540</Longitude>
+                <Elevation>0.02305</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19L6" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.464680</Latitude>
+            <Longitude>43.173610</Longitude>
+            <Elevation>0.04397</Elevation>
+            <Site>
+                <Name>I19DJ L6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-12-05T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.464680</Latitude>
+                <Longitude>43.173610</Longitude>
+                <Elevation>0.04397</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2011-08-01T00:00:00" endDate="2016-12-05T00:00:00">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.464680</Latitude>
+                <Longitude>43.173610</Longitude>
+                <Elevation>0.04397</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19L7" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.470040</Latitude>
+            <Longitude>43.165550</Longitude>
+            <Elevation>0.0336</Elevation>
+            <Site>
+                <Name>I19DJ L7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.470040</Latitude>
+                <Longitude>43.165550</Longitude>
+                <Elevation>0.0336</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19L8" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.479850</Latitude>
+            <Longitude>43.167650</Longitude>
+            <Elevation>0.01961</Elevation>
+            <Site>
+                <Name>I19DJ L8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ</Description>
+                </Sensor>
+                <Latitude>11.479850</Latitude>
+                <Longitude>43.167650</Longitude>
+                <Elevation>0.01961</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19C1" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.474100</Latitude>
+            <Longitude>43.173100</Longitude>
+            <Elevation>21.2</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI C1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.474100</Latitude>
+                <Longitude>43.173100</Longitude>
+                <Elevation>21.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19C2" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.471700</Latitude>
+            <Longitude>43.173800</Longitude>
+            <Elevation>20.2</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI C2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.471700</Latitude>
+                <Longitude>43.173800</Longitude>
+                <Elevation>20.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19C3" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.472100</Latitude>
+            <Longitude>43.171800</Longitude>
+            <Elevation>20.6</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI C3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.472100</Latitude>
+                <Longitude>43.171800</Longitude>
+                <Elevation>20.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19C4" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.479900</Latitude>
+            <Longitude>43.179300</Longitude>
+            <Elevation>8.2</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI C4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.479900</Latitude>
+                <Longitude>43.179300</Longitude>
+                <Elevation>8.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19C5" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.469200</Latitude>
+            <Longitude>43.182600</Longitude>
+            <Elevation>23.1</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI C5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.469200</Latitude>
+                <Longitude>43.182600</Longitude>
+                <Elevation>23.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19C6" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.464600</Latitude>
+            <Longitude>43.173700</Longitude>
+            <Elevation>44</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI C6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.464600</Latitude>
+                <Longitude>43.173700</Longitude>
+                <Elevation>44</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19C7" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.470100</Latitude>
+            <Longitude>43.165600</Longitude>
+            <Elevation>33.6</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI C7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.470100</Latitude>
+                <Longitude>43.165600</Longitude>
+                <Elevation>33.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19C8" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.479900</Latitude>
+            <Longitude>43.167700</Longitude>
+            <Elevation>19.6</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI C8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.479900</Latitude>
+                <Longitude>43.167700</Longitude>
+                <Elevation>19.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19H1" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.474100</Latitude>
+            <Longitude>43.173100</Longitude>
+            <Elevation>21.2</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.474100</Latitude>
+                <Longitude>43.173100</Longitude>
+                <Elevation>21.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19H2" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.471700</Latitude>
+            <Longitude>43.173800</Longitude>
+            <Elevation>20.2</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.471700</Latitude>
+                <Longitude>43.173800</Longitude>
+                <Elevation>20.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19H3" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.472100</Latitude>
+            <Longitude>43.171800</Longitude>
+            <Elevation>20.6</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.472100</Latitude>
+                <Longitude>43.171800</Longitude>
+                <Elevation>20.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19H4" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.479900</Latitude>
+            <Longitude>43.179300</Longitude>
+            <Elevation>8.2</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.479900</Latitude>
+                <Longitude>43.179300</Longitude>
+                <Elevation>8.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19H5" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.469200</Latitude>
+            <Longitude>43.182600</Longitude>
+            <Elevation>23.1</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.469200</Latitude>
+                <Longitude>43.182600</Longitude>
+                <Elevation>23.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19H6" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.464600</Latitude>
+            <Longitude>43.173700</Longitude>
+            <Elevation>44</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.464600</Latitude>
+                <Longitude>43.173700</Longitude>
+                <Elevation>44</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19H7" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.470100</Latitude>
+            <Longitude>43.165600</Longitude>
+            <Elevation>33.6</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.470100</Latitude>
+                <Longitude>43.165600</Longitude>
+                <Elevation>33.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I19H8" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>11.479900</Latitude>
+            <Longitude>43.167700</Longitude>
+            <Elevation>19.6</Elevation>
+            <Site>
+                <Name>I19DJ DIJIBOUTI DJIBOUTI H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2023-02-21T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I19DJ DIJIBOUTI DJIBOUTI</Description>
+                </Sensor>
+                <Latitude>11.479900</Latitude>
+                <Longitude>43.167700</Longitude>
+                <Elevation>19.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

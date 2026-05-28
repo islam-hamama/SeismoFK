@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2009-05-20T18:05:50" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>6</TotalNumberStations>
+        <Station code="I43H1" startDate="2009-05-20T18:05:50" endDate="2050-12-31T23:59:59">
+            <Latitude>56.721360</Latitude>
+            <Longitude>37.217590</Longitude>
+            <Elevation>0.12</Elevation>
+            <Site>
+                <Name>I43RU H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I43RU</Description>
+                </Sensor>
+                <Latitude>56.721360</Latitude>
+                <Longitude>37.217590</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I43H2" startDate="2009-05-20T18:05:50" endDate="2050-12-31T23:59:59">
+            <Latitude>56.726600</Latitude>
+            <Longitude>37.224960</Longitude>
+            <Elevation>0.12</Elevation>
+            <Site>
+                <Name>I43RU DUBNA H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-10-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.726600</Latitude>
+                <Longitude>37.224960</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-24T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.726600</Latitude>
+                <Longitude>37.224960</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-23T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.726600</Latitude>
+                <Longitude>37.225000</Longitude>
+                <Elevation>120</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I43H3" startDate="2009-05-20T18:05:50" endDate="2050-12-31T23:59:59">
+            <Latitude>56.714610</Latitude>
+            <Longitude>37.219300</Longitude>
+            <Elevation>0.12</Elevation>
+            <Site>
+                <Name>I43RU DUBNA H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-10-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.714610</Latitude>
+                <Longitude>37.219300</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-24T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.714610</Latitude>
+                <Longitude>37.219300</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-23T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.714600</Latitude>
+                <Longitude>37.219300</Longitude>
+                <Elevation>120</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I43H4" startDate="2009-05-20T18:05:50" endDate="2050-12-31T23:59:59">
+            <Latitude>56.723740</Latitude>
+            <Longitude>37.202460</Longitude>
+            <Elevation>0.12</Elevation>
+            <Site>
+                <Name>I43RU DUBNA H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-10-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.723740</Latitude>
+                <Longitude>37.202460</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-24T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.723740</Latitude>
+                <Longitude>37.202460</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-23T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.723700</Latitude>
+                <Longitude>37.202500</Longitude>
+                <Elevation>120</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I43H5" startDate="2009-05-20T18:05:50" endDate="2050-12-31T23:59:59">
+            <Latitude>56.723690</Latitude>
+            <Longitude>37.200110</Longitude>
+            <Elevation>0.12</Elevation>
+            <Site>
+                <Name>I43RU DUBNA H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-10-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.723690</Latitude>
+                <Longitude>37.200110</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-24T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.723690</Latitude>
+                <Longitude>37.200110</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-23T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.723700</Latitude>
+                <Longitude>37.200100</Longitude>
+                <Elevation>120</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I43H6" startDate="2009-05-20T18:05:50" endDate="2050-12-31T23:59:59">
+            <Latitude>56.722790</Latitude>
+            <Longitude>37.201950</Longitude>
+            <Elevation>0.12</Elevation>
+            <Site>
+                <Name>I43RU DUBNA H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-10-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.722790</Latitude>
+                <Longitude>37.201950</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-24T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.722790</Latitude>
+                <Longitude>37.201950</Longitude>
+                <Elevation>0.12</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2009-05-20T18:05:50" endDate="2017-10-23T00:00:00">
+                <Sensor>
+                    <Description>I43RU DUBNA</Description>
+                </Sensor>
+                <Latitude>56.722800</Latitude>
+                <Longitude>37.202000</Longitude>
+                <Elevation>120</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

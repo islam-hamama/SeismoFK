@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I17H1" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>6.670357</Latitude>
+            <Longitude>-4.856911</Longitude>
+            <Elevation>0.156306</Elevation>
+            <Site>
+                <Name>I17CI H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I17CI</Description>
+                </Sensor>
+                <Latitude>6.670357</Latitude>
+                <Longitude>-4.856911</Longitude>
+                <Elevation>0.156306</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I17H2" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>6.683668</Latitude>
+            <Longitude>-4.845810</Longitude>
+            <Elevation>0.126239</Elevation>
+            <Site>
+                <Name>I17CI H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I17CI</Description>
+                </Sensor>
+                <Latitude>6.683668</Latitude>
+                <Longitude>-4.845810</Longitude>
+                <Elevation>0.126239</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I17H3" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>6.658000</Latitude>
+            <Longitude>-4.849331</Longitude>
+            <Elevation>0.11965</Elevation>
+            <Site>
+                <Name>I17CI H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I17CI</Description>
+                </Sensor>
+                <Latitude>6.658000</Latitude>
+                <Longitude>-4.849331</Longitude>
+                <Elevation>0.11965</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I17H4" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>6.671189</Latitude>
+            <Longitude>-4.869259</Longitude>
+            <Elevation>0.146596</Elevation>
+            <Site>
+                <Name>I17CI H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I17CI</Description>
+                </Sensor>
+                <Latitude>6.671189</Latitude>
+                <Longitude>-4.869259</Longitude>
+                <Elevation>0.146596</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

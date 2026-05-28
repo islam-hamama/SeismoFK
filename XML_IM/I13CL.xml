@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>8</TotalNumberStations>
+        <Station code="I13H1" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-27.127260</Latitude>
+            <Longitude>-109.362650</Longitude>
+            <Elevation>0.16347</Elevation>
+            <Site>
+                <Name>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.127260</Latitude>
+                <Longitude>-109.362650</Longitude>
+                <Elevation>0.16347</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2019-11-10T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.127300</Latitude>
+                <Longitude>-109.362700</Longitude>
+                <Elevation>163.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-10T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.127300</Latitude>
+                <Longitude>-109.362700</Longitude>
+                <Elevation>163.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I13H2" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-27.127630</Latitude>
+            <Longitude>-109.350460</Longitude>
+            <Elevation>0.15193</Elevation>
+            <Site>
+                <Name>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.127630</Latitude>
+                <Longitude>-109.350460</Longitude>
+                <Elevation>0.15193</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2019-11-10T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.127600</Latitude>
+                <Longitude>-109.350500</Longitude>
+                <Elevation>151.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-10T00:00:00" endDate="2019-11-12T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.127600</Latitude>
+                <Longitude>-109.350500</Longitude>
+                <Elevation>151.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.127600</Latitude>
+                <Longitude>-109.350500</Longitude>
+                <Elevation>151.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I13H3" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-27.141830</Latitude>
+            <Longitude>-109.368460</Longitude>
+            <Elevation>0.16175</Elevation>
+            <Site>
+                <Name>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.141830</Latitude>
+                <Longitude>-109.368460</Longitude>
+                <Elevation>0.16175</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2019-11-10T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.141800</Latitude>
+                <Longitude>-109.368500</Longitude>
+                <Elevation>161.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-10T00:00:00" endDate="2019-11-12T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.141800</Latitude>
+                <Longitude>-109.368500</Longitude>
+                <Elevation>161.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.141800</Latitude>
+                <Longitude>-109.368500</Longitude>
+                <Elevation>161.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I13H4" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-27.116560</Latitude>
+            <Longitude>-109.365810</Longitude>
+            <Elevation>0.21797</Elevation>
+            <Site>
+                <Name>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.116560</Latitude>
+                <Longitude>-109.365810</Longitude>
+                <Elevation>0.21797</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2019-11-10T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.116600</Latitude>
+                <Longitude>-109.365800</Longitude>
+                <Elevation>218</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-10T00:00:00" endDate="2019-11-12T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.116600</Latitude>
+                <Longitude>-109.365800</Longitude>
+                <Elevation>218</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.116600</Latitude>
+                <Longitude>-109.365800</Longitude>
+                <Elevation>218</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I13H5" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-27.122930</Latitude>
+            <Longitude>-109.366980</Longitude>
+            <Elevation>0.1862</Elevation>
+            <Site>
+                <Name>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122930</Latitude>
+                <Longitude>-109.366980</Longitude>
+                <Elevation>0.1862</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2019-11-10T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122900</Latitude>
+                <Longitude>-109.367000</Longitude>
+                <Elevation>186.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-10T00:00:00" endDate="2019-11-12T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122900</Latitude>
+                <Longitude>-109.367000</Longitude>
+                <Elevation>186.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122900</Latitude>
+                <Longitude>-109.367000</Longitude>
+                <Elevation>186.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I13H6" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-27.122750</Latitude>
+            <Longitude>-109.365460</Longitude>
+            <Elevation>0.16979</Elevation>
+            <Site>
+                <Name>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122750</Latitude>
+                <Longitude>-109.365460</Longitude>
+                <Elevation>0.16979</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2019-11-10T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122800</Latitude>
+                <Longitude>-109.365500</Longitude>
+                <Elevation>169.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-10T00:00:00" endDate="2019-11-12T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122800</Latitude>
+                <Longitude>-109.365500</Longitude>
+                <Elevation>169.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122800</Latitude>
+                <Longitude>-109.365500</Longitude>
+                <Elevation>169.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I13H7" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-27.124160</Latitude>
+            <Longitude>-109.367080</Longitude>
+            <Elevation>0.16244</Elevation>
+            <Site>
+                <Name>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.124160</Latitude>
+                <Longitude>-109.367080</Longitude>
+                <Elevation>0.16244</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2019-11-10T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.124200</Latitude>
+                <Longitude>-109.367100</Longitude>
+                <Elevation>162.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-10T00:00:00" endDate="2019-11-12T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.124200</Latitude>
+                <Longitude>-109.367100</Longitude>
+                <Elevation>162.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.124200</Latitude>
+                <Longitude>-109.367100</Longitude>
+                <Elevation>162.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I13H8" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-27.122380</Latitude>
+            <Longitude>-109.367580</Longitude>
+            <Elevation>0.18178</Elevation>
+            <Site>
+                <Name>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122380</Latitude>
+                <Longitude>-109.367580</Longitude>
+                <Elevation>0.18178</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-17T19:46:53" endDate="2019-11-10T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122400</Latitude>
+                <Longitude>-109.367600</Longitude>
+                <Elevation>181.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-10T00:00:00" endDate="2019-11-12T00:00:00">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122400</Latitude>
+                <Longitude>-109.367600</Longitude>
+                <Elevation>181.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I13CL EASTER ISLAND CHILE INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-27.122400</Latitude>
+                <Longitude>-109.367600</Longitude>
+                <Elevation>181.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

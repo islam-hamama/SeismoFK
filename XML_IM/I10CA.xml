@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2001-06-29T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I10H1" startDate="2001-06-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>50.201469</Latitude>
+            <Longitude>-96.026854</Longitude>
+            <Elevation>0.246629</Elevation>
+            <Site>
+                <Name>I10CA LAC DU H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2001-06-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.201469</Latitude>
+                <Longitude>-96.026854</Longitude>
+                <Elevation>0.246629</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-29T00:00:00" endDate="2022-11-03T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.201500</Latitude>
+                <Longitude>-96.026900</Longitude>
+                <Elevation>246.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-11-03T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.201500</Latitude>
+                <Longitude>-96.026900</Longitude>
+                <Elevation>246.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>15873</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I10H2" startDate="2001-06-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>50.206652</Latitude>
+            <Longitude>-96.039572</Longitude>
+            <Elevation>0.237465</Elevation>
+            <Site>
+                <Name>I10CA LAC DU H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206652</Latitude>
+                <Longitude>-96.039572</Longitude>
+                <Elevation>0.237465</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-29T00:00:00" endDate="2018-08-24T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206652</Latitude>
+                <Longitude>-96.039572</Longitude>
+                <Elevation>0.237465</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-29T00:00:00" endDate="2018-01-21T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206700</Latitude>
+                <Longitude>-96.039600</Longitude>
+                <Elevation>237.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-22T00:00:00" endDate="2022-11-03T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206700</Latitude>
+                <Longitude>-96.039600</Longitude>
+                <Elevation>237.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-11-03T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206700</Latitude>
+                <Longitude>-96.039600</Longitude>
+                <Elevation>237.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>15873</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I10H3" startDate="2001-06-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>50.206487</Latitude>
+            <Longitude>-96.011693</Longitude>
+            <Elevation>0.23985</Elevation>
+            <Site>
+                <Name>I10CA LAC DU H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206487</Latitude>
+                <Longitude>-96.011693</Longitude>
+                <Elevation>0.23985</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-29T00:00:00" endDate="2018-08-24T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206487</Latitude>
+                <Longitude>-96.011693</Longitude>
+                <Elevation>0.23985</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-29T00:00:00" endDate="2018-01-21T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206500</Latitude>
+                <Longitude>-96.011700</Longitude>
+                <Elevation>239.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-22T00:00:00" endDate="2022-11-03T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206500</Latitude>
+                <Longitude>-96.011700</Longitude>
+                <Elevation>239.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-11-03T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.206500</Latitude>
+                <Longitude>-96.011700</Longitude>
+                <Elevation>239.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>15873</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I10H4" startDate="2001-06-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>50.187358</Latitude>
+            <Longitude>-96.018934</Longitude>
+            <Elevation>0.242594</Elevation>
+            <Site>
+                <Name>I10CA LAC DU H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.187358</Latitude>
+                <Longitude>-96.018934</Longitude>
+                <Elevation>0.242594</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-29T00:00:00" endDate="2018-08-24T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.187358</Latitude>
+                <Longitude>-96.018934</Longitude>
+                <Elevation>0.242594</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-29T00:00:00" endDate="2018-01-21T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.187400</Latitude>
+                <Longitude>-96.018900</Longitude>
+                <Elevation>242.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-22T00:00:00" endDate="2022-11-03T00:00:00">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.187400</Latitude>
+                <Longitude>-96.018900</Longitude>
+                <Elevation>242.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-11-03T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I10CA LAC DU</Description>
+                </Sensor>
+                <Latitude>50.187400</Latitude>
+                <Longitude>-96.018900</Longitude>
+                <Elevation>242.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>15873</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

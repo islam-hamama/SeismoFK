@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>8</TotalNumberStations>
+        <Station code="I04H1" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+            <Latitude>-34.597610</Latitude>
+            <Longitude>116.356690</Longitude>
+            <Elevation>0.16708</Elevation>
+            <Site>
+                <Name>I04AU SHANNON H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.597610</Latitude>
+                <Longitude>116.356690</Longitude>
+                <Elevation>0.16708</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.597600</Latitude>
+                <Longitude>116.356700</Longitude>
+                <Elevation>167.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.597600</Latitude>
+                <Longitude>116.356700</Longitude>
+                <Elevation>167.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I04H2" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+            <Latitude>-34.596170</Latitude>
+            <Longitude>116.367140</Longitude>
+            <Elevation>0.15569</Elevation>
+            <Site>
+                <Name>I04AU SHANNON H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.596170</Latitude>
+                <Longitude>116.367140</Longitude>
+                <Elevation>0.15569</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2006-03-23T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.596200</Latitude>
+                <Longitude>116.367100</Longitude>
+                <Elevation>155.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.596200</Latitude>
+                <Longitude>116.367100</Longitude>
+                <Elevation>155.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.596200</Latitude>
+                <Longitude>116.367100</Longitude>
+                <Elevation>155.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I04H3" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+            <Latitude>-34.607570</Latitude>
+            <Longitude>116.351550</Longitude>
+            <Elevation>0.12319</Elevation>
+            <Site>
+                <Name>I04AU SHANNON H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.607570</Latitude>
+                <Longitude>116.351550</Longitude>
+                <Elevation>0.12319</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2006-03-23T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.607600</Latitude>
+                <Longitude>116.351600</Longitude>
+                <Elevation>123.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.607600</Latitude>
+                <Longitude>116.351600</Longitude>
+                <Elevation>123.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.607600</Latitude>
+                <Longitude>116.351600</Longitude>
+                <Elevation>123.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I04H4" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+            <Latitude>-34.594000</Latitude>
+            <Longitude>116.344580</Longitude>
+            <Elevation>0.15468</Elevation>
+            <Site>
+                <Name>I04AU SHANNON H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.594000</Latitude>
+                <Longitude>116.344580</Longitude>
+                <Elevation>0.15468</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2006-03-23T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.594000</Latitude>
+                <Longitude>116.344600</Longitude>
+                <Elevation>154.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.594000</Latitude>
+                <Longitude>116.344600</Longitude>
+                <Elevation>154.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.594000</Latitude>
+                <Longitude>116.344600</Longitude>
+                <Elevation>154.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I04H5" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+            <Latitude>-34.594710</Latitude>
+            <Longitude>116.341090</Longitude>
+            <Elevation>0.1477</Elevation>
+            <Site>
+                <Name>I04AU SHANNON H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.594710</Latitude>
+                <Longitude>116.341090</Longitude>
+                <Elevation>0.1477</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2006-03-23T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.594700</Latitude>
+                <Longitude>116.341100</Longitude>
+                <Elevation>147.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.594700</Latitude>
+                <Longitude>116.341100</Longitude>
+                <Elevation>147.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.594700</Latitude>
+                <Longitude>116.341100</Longitude>
+                <Elevation>147.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I04H6" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+            <Latitude>-34.593120</Latitude>
+            <Longitude>116.341040</Longitude>
+            <Elevation>0.14676</Elevation>
+            <Site>
+                <Name>I04AU SHANNON H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.593120</Latitude>
+                <Longitude>116.341040</Longitude>
+                <Elevation>0.14676</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2006-03-23T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.593100</Latitude>
+                <Longitude>116.341000</Longitude>
+                <Elevation>146.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.593100</Latitude>
+                <Longitude>116.341000</Longitude>
+                <Elevation>146.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.593100</Latitude>
+                <Longitude>116.341000</Longitude>
+                <Elevation>146.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I04H7" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+            <Latitude>-34.591120</Latitude>
+            <Longitude>116.343160</Longitude>
+            <Elevation>0.14321</Elevation>
+            <Site>
+                <Name>I04AU SHANNON H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.591120</Latitude>
+                <Longitude>116.343160</Longitude>
+                <Elevation>0.14321</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2006-03-23T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.591100</Latitude>
+                <Longitude>116.343200</Longitude>
+                <Elevation>143.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.591100</Latitude>
+                <Longitude>116.343200</Longitude>
+                <Elevation>143.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.591100</Latitude>
+                <Longitude>116.343200</Longitude>
+                <Elevation>143.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I04H8" startDate="2006-02-01T11:27:10" endDate="2050-12-31T23:59:59">
+            <Latitude>-34.592920</Latitude>
+            <Longitude>116.346390</Longitude>
+            <Elevation>0.14871</Elevation>
+            <Site>
+                <Name>I04AU SHANNON H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.592920</Latitude>
+                <Longitude>116.346390</Longitude>
+                <Elevation>0.14871</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-02-01T11:27:10" endDate="2006-03-23T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.592900</Latitude>
+                <Longitude>116.346400</Longitude>
+                <Elevation>148.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2006-03-24T00:00:00" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.592900</Latitude>
+                <Longitude>116.346400</Longitude>
+                <Elevation>148.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I04AU SHANNON</Description>
+                </Sensor>
+                <Latitude>-34.592900</Latitude>
+                <Longitude>116.346400</Longitude>
+                <Elevation>148.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

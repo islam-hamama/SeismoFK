@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2013-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I58H1" startDate="2013-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>28.209718</Latitude>
+            <Longitude>-177.381430</Longitude>
+            <Elevation>0.004608</Elevation>
+            <Site>
+                <Name>I58US MIDWAY ISLANDS H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-02-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.209718</Latitude>
+                <Longitude>-177.381430</Longitude>
+                <Elevation>0.004608</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>200240</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-11-11T00:00:00" endDate="2017-02-13T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.209718</Latitude>
+                <Longitude>-177.381430</Longitude>
+                <Elevation>0.004608</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>200240</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-08-01T00:00:00" endDate="2013-11-11T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.209700</Latitude>
+                <Longitude>-177.381400</Longitude>
+                <Elevation>4.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>142857</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-11-11T00:00:00" endDate="2017-02-13T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.209700</Latitude>
+                <Longitude>-177.381400</Longitude>
+                <Elevation>4.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>200000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-02-13T00:00:00" endDate="2021-08-26T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.209700</Latitude>
+                <Longitude>-177.381400</Longitude>
+                <Elevation>4.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>200000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-08-27T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.209700</Latitude>
+                <Longitude>-177.381400</Longitude>
+                <Elevation>4.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>32258.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I58H2" startDate="2013-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>28.213261</Latitude>
+            <Longitude>-177.369580</Longitude>
+            <Elevation>0.006769</Elevation>
+            <Site>
+                <Name>I58US MIDWAY ISLANDS H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-02-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.213261</Latitude>
+                <Longitude>-177.369580</Longitude>
+                <Elevation>0.006769</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>192012</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-11-11T00:00:00" endDate="2017-02-13T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.213261</Latitude>
+                <Longitude>-177.369580</Longitude>
+                <Elevation>0.006769</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>192012</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-08-01T00:00:00" endDate="2013-11-11T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.213300</Latitude>
+                <Longitude>-177.369600</Longitude>
+                <Elevation>6.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>142857</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-11-11T00:00:00" endDate="2017-02-13T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.213300</Latitude>
+                <Longitude>-177.369600</Longitude>
+                <Elevation>6.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>200000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-02-13T00:00:00" endDate="2021-08-26T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.213300</Latitude>
+                <Longitude>-177.369600</Longitude>
+                <Elevation>6.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>200000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-08-27T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.213300</Latitude>
+                <Longitude>-177.369600</Longitude>
+                <Elevation>6.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>32258.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I58H3" startDate="2013-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>28.212899</Latitude>
+            <Longitude>-177.385430</Longitude>
+            <Elevation>0.004305</Elevation>
+            <Site>
+                <Name>I58US MIDWAY ISLANDS H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-02-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.212899</Latitude>
+                <Longitude>-177.385430</Longitude>
+                <Elevation>0.004305</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>193274</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-11-11T00:00:00" endDate="2017-02-13T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.212899</Latitude>
+                <Longitude>-177.385430</Longitude>
+                <Elevation>0.004305</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>193274</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-08-01T00:00:00" endDate="2013-11-11T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.212900</Latitude>
+                <Longitude>-177.385400</Longitude>
+                <Elevation>4.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>142857</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-11-11T00:00:00" endDate="2017-02-13T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.212900</Latitude>
+                <Longitude>-177.385400</Longitude>
+                <Elevation>4.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>200000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-02-13T00:00:00" endDate="2021-08-26T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.212900</Latitude>
+                <Longitude>-177.385400</Longitude>
+                <Elevation>4.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>200000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-08-27T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.212900</Latitude>
+                <Longitude>-177.385400</Longitude>
+                <Elevation>4.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>32258.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I58H4" startDate="2013-08-01T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>28.202870</Latitude>
+            <Longitude>-177.384400</Longitude>
+            <Elevation>0.008967</Elevation>
+            <Site>
+                <Name>I58US MIDWAY ISLANDS H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-02-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.202870</Latitude>
+                <Longitude>-177.384400</Longitude>
+                <Elevation>0.008967</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>165563</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-11-11T00:00:00" endDate="2017-02-13T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.202870</Latitude>
+                <Longitude>-177.384400</Longitude>
+                <Elevation>0.008967</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>165563</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-08-01T00:00:00" endDate="2013-11-11T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.202900</Latitude>
+                <Longitude>-177.384400</Longitude>
+                <Elevation>9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>142857</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2013-11-11T00:00:00" endDate="2017-02-13T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.202900</Latitude>
+                <Longitude>-177.384400</Longitude>
+                <Elevation>9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>166667</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-02-13T00:00:00" endDate="2021-08-26T00:00:00">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.202900</Latitude>
+                <Longitude>-177.384400</Longitude>
+                <Elevation>9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>166667</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-08-27T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I58US MIDWAY ISLANDS</Description>
+                </Sensor>
+                <Latitude>28.202900</Latitude>
+                <Longitude>-177.384400</Longitude>
+                <Elevation>9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>32258.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

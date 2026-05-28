@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2005-03-29T12:16:37" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I21H1" startDate="2005-03-29T12:16:37" endDate="2050-12-31T23:59:59">
+            <Latitude>-8.867830</Latitude>
+            <Longitude>-140.159070</Longitude>
+            <Elevation>0.806</Elevation>
+            <Site>
+                <Name>I21FR H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-29T12:16:37" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I21FR</Description>
+                </Sensor>
+                <Latitude>-8.867830</Latitude>
+                <Longitude>-140.159070</Longitude>
+                <Elevation>0.806</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I21H2" startDate="2005-03-29T12:16:37" endDate="2050-12-31T23:59:59">
+            <Latitude>-8.860540</Latitude>
+            <Longitude>-140.161110</Longitude>
+            <Elevation>0.822</Elevation>
+            <Site>
+                <Name>I21FR MARQUESAS ISLAND INFRASONIC ARRAY H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.860540</Latitude>
+                <Longitude>-140.161110</Longitude>
+                <Elevation>0.822</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-29T12:16:37" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.860540</Latitude>
+                <Longitude>-140.161110</Longitude>
+                <Elevation>0.822</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-29T12:16:37" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.860500</Latitude>
+                <Longitude>-140.161100</Longitude>
+                <Elevation>822</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.860500</Latitude>
+                <Longitude>-140.161100</Longitude>
+                <Elevation>822</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I21H3" startDate="2005-03-29T12:16:37" endDate="2050-12-31T23:59:59">
+            <Latitude>-8.870780</Latitude>
+            <Longitude>-140.150470</Longitude>
+            <Elevation>0.796</Elevation>
+            <Site>
+                <Name>I21FR MARQUESAS ISLAND INFRASONIC ARRAY H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.870780</Latitude>
+                <Longitude>-140.150470</Longitude>
+                <Elevation>0.796</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-29T12:16:37" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.870780</Latitude>
+                <Longitude>-140.150470</Longitude>
+                <Elevation>0.796</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-29T12:16:37" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.870800</Latitude>
+                <Longitude>-140.150500</Longitude>
+                <Elevation>796</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.870800</Latitude>
+                <Longitude>-140.150500</Longitude>
+                <Elevation>796</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I21H4" startDate="2005-03-29T12:16:37" endDate="2050-12-31T23:59:59">
+            <Latitude>-8.874980</Latitude>
+            <Longitude>-140.166590</Longitude>
+            <Elevation>0.821</Elevation>
+            <Site>
+                <Name>I21FR MARQUESAS ISLAND INFRASONIC ARRAY H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.874980</Latitude>
+                <Longitude>-140.166590</Longitude>
+                <Elevation>0.821</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-29T12:16:37" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.874980</Latitude>
+                <Longitude>-140.166590</Longitude>
+                <Elevation>0.821</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-29T12:16:37" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.875000</Latitude>
+                <Longitude>-140.166600</Longitude>
+                <Elevation>821</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I21FR MARQUESAS ISLAND INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-8.875000</Latitude>
+                <Longitude>-140.166600</Longitude>
+                <Elevation>821</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

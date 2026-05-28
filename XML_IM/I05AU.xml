@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>16</TotalNumberStations>
+        <Station code="I05H1" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.490798</Latitude>
+            <Longitude>147.680630</Longitude>
+            <Elevation>0.35</Elevation>
+            <Site>
+                <Name>I05AU HOBART INFRASONIC H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.490798</Latitude>
+                <Longitude>147.680630</Longitude>
+                <Elevation>0.35</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2022-02-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.490800</Latitude>
+                <Longitude>147.680600</Longitude>
+                <Elevation>350</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.490800</Latitude>
+                <Longitude>147.680600</Longitude>
+                <Elevation>350</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05H2" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.487193</Latitude>
+            <Longitude>147.674300</Longitude>
+            <Elevation>0.31</Elevation>
+            <Site>
+                <Name>I05AU HOBART INFRASONIC H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.487193</Latitude>
+                <Longitude>147.674300</Longitude>
+                <Elevation>0.31</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.487193</Latitude>
+                <Longitude>147.674300</Longitude>
+                <Elevation>0.31</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.487200</Latitude>
+                <Longitude>147.674300</Longitude>
+                <Elevation>310</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2022-02-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.487200</Latitude>
+                <Longitude>147.674300</Longitude>
+                <Elevation>310</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.487200</Latitude>
+                <Longitude>147.674300</Longitude>
+                <Elevation>310</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05H3" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.482285</Latitude>
+            <Longitude>147.677620</Longitude>
+            <Elevation>0.314</Elevation>
+            <Site>
+                <Name>I05AU HOBART INFRASONIC H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.482285</Latitude>
+                <Longitude>147.677620</Longitude>
+                <Elevation>0.314</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.482285</Latitude>
+                <Longitude>147.677620</Longitude>
+                <Elevation>0.314</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.482300</Latitude>
+                <Longitude>147.677600</Longitude>
+                <Elevation>314</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2022-02-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.482300</Latitude>
+                <Longitude>147.677600</Longitude>
+                <Elevation>314</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.482300</Latitude>
+                <Longitude>147.677600</Longitude>
+                <Elevation>314</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05H4" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.480752</Latitude>
+            <Longitude>147.689780</Longitude>
+            <Elevation>0.316</Elevation>
+            <Site>
+                <Name>I05AU HOBART INFRASONIC H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.480752</Latitude>
+                <Longitude>147.689780</Longitude>
+                <Elevation>0.316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.480752</Latitude>
+                <Longitude>147.689780</Longitude>
+                <Elevation>0.316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.480800</Latitude>
+                <Longitude>147.689800</Longitude>
+                <Elevation>316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2022-02-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.480800</Latitude>
+                <Longitude>147.689800</Longitude>
+                <Elevation>316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.480800</Latitude>
+                <Longitude>147.689800</Longitude>
+                <Elevation>316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05H5" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.488470</Latitude>
+            <Longitude>147.691050</Longitude>
+            <Elevation>0.316</Elevation>
+            <Site>
+                <Name>I05AU HOBART INFRASONIC H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.488470</Latitude>
+                <Longitude>147.691050</Longitude>
+                <Elevation>0.316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.488470</Latitude>
+                <Longitude>147.691050</Longitude>
+                <Elevation>0.316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.488500</Latitude>
+                <Longitude>147.691100</Longitude>
+                <Elevation>316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2022-02-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.488500</Latitude>
+                <Longitude>147.691100</Longitude>
+                <Elevation>316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.488500</Latitude>
+                <Longitude>147.691100</Longitude>
+                <Elevation>316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05H6" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.496572</Latitude>
+            <Longitude>147.682990</Longitude>
+            <Elevation>0.308</Elevation>
+            <Site>
+                <Name>I05AU HOBART INFRASONIC H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.496572</Latitude>
+                <Longitude>147.682990</Longitude>
+                <Elevation>0.308</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.496572</Latitude>
+                <Longitude>147.682990</Longitude>
+                <Elevation>0.308</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.496600</Latitude>
+                <Longitude>147.683000</Longitude>
+                <Elevation>308</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2022-02-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.496600</Latitude>
+                <Longitude>147.683000</Longitude>
+                <Elevation>308</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.496600</Latitude>
+                <Longitude>147.683000</Longitude>
+                <Elevation>308</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05H7" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.500460</Latitude>
+            <Longitude>147.684330</Longitude>
+            <Elevation>0.306</Elevation>
+            <Site>
+                <Name>I05AU HOBART INFRASONIC H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.500460</Latitude>
+                <Longitude>147.684330</Longitude>
+                <Elevation>0.306</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.500460</Latitude>
+                <Longitude>147.684330</Longitude>
+                <Elevation>0.306</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.500500</Latitude>
+                <Longitude>147.684300</Longitude>
+                <Elevation>306</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2022-02-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.500500</Latitude>
+                <Longitude>147.684300</Longitude>
+                <Elevation>306</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.500500</Latitude>
+                <Longitude>147.684300</Longitude>
+                <Elevation>306</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05H8" startDate="2003-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.499768</Latitude>
+            <Longitude>147.680920</Longitude>
+            <Elevation>0.304</Elevation>
+            <Site>
+                <Name>I05AU HOBART INFRASONIC H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.499768</Latitude>
+                <Longitude>147.680920</Longitude>
+                <Elevation>0.304</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.499768</Latitude>
+                <Longitude>147.680920</Longitude>
+                <Elevation>0.304</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-29T00:00:00" endDate="2018-01-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.499800</Latitude>
+                <Longitude>147.680900</Longitude>
+                <Elevation>304</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2018-01-23T00:00:00" endDate="2022-02-22T00:00:00">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.499800</Latitude>
+                <Longitude>147.680900</Longitude>
+                <Elevation>304</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-42.499800</Latitude>
+                <Longitude>147.680900</Longitude>
+                <Elevation>304</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05C1" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.490800</Latitude>
+            <Longitude>147.680600</Longitude>
+            <Elevation>350</Elevation>
+            <Site>
+                <Name>I05AU HOBART TAS C1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART TAS</Description>
+                </Sensor>
+                <Latitude>-42.490800</Latitude>
+                <Longitude>147.680600</Longitude>
+                <Elevation>350</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05C2" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.487200</Latitude>
+            <Longitude>147.674300</Longitude>
+            <Elevation>310</Elevation>
+            <Site>
+                <Name>I05AU HOBART TAS C2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART TAS</Description>
+                </Sensor>
+                <Latitude>-42.487200</Latitude>
+                <Longitude>147.674300</Longitude>
+                <Elevation>310</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05C3" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.482300</Latitude>
+            <Longitude>147.677600</Longitude>
+            <Elevation>314</Elevation>
+            <Site>
+                <Name>I05AU HOBART TAS C3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART TAS</Description>
+                </Sensor>
+                <Latitude>-42.482300</Latitude>
+                <Longitude>147.677600</Longitude>
+                <Elevation>314</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05C4" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.480800</Latitude>
+            <Longitude>147.689800</Longitude>
+            <Elevation>316</Elevation>
+            <Site>
+                <Name>I05AU HOBART TAS C4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART TAS</Description>
+                </Sensor>
+                <Latitude>-42.480800</Latitude>
+                <Longitude>147.689800</Longitude>
+                <Elevation>316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05C5" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.488500</Latitude>
+            <Longitude>147.691100</Longitude>
+            <Elevation>316</Elevation>
+            <Site>
+                <Name>I05AU HOBART TAS C5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART TAS</Description>
+                </Sensor>
+                <Latitude>-42.488500</Latitude>
+                <Longitude>147.691100</Longitude>
+                <Elevation>316</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05C6" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.496600</Latitude>
+            <Longitude>147.683000</Longitude>
+            <Elevation>308</Elevation>
+            <Site>
+                <Name>I05AU HOBART TAS C6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART TAS</Description>
+                </Sensor>
+                <Latitude>-42.496600</Latitude>
+                <Longitude>147.683000</Longitude>
+                <Elevation>308</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05C7" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.500500</Latitude>
+            <Longitude>147.684300</Longitude>
+            <Elevation>306</Elevation>
+            <Site>
+                <Name>I05AU HOBART TAS C7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART TAS</Description>
+                </Sensor>
+                <Latitude>-42.500500</Latitude>
+                <Longitude>147.684300</Longitude>
+                <Elevation>306</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I05C8" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-42.499800</Latitude>
+            <Longitude>147.680900</Longitude>
+            <Elevation>304</Elevation>
+            <Site>
+                <Name>I05AU HOBART TAS C8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2022-02-22T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I05AU HOBART TAS</Description>
+                </Sensor>
+                <Latitude>-42.499800</Latitude>
+                <Longitude>147.680900</Longitude>
+                <Elevation>304</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

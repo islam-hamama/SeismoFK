@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>8</TotalNumberStations>
+        <Station code="I11L1" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+            <Latitude>15.257290</Latitude>
+            <Longitude>-23.183880</Longitude>
+            <Elevation>0.0443</Elevation>
+            <Site>
+                <Name>I11CV CAPE VERDE-MAIO L1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE-MAIO</Description>
+                </Sensor>
+                <Latitude>15.257290</Latitude>
+                <Longitude>-23.183880</Longitude>
+                <Elevation>0.0443</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12183.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2020-12-07T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE-MAIO</Description>
+                </Sensor>
+                <Latitude>15.257300</Latitude>
+                <Longitude>-23.183900</Longitude>
+                <Elevation>44.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-07T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE-MAIO</Description>
+                </Sensor>
+                <Latitude>15.257300</Latitude>
+                <Longitude>-23.183900</Longitude>
+                <Elevation>44.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I11L2" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+            <Latitude>15.258220</Latitude>
+            <Longitude>-23.186370</Longitude>
+            <Elevation>0.0407</Elevation>
+            <Site>
+                <Name>I11CV CAPE VERDE L2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.258220</Latitude>
+                <Longitude>-23.186370</Longitude>
+                <Elevation>0.0407</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12226.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2020-12-07T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.258200</Latitude>
+                <Longitude>-23.186400</Longitude>
+                <Elevation>40.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-07T00:00:00" endDate="2020-12-09T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.258200</Latitude>
+                <Longitude>-23.186400</Longitude>
+                <Elevation>40.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-09T00:00:00" endDate="2020-12-14T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.258200</Latitude>
+                <Longitude>-23.186400</Longitude>
+                <Elevation>40.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.258200</Latitude>
+                <Longitude>-23.186400</Longitude>
+                <Elevation>40.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I11L3" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+            <Latitude>15.255510</Latitude>
+            <Longitude>-23.185850</Longitude>
+            <Elevation>0.044</Elevation>
+            <Site>
+                <Name>I11CV CAPE VERDE L3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.255510</Latitude>
+                <Longitude>-23.185850</Longitude>
+                <Elevation>0.044</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12242.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2020-12-07T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.255500</Latitude>
+                <Longitude>-23.185900</Longitude>
+                <Elevation>44</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-07T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.255500</Latitude>
+                <Longitude>-23.185900</Longitude>
+                <Elevation>44</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I11L4" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+            <Latitude>15.267380</Latitude>
+            <Longitude>-23.183850</Longitude>
+            <Elevation>0.0413</Elevation>
+            <Site>
+                <Name>I11CV CAPE VERDE L4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.267380</Latitude>
+                <Longitude>-23.183850</Longitude>
+                <Elevation>0.0413</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12230.2</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2020-12-07T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.267400</Latitude>
+                <Longitude>-23.183900</Longitude>
+                <Elevation>41.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-07T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.267400</Latitude>
+                <Longitude>-23.183900</Longitude>
+                <Elevation>41.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I11L5" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+            <Latitude>15.258020</Latitude>
+            <Longitude>-23.177000</Longitude>
+            <Elevation>0.0451</Elevation>
+            <Site>
+                <Name>I11CV CAPE VERDE L5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.258020</Latitude>
+                <Longitude>-23.177000</Longitude>
+                <Elevation>0.0451</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12227.9</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2020-12-07T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.258000</Latitude>
+                <Longitude>-23.177000</Longitude>
+                <Elevation>45.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-07T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.258000</Latitude>
+                <Longitude>-23.177000</Longitude>
+                <Elevation>45.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I11L6" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+            <Latitude>15.250160</Latitude>
+            <Longitude>-23.183030</Longitude>
+            <Elevation>0.0552</Elevation>
+            <Site>
+                <Name>I11CV CAPE VERDE L6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.250160</Latitude>
+                <Longitude>-23.183030</Longitude>
+                <Elevation>0.0552</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12214.6</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2020-12-07T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.250200</Latitude>
+                <Longitude>-23.183000</Longitude>
+                <Elevation>55.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-07T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.250200</Latitude>
+                <Longitude>-23.183000</Longitude>
+                <Elevation>55.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I11L7" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+            <Latitude>15.255660</Latitude>
+            <Longitude>-23.194260</Longitude>
+            <Elevation>0.0403</Elevation>
+            <Site>
+                <Name>I11CV CAPE VERDE L7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.255660</Latitude>
+                <Longitude>-23.194260</Longitude>
+                <Elevation>0.0403</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12192.9</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2020-12-07T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.255700</Latitude>
+                <Longitude>-23.194300</Longitude>
+                <Elevation>40.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-07T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.255700</Latitude>
+                <Longitude>-23.194300</Longitude>
+                <Elevation>40.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I11L8" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+            <Latitude>15.264590</Latitude>
+            <Longitude>-23.193740</Longitude>
+            <Elevation>0.0371</Elevation>
+            <Site>
+                <Name>I11CV CAPE VERDE L8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.264590</Latitude>
+                <Longitude>-23.193740</Longitude>
+                <Elevation>0.0371</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12185.9</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2007-05-30T10:16:32" endDate="2020-12-07T00:00:00">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.264600</Latitude>
+                <Longitude>-23.193700</Longitude>
+                <Elevation>37.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-07T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I11CV CAPE VERDE</Description>
+                </Sensor>
+                <Latitude>15.264600</Latitude>
+                <Longitude>-23.193700</Longitude>
+                <Elevation>37.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>12195.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

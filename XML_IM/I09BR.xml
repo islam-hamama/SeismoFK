@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2001-06-20T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I09H1" startDate="2001-06-20T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-15.637967</Latitude>
+            <Longitude>-48.016422</Longitude>
+            <Elevation>1.1853</Elevation>
+            <Site>
+                <Name>I09BR BRASILIA INFRASONIC H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2012-04-23T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.637967</Latitude>
+                <Longitude>-48.016422</Longitude>
+                <Elevation>1.1853</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6973.5</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-20T00:00:00" endDate="2012-04-22T23:59:59">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.637967</Latitude>
+                <Longitude>-48.016422</Longitude>
+                <Elevation>1.1853</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-20T00:00:00" endDate="2012-04-23T00:00:00">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.638000</Latitude>
+                <Longitude>-48.016400</Longitude>
+                <Elevation>1185.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I09H2" startDate="2001-06-20T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-15.628031</Latitude>
+            <Longitude>-48.019857</Longitude>
+            <Elevation>1.2444</Elevation>
+            <Site>
+                <Name>I09BR BRASILIA INFRASONIC H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2012-04-23T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.628031</Latitude>
+                <Longitude>-48.019857</Longitude>
+                <Elevation>1.2444</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6973.5</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-20T00:00:00" endDate="2012-04-22T23:59:59">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.628031</Latitude>
+                <Longitude>-48.019857</Longitude>
+                <Elevation>1.2444</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-20T00:00:00" endDate="2012-04-23T00:00:00">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.628000</Latitude>
+                <Longitude>-48.019900</Longitude>
+                <Elevation>1244.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I09H3" startDate="2001-06-20T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-15.645076</Latitude>
+            <Longitude>-48.008277</Longitude>
+            <Elevation>1.1835</Elevation>
+            <Site>
+                <Name>I09BR BRASILIA INFRASONIC H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2012-04-23T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.645076</Latitude>
+                <Longitude>-48.008277</Longitude>
+                <Elevation>1.1835</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6973.5</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-20T00:00:00" endDate="2012-04-22T23:59:59">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.645076</Latitude>
+                <Longitude>-48.008277</Longitude>
+                <Elevation>1.1835</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-20T00:00:00" endDate="2012-04-23T00:00:00">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.645100</Latitude>
+                <Longitude>-48.008300</Longitude>
+                <Elevation>1183.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I09H4" startDate="2001-06-20T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-15.639847</Latitude>
+            <Longitude>-48.025481</Longitude>
+            <Elevation>1.2647</Elevation>
+            <Site>
+                <Name>I09BR BRASILIA INFRASONIC H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2012-04-23T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.639847</Latitude>
+                <Longitude>-48.025481</Longitude>
+                <Elevation>1.2647</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6973.5</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-20T00:00:00" endDate="2012-04-22T23:59:59">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.639847</Latitude>
+                <Longitude>-48.025481</Longitude>
+                <Elevation>1.2647</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-06-20T00:00:00" endDate="2012-04-23T00:00:00">
+                <Sensor>
+                    <Description>I09BR BRASILIA INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-15.639800</Latitude>
+                <Longitude>-48.025500</Longitude>
+                <Elevation>1264.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

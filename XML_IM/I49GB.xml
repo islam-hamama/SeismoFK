@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2005-03-24T18:08:17" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>5</TotalNumberStations>
+        <Station code="I49H1" startDate="2005-03-24T18:08:17" endDate="2050-12-31T23:59:59">
+            <Latitude>-37.089950</Latitude>
+            <Longitude>-12.331920</Longitude>
+            <Elevation>0.0806</Elevation>
+            <Site>
+                <Name>I49GB H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB</Description>
+                </Sensor>
+                <Latitude>-37.089950</Latitude>
+                <Longitude>-12.331920</Longitude>
+                <Elevation>0.0806</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I49H2" startDate="2005-03-24T18:08:17" endDate="2050-12-31T23:59:59">
+            <Latitude>-37.084270</Latitude>
+            <Longitude>-12.328390</Longitude>
+            <Elevation>0.0902</Elevation>
+            <Site>
+                <Name>I49GB TRISTAN DA CUNHA IS. H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.084270</Latitude>
+                <Longitude>-12.328390</Longitude>
+                <Elevation>0.0902</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.084270</Latitude>
+                <Longitude>-12.328390</Longitude>
+                <Elevation>0.0902</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.084300</Latitude>
+                <Longitude>-12.328400</Longitude>
+                <Elevation>90.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.084300</Latitude>
+                <Longitude>-12.328400</Longitude>
+                <Elevation>90.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I49H3" startDate="2005-03-24T18:08:17" endDate="2050-12-31T23:59:59">
+            <Latitude>-37.087430</Latitude>
+            <Longitude>-12.319840</Longitude>
+            <Elevation>0.16404</Elevation>
+            <Site>
+                <Name>I49GB TRISTAN DA CUNHA IS. H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.087430</Latitude>
+                <Longitude>-12.319840</Longitude>
+                <Elevation>0.16404</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.087430</Latitude>
+                <Longitude>-12.319840</Longitude>
+                <Elevation>0.16404</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.087400</Latitude>
+                <Longitude>-12.319800</Longitude>
+                <Elevation>164</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.087400</Latitude>
+                <Longitude>-12.319800</Longitude>
+                <Elevation>164</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I49H4" startDate="2005-03-24T18:08:17" endDate="2050-12-31T23:59:59">
+            <Latitude>-37.097080</Latitude>
+            <Longitude>-12.333630</Longitude>
+            <Elevation>0.11379</Elevation>
+            <Site>
+                <Name>I49GB TRISTA DA CUNHA IS. H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB TRISTA DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.097080</Latitude>
+                <Longitude>-12.333630</Longitude>
+                <Elevation>0.11379</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I49GB TRISTA DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.097080</Latitude>
+                <Longitude>-12.333630</Longitude>
+                <Elevation>0.11379</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I49GB TRISTA DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.097100</Latitude>
+                <Longitude>-12.333600</Longitude>
+                <Elevation>113.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB TRISTA DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.097100</Latitude>
+                <Longitude>-12.333600</Longitude>
+                <Elevation>113.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I49H5" startDate="2005-03-24T18:08:17" endDate="2050-12-31T23:59:59">
+            <Latitude>-37.096080</Latitude>
+            <Longitude>-12.341440</Longitude>
+            <Elevation>0.05418</Elevation>
+            <Site>
+                <Name>I49GB TRISTAN DA CUNHA IS. H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-03-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.096080</Latitude>
+                <Longitude>-12.341440</Longitude>
+                <Elevation>0.05418</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2018-03-13T00:00:00">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.096080</Latitude>
+                <Longitude>-12.341440</Longitude>
+                <Elevation>0.05418</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-03-24T18:08:17" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.096100</Latitude>
+                <Longitude>-12.341400</Longitude>
+                <Elevation>54.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I49GB TRISTAN DA CUNHA IS.</Description>
+                </Sensor>
+                <Latitude>-37.096100</Latitude>
+                <Longitude>-12.341400</Longitude>
+                <Elevation>54.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

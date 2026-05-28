@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2005-02-28T14:32:38" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>6</TotalNumberStations>
+        <Station code="I30H1" startDate="2005-02-28T14:32:38" endDate="2050-12-31T23:59:59">
+            <Latitude>35.307756</Latitude>
+            <Longitude>140.313760</Longitude>
+            <Elevation>0.0524394</Elevation>
+            <Site>
+                <Name>I30JP H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP</Description>
+                </Sensor>
+                <Latitude>35.307756</Latitude>
+                <Longitude>140.313760</Longitude>
+                <Elevation>0.0524394</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I30H2" startDate="2005-02-28T14:32:38" endDate="2050-12-31T23:59:59">
+            <Latitude>35.312867</Latitude>
+            <Longitude>140.318020</Longitude>
+            <Elevation>0.039779</Elevation>
+            <Site>
+                <Name>I30JP ISUMI JAPAN INFRASONIC ARRAY H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-01-25T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.312867</Latitude>
+                <Longitude>140.318020</Longitude>
+                <Elevation>0.039779</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2018-01-25T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.312867</Latitude>
+                <Longitude>140.318020</Longitude>
+                <Elevation>0.0397785</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.312900</Latitude>
+                <Longitude>140.318000</Longitude>
+                <Elevation>39.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.312900</Latitude>
+                <Longitude>140.318000</Longitude>
+                <Elevation>39.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I30H3" startDate="2005-02-28T14:32:38" endDate="2050-12-31T23:59:59">
+            <Latitude>35.311456</Latitude>
+            <Longitude>140.330000</Longitude>
+            <Elevation>0.039873</Elevation>
+            <Site>
+                <Name>I30JP ISUMI JAPAN INFRASONIC ARRAY H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-01-25T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.311456</Latitude>
+                <Longitude>140.330000</Longitude>
+                <Elevation>0.039873</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2018-01-25T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.311456</Latitude>
+                <Longitude>140.330000</Longitude>
+                <Elevation>0.0398729</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.311500</Latitude>
+                <Longitude>140.330000</Longitude>
+                <Elevation>39.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.311500</Latitude>
+                <Longitude>140.330000</Longitude>
+                <Elevation>39.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I30H4" startDate="2005-02-28T14:32:38" endDate="2050-12-31T23:59:59">
+            <Latitude>35.304555</Latitude>
+            <Longitude>140.326210</Longitude>
+            <Elevation>0.046926</Elevation>
+            <Site>
+                <Name>I30JP ISUMI JAPAN INFRASONIC ARRAY H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-01-25T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.304555</Latitude>
+                <Longitude>140.326210</Longitude>
+                <Elevation>0.046926</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2018-01-25T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.304555</Latitude>
+                <Longitude>140.326210</Longitude>
+                <Elevation>0.0469256</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.304600</Latitude>
+                <Longitude>140.326200</Longitude>
+                <Elevation>46.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.304600</Latitude>
+                <Longitude>140.326200</Longitude>
+                <Elevation>46.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I30H5" startDate="2005-02-28T14:32:38" endDate="2050-12-31T23:59:59">
+            <Latitude>35.299183</Latitude>
+            <Longitude>140.313640</Longitude>
+            <Elevation>0.038876</Elevation>
+            <Site>
+                <Name>I30JP ISUMI JAPAN INFRASONIC ARRAY H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-01-25T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.299183</Latitude>
+                <Longitude>140.313640</Longitude>
+                <Elevation>0.038876</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2018-01-25T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.299183</Latitude>
+                <Longitude>140.313640</Longitude>
+                <Elevation>0.0388758</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.299200</Latitude>
+                <Longitude>140.313600</Longitude>
+                <Elevation>38.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.299200</Latitude>
+                <Longitude>140.313600</Longitude>
+                <Elevation>38.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I30H6" startDate="2005-02-28T14:32:38" endDate="2050-12-31T23:59:59">
+            <Latitude>35.307906</Latitude>
+            <Longitude>140.307010</Longitude>
+            <Elevation>0.040498</Elevation>
+            <Site>
+                <Name>I30JP ISUMI JAPAN INFRASONIC ARRAY H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-01-25T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.307906</Latitude>
+                <Longitude>140.307010</Longitude>
+                <Elevation>0.040498</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2018-01-25T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.307906</Latitude>
+                <Longitude>140.307010</Longitude>
+                <Elevation>0.0404984</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-02-28T14:32:38" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.307900</Latitude>
+                <Longitude>140.307000</Longitude>
+                <Elevation>40.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I30JP ISUMI JAPAN INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>35.307900</Latitude>
+                <Longitude>140.307000</Longitude>
+                <Elevation>40.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

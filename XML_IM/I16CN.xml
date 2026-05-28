@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>8</TotalNumberStations>
+        <Station code="I16H1" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>25.276300</Latitude>
+            <Longitude>102.683100</Longitude>
+            <Elevation>2014</Elevation>
+            <Site>
+                <Name>I16CN KUNMING H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I16CN KUNMING</Description>
+                </Sensor>
+                <Latitude>25.276300</Latitude>
+                <Longitude>102.683100</Longitude>
+                <Elevation>2014</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I16H2" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>25.274700</Latitude>
+            <Longitude>102.684500</Longitude>
+            <Elevation>2033</Elevation>
+            <Site>
+                <Name>I16CN KUNMING H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I16CN KUNMING</Description>
+                </Sensor>
+                <Latitude>25.274700</Latitude>
+                <Longitude>102.684500</Longitude>
+                <Elevation>2033</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I16H3" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>25.274100</Latitude>
+            <Longitude>102.682000</Longitude>
+            <Elevation>2030</Elevation>
+            <Site>
+                <Name>I16CN KUNMING H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I16CN KUNMING</Description>
+                </Sensor>
+                <Latitude>25.274100</Latitude>
+                <Longitude>102.682000</Longitude>
+                <Elevation>2030</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I16H4" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>25.283400</Latitude>
+            <Longitude>102.686700</Longitude>
+            <Elevation>2053</Elevation>
+            <Site>
+                <Name>I16CN KUNMING H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I16CN KUNMING</Description>
+                </Sensor>
+                <Latitude>25.283400</Latitude>
+                <Longitude>102.686700</Longitude>
+                <Elevation>2053</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I16H5" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>25.276100</Latitude>
+            <Longitude>102.689700</Longitude>
+            <Elevation>2128</Elevation>
+            <Site>
+                <Name>I16CN KUNMING H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I16CN KUNMING</Description>
+                </Sensor>
+                <Latitude>25.276100</Latitude>
+                <Longitude>102.689700</Longitude>
+                <Elevation>2128</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I16H6" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>25.267500</Latitude>
+            <Longitude>102.686700</Longitude>
+            <Elevation>2078</Elevation>
+            <Site>
+                <Name>I16CN KUNMING H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I16CN KUNMING</Description>
+                </Sensor>
+                <Latitude>25.267500</Latitude>
+                <Longitude>102.686700</Longitude>
+                <Elevation>2078</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I16H7" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>25.270700</Latitude>
+            <Longitude>102.677300</Longitude>
+            <Elevation>1971</Elevation>
+            <Site>
+                <Name>I16CN KUNMING H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I16CN KUNMING</Description>
+                </Sensor>
+                <Latitude>25.270700</Latitude>
+                <Longitude>102.677300</Longitude>
+                <Elevation>1971</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I16H8" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>25.279800</Latitude>
+            <Longitude>102.677600</Longitude>
+            <Elevation>1986</Elevation>
+            <Site>
+                <Name>I16CN KUNMING H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2017-01-12T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I16CN KUNMING</Description>
+                </Sensor>
+                <Latitude>25.279800</Latitude>
+                <Longitude>102.677600</Longitude>
+                <Elevation>1986</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>
