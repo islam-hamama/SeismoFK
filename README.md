@@ -108,7 +108,7 @@ This opens the main **SeismoFK — Infrasound FK Array Analysis** window.
 
 ## Station metadata (XML inventories)
 
-This repository does **not** include station XML files. IMS infrasound station metadata is subject to CTBTO/IRIS data-distribution policies and cannot be redistributed. The local HLW (Helwan) station file is also not bundled.
+This repository does **not** include station XML files.
 
 **You can supply your own.** Two options:
 
