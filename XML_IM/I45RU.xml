@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I45H1" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+            <Latitude>44.199900</Latitude>
+            <Longitude>131.977300</Longitude>
+            <Elevation>0.15</Elevation>
+            <Site>
+                <Name>I45RU H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I45RU</Description>
+                </Sensor>
+                <Latitude>44.199900</Latitude>
+                <Longitude>131.977300</Longitude>
+                <Elevation>0.15</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I45H2" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+            <Latitude>44.210800</Latitude>
+            <Longitude>131.970600</Longitude>
+            <Elevation>0.16</Elevation>
+            <Site>
+                <Name>I45RU H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I45RU</Description>
+                </Sensor>
+                <Latitude>44.210800</Latitude>
+                <Longitude>131.970600</Longitude>
+                <Elevation>0.16</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I45H3" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+            <Latitude>44.199400</Latitude>
+            <Longitude>131.989200</Longitude>
+            <Elevation>0.17</Elevation>
+            <Site>
+                <Name>I45RU H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I45RU</Description>
+                </Sensor>
+                <Latitude>44.199400</Latitude>
+                <Longitude>131.989200</Longitude>
+                <Elevation>0.17</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I45H4" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+            <Latitude>44.191300</Latitude>
+            <Longitude>131.972300</Longitude>
+            <Elevation>0.14</Elevation>
+            <Site>
+                <Name>I45RU H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T14:22:39" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I45RU</Description>
+                </Sensor>
+                <Latitude>44.191300</Latitude>
+                <Longitude>131.972300</Longitude>
+                <Elevation>0.14</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

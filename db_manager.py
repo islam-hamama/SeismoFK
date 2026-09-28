@@ -1,7 +1,7 @@
 """
 db_manager.py — SQLite persistence layer for SeismoFK event results.
 
-Copyright (c) 2024-2025 Islam Hamama
+Copyright (c) 2024-2026 Islam Hamama
 Contact: islam.hamama@nriag.sci.eg
 
 Licensed under the MIT License — see LICENSE for details.
@@ -10,8 +10,9 @@ Licensed under the MIT License — see LICENSE for details.
 import os
 import sqlite3
 from datetime import datetime, timezone
+from app_paths import database_path
 
-DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fk_events.db')
+DB_PATH = str(database_path())
 
 # ── Classification vocabulary ─────────────────────────────────────────────────
 CLASSIFICATIONS = [
@@ -65,6 +66,7 @@ CREATE TABLE IF NOT EXISTS events (
 
 
 def _connect():
+    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     return conn

@@ -1,7 +1,7 @@
 """
 plot_spectrogram_window.py — Spectrogram plotting utility for SeismoFK.
 
-Copyright (c) 2024-2025 Islam Hamama
+Copyright (c) 2024-2026 Islam Hamama
 Contact: islam.hamama@nriag.sci.eg
 
 Licensed under the MIT License — see LICENSE for details.
@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 import numpy as np
 from obspy import UTCDateTime, read, read_inventory
+from scipy.ndimage import gaussian_filter
 from scipy.signal import spectrogram
 
 
@@ -112,13 +113,18 @@ def get_sensitivity_counts_per_pa(inventory, trace):
     sensitivity = response.instrument_sensitivity
     if sensitivity is None:
         raise ValueError("No instrument sensitivity found for {0}".format(trace.id))
-    if sensitivity.input_units.upper() != "PA" or sensitivity.output_units.upper() != "COUNTS":
+    input_units = str(sensitivity.input_units or "").strip().upper()
+    output_units = str(sensitivity.output_units or "").strip().upper()
+    if input_units not in {"PA", "PASCAL", "PASCALS"} or output_units not in {"COUNT", "COUNTS"}:
         raise ValueError(
             "Unexpected sensitivity units for {0}: {1} -> {2}".format(
                 trace.id, sensitivity.input_units, sensitivity.output_units
             )
         )
-    return float(sensitivity.value)
+    value = float(sensitivity.value)
+    if not np.isfinite(value) or value <= 0:
+        raise ValueError(f"Invalid pressure sensitivity for {trace.id}: {value}")
+    return value
 
 
 def compute_spectrogram(
@@ -131,6 +137,8 @@ def compute_spectrogram(
     nperseg,
     noverlap,
     reference_pressure=DEFAULT_REFERENCE_PRESSURE_PA,
+    units="pressure",
+    smooth_bins=0.0,
 ):
     """Compute a dB-scaled PSD spectrogram for a single ObsPy trace.
 
@@ -139,7 +147,8 @@ def compute_spectrogram(
 
     Pipeline (identical to the original standalone script):
       1. detrend("linear") -> detrend("demean")
-      2. counts -> Pa using the instrument sensitivity from ``inventory``
+      2. counts -> Pa using ``inventory`` when ``units='pressure'``;
+         otherwise retain raw counts
       3. zero-phase 4-corner bandpass [filter_freqmin, filter_freqmax]
       4. scipy.signal.spectrogram (Hann window, density/PSD)
       5. crop to ``freq <= freq_max`` and convert to dB re ``reference_pressure``
@@ -162,6 +171,12 @@ def compute_spectrogram(
         ``noverlap`` must be < ``nperseg``.
     reference_pressure : float, optional
         Reference pressure (Pa) for the dB conversion. Defaults to 20 µPa.
+    units : {'pressure', 'counts'}, optional
+        Pressure requires StationXML sensitivity. Counts permits inspection
+        when calibration metadata is unavailable; its dB reference is one count.
+    smooth_bins : float, optional
+        Gaussian smoothing in time bins (frequency width is 0.65 times this).
+        Smoothing is applied to linear PSD before conversion to dB. Zero disables it.
 
     Returns
     -------
@@ -187,18 +202,32 @@ def compute_spectrogram(
         raise ValueError("filter_freqmin must be < filter_freqmax.")
     if not (freq_max > 0):
         raise ValueError("freq_max must be > 0 Hz.")
+    if units == "pressure" and not (np.isfinite(reference_pressure) and
+                                     reference_pressure > 0):
+        raise ValueError("reference_pressure must be a positive finite value.")
     if nperseg <= 0:
         raise ValueError("nperseg must be a positive integer.")
     if noverlap < 0 or noverlap >= nperseg:
         raise ValueError("noverlap must satisfy 0 <= noverlap < nperseg.")
+    if not np.isfinite(smooth_bins) or smooth_bins < 0:
+        raise ValueError("smooth_bins must be a non-negative finite value.")
 
     work = trace.copy()
     work.detrend("linear")
     work.detrend("demean")
 
     data_counts = work.data.astype(np.float64)
-    sensitivity_counts_per_pa = get_sensitivity_counts_per_pa(inventory, work)
-    data_pa = data_counts / sensitivity_counts_per_pa
+    if units == "pressure":
+        if inventory is None:
+            raise ValueError("StationXML sensitivity is required for pressure units.")
+        sensitivity_counts_per_pa = get_sensitivity_counts_per_pa(inventory, work)
+        signal = data_counts / sensitivity_counts_per_pa
+        reference = reference_pressure
+    elif units == "counts":
+        signal = data_counts
+        reference = 1.0
+    else:
+        raise ValueError("units must be 'pressure' or 'counts'.")
 
     fs = work.stats.sampling_rate
     nyquist = fs / 2.0
@@ -210,7 +239,7 @@ def compute_spectrogram(
         )
 
     filtered = work.copy()
-    filtered.data = data_pa.copy()
+    filtered.data = signal.copy()
     filtered.filter(
         "bandpass",
         freqmin=filter_freqmin,
@@ -240,9 +269,12 @@ def compute_spectrogram(
         )
     freqs = freqs[band_mask]
     power = power[band_mask, :]
+    if smooth_bins > 0 and min(power.shape) > 1:
+        power = gaussian_filter(
+            power, sigma=(0.65 * smooth_bins, smooth_bins), mode="nearest")
 
     power_db = 10 * np.log10(
-        power / (reference_pressure ** 2) + np.finfo(float).eps
+        power / (reference ** 2) + np.finfo(float).eps
     )
     time_nums = mdates.date2num(
         utc_to_matplotlib(times, work.stats.starttime)
@@ -438,7 +470,7 @@ def main(argv=None):
 
     if last_mesh is not None:
         cbar = fig.colorbar(last_mesh, cax=cax)
-        cbar.set_label("PSD (dB re 20 µPa^2/Hz)")
+        cbar.set_label(f"PSD (dB re ({ref_uref_label})²/Hz)")
         cbar.outline.set_linewidth(0.8)
 
     out_name = "combined_spectrogram_{0}.png".format(file_stamp)

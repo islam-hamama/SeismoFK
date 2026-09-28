@@ -2,7 +2,7 @@
 """
 export_stations.py — Export individual IMS stations from all_IMS_sts.xml to separate XML files.
 
-Copyright (c) 2024-2025 Islam Hamama
+Copyright (c) 2024-2026 Islam Hamama
 Contact: islam.hamama@nriag.sci.eg
 
 Licensed under the MIT License — see LICENSE for details.

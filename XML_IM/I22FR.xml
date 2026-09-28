@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I22H1" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-22.184450</Latitude>
+            <Longitude>166.845920</Longitude>
+            <Elevation>0.2716</Elevation>
+            <Site>
+                <Name>I22FR H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I22FR</Description>
+                </Sensor>
+                <Latitude>-22.184450</Latitude>
+                <Longitude>166.845920</Longitude>
+                <Elevation>0.2716</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I22H2" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-22.172550</Latitude>
+            <Longitude>166.844660</Longitude>
+            <Elevation>0.2395</Elevation>
+            <Site>
+                <Name>I22FR H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I22FR</Description>
+                </Sensor>
+                <Latitude>-22.172550</Latitude>
+                <Longitude>166.844660</Longitude>
+                <Elevation>0.2395</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I22H3" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-22.188160</Latitude>
+            <Longitude>166.856940</Longitude>
+            <Elevation>0.2833</Elevation>
+            <Site>
+                <Name>I22FR H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I22FR</Description>
+                </Sensor>
+                <Latitude>-22.188160</Latitude>
+                <Longitude>166.856940</Longitude>
+                <Elevation>0.2833</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I22H4" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-22.189190</Latitude>
+            <Longitude>166.839580</Longitude>
+            <Elevation>0.24627</Elevation>
+            <Site>
+                <Name>I22FR H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2002-03-29T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I22FR</Description>
+                </Sensor>
+                <Latitude>-22.189190</Latitude>
+                <Longitude>166.839580</Longitude>
+                <Elevation>0.24627</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

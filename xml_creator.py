@@ -1,7 +1,7 @@
 """
 xml_creator.py — StationXML Creator / Editor Tool for SeismoFK
 
-Copyright (c) 2024-2025 Islam Hamama
+Copyright (c) 2024-2026 Islam Hamama
 Contact: islam.hamama@nriag.sci.eg
 
 Licensed under the MIT License — see LICENSE for details.
@@ -25,7 +25,9 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
 )
 from PyQt5.QtCore import Qt, QDateTime
-from PyQt5.QtGui  import QFont, QColor
+from PyQt5.QtGui  import QFontDatabase
+
+from result_ui import apply_app_theme, apply_main_style, result_header
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  Sensor presets  {name: (channel_code, location, fs, sensitivity, freq, input_units, output_units)}
@@ -144,7 +146,7 @@ class PreviewDialog(QDialog):
         layout = QVBoxLayout(self)
         self.editor = QTextEdit()
         self.editor.setReadOnly(True)
-        self.editor.setFont(QFont("Courier New", 9))
+        self.editor.setFont(QFontDatabase.systemFont(QFontDatabase.FixedFont))
         self.editor.setPlainText(xml_text)
         layout.addWidget(self.editor)
         btns = QDialogButtonBox(QDialogButtonBox.Close)
@@ -158,29 +160,10 @@ class PreviewDialog(QDialog):
 
 class XMLCreatorGUI(QMainWindow):
 
-    _STYLE = """
-        QMainWindow  { background:#f4f6f8; }
-        QWidget      { font-family:'Segoe UI',Arial,sans-serif; font-size:10pt; }
-        QGroupBox    { font-weight:bold; border:1px solid #ccc; border-radius:6px;
-                       margin-top:8px; padding-top:6px; }
-        QGroupBox::title { subcontrol-origin:margin; left:10px; color:#2c3e50; }
-        QPushButton  { background:#2980b9; color:white; border:none;
-                       padding:6px 14px; border-radius:4px;
-                       font-weight:bold; min-width:70px; }
-        QPushButton:hover    { background:#1f618d; }
-        QPushButton:disabled { background:#bdc3c7; color:#7f8c8d; }
-        QTableWidget { border:1px solid #ccc; gridline-color:#e0e0e0; }
-        QHeaderView::section { background:#2c3e50; color:white;
-                               padding:4px; font-weight:bold; }
-        QLineEdit, QComboBox, QDoubleSpinBox, QDateTimeEdit {
-                       padding:4px; border:1px solid #bdc3c7;
-                       border-radius:4px; background:white; }
-        QLabel       { color:#2c3e50; }
-    """
 
     def __init__(self):
         super().__init__()
-        self.setStyleSheet(self._STYLE)
+        apply_main_style(self)
         self.setWindowTitle("SeismoFK — StationXML Creator")
         self.setGeometry(100, 60, 1400, 820)
         self._build_ui()
@@ -189,11 +172,16 @@ class XMLCreatorGUI(QMainWindow):
     def _build_ui(self):
         root = QWidget()
         main = QVBoxLayout(root)
-        main.setSpacing(6)
+        main.setSpacing(8)
+        main.setContentsMargins(16, 14, 16, 10)
         self.setCentralWidget(root)
+        main.addWidget(result_header(
+            "StationXML editor",
+            "Build or edit array metadata: network, stations and channels",
+            kicker="SEISMOFK / METADATA", badge="STATIONXML"))
 
         # ── Network header ────────────────────────────────────────────────
-        net_grp    = QGroupBox("Network")
+        net_grp    = QGroupBox("NETWORK")
         net_layout = QHBoxLayout()
 
         self.net_code  = QLineEdit("EN");  self.net_code.setMaximumWidth(80)
@@ -221,7 +209,7 @@ class XMLCreatorGUI(QMainWindow):
         sta_layout = QVBoxLayout(sta_widget)
         sta_layout.setContentsMargins(0, 0, 0, 0)
 
-        sta_grp    = QGroupBox("Stations")
+        sta_grp    = QGroupBox("STATIONS")
         sta_inner  = QVBoxLayout()
 
         # station date range (shared default)
@@ -248,11 +236,11 @@ class XMLCreatorGUI(QMainWindow):
         sta_btn_row = QHBoxLayout()
         add_sta  = QPushButton("+ Add Station")
         add_sta.clicked.connect(self.add_station)
-        dup_sta  = QPushButton("⧉ Duplicate")
+        dup_sta  = QPushButton("Duplicate")
         dup_sta.clicked.connect(self.duplicate_station)
-        rem_sta  = QPushButton("− Remove")
+        rem_sta  = QPushButton("Remove")
         rem_sta.clicked.connect(self.remove_station)
-        imp_csv  = QPushButton("📂 Import CSV")
+        imp_csv  = QPushButton("Import CSV…")
         imp_csv.clicked.connect(self.import_csv)
         for b in (add_sta, dup_sta, rem_sta, imp_csv):
             sta_btn_row.addWidget(b)
@@ -261,7 +249,7 @@ class XMLCreatorGUI(QMainWindow):
 
         # CSV format hint
         hint = QLabel("CSV columns: code, lat, lon, elev, site  (header row optional)")
-        hint.setStyleSheet("color:#888; font-size:8pt; font-style:italic;")
+        hint.setObjectName("mutedText")
         sta_inner.addWidget(hint)
 
         sta_grp.setLayout(sta_inner)
@@ -273,7 +261,7 @@ class XMLCreatorGUI(QMainWindow):
         ch_layout = QVBoxLayout(ch_widget)
         ch_layout.setContentsMargins(0, 0, 0, 0)
 
-        ch_grp   = QGroupBox("Channels  (select a station first)")
+        ch_grp   = QGroupBox("CHANNELS  ·  SELECT A STATION FIRST")
         ch_inner = QVBoxLayout()
 
         # Preset row
@@ -312,9 +300,9 @@ class XMLCreatorGUI(QMainWindow):
         ch_btn_row = QHBoxLayout()
         add_ch  = QPushButton("+ Add Channel")
         add_ch.clicked.connect(self.add_channel)
-        dup_ch  = QPushButton("⧉ Duplicate")
+        dup_ch  = QPushButton("Duplicate")
         dup_ch.clicked.connect(self.duplicate_channel)
-        rem_ch  = QPushButton("− Remove")
+        rem_ch  = QPushButton("Remove")
         rem_ch.clicked.connect(self.remove_channel)
         for b in (add_ch, dup_ch, rem_ch):
             ch_btn_row.addWidget(b)
@@ -333,20 +321,18 @@ class XMLCreatorGUI(QMainWindow):
         main.addWidget(sep)
 
         action_row = QHBoxLayout()
-        load_btn    = QPushButton("📂  Load XML")
+        load_btn    = QPushButton("Load XML…")
         load_btn.clicked.connect(self.load_xml)
-        preview_btn = QPushButton("🔍  Preview XML")
+        preview_btn = QPushButton("Preview XML")
         preview_btn.clicked.connect(self.preview_xml)
-        validate_btn = QPushButton("✔  Validate")
+        validate_btn = QPushButton("Validate")
         validate_btn.clicked.connect(self.validate_xml)
-        save_btn    = QPushButton("💾  Save XML")
-        save_btn.setStyleSheet(
-            "QPushButton{background:#27ae60;font-size:10pt;padding:8px 20px;}"
-            "QPushButton:hover{background:#1e8449;}")
+        save_btn    = QPushButton("Save XML…")
+        save_btn.setObjectName("primaryAction")
         save_btn.clicked.connect(self.save_xml)
 
         self.save_path_label = QLabel("Not saved yet.")
-        self.save_path_label.setStyleSheet("color:#888; font-style:italic;")
+        self.save_path_label.setObjectName("mutedText")
 
         for w in (load_btn, preview_btn, validate_btn, save_btn):
             action_row.addWidget(w)
@@ -674,8 +660,8 @@ class XMLCreatorGUI(QMainWindow):
             return
 
         default_name = f"{net['code']}_array.xml"
-        xml_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'XML')
-        os.makedirs(xml_dir, exist_ok=True)
+        from app_paths import inventory_dir
+        xml_dir = str(inventory_dir(create=True))
 
         fname, _ = QFileDialog.getSaveFileName(
             self, "Save StationXML", os.path.join(xml_dir, default_name),
@@ -772,6 +758,7 @@ class XMLCreatorGUI(QMainWindow):
 # ─────────────────────────────────────────────────────────────────────────────
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    apply_app_theme(app)
     win = XMLCreatorGUI()
     win.show()
     sys.exit(app.exec_())

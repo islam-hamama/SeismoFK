@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2001-10-15T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I33H1" startDate="2001-10-15T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.010859</Latitude>
+            <Longitude>47.305024</Longitude>
+            <Elevation>1.38487</Elevation>
+            <Site>
+                <Name>I33MG H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2001-10-15T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I33MG</Description>
+                </Sensor>
+                <Latitude>-19.010859</Latitude>
+                <Longitude>47.305024</Longitude>
+                <Elevation>1.38487</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I33H2" startDate="2001-10-15T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.002141</Latitude>
+            <Longitude>47.313615</Longitude>
+            <Elevation>1.35082</Elevation>
+            <Site>
+                <Name>I33MG ANTANANARIVO INFRASONIC H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-01-25T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.002141</Latitude>
+                <Longitude>47.313615</Longitude>
+                <Elevation>1.35082</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-10-15T00:00:00" endDate="2018-01-25T00:00:00">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.002141</Latitude>
+                <Longitude>47.313615</Longitude>
+                <Elevation>1.35082</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-10-15T00:00:00" endDate="2017-12-13T00:00:00">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.002100</Latitude>
+                <Longitude>47.313600</Longitude>
+                <Elevation>1350.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.002100</Latitude>
+                <Longitude>47.313600</Longitude>
+                <Elevation>1350.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I33H3" startDate="2001-10-15T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.023406</Latitude>
+            <Longitude>47.308613</Longitude>
+            <Elevation>1.3845</Elevation>
+            <Site>
+                <Name>I33MG ANTANANARIVO INFRASONIC H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-01-25T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.023406</Latitude>
+                <Longitude>47.308613</Longitude>
+                <Elevation>1.3845</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-10-15T00:00:00" endDate="2018-01-25T00:00:00">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.023406</Latitude>
+                <Longitude>47.308613</Longitude>
+                <Elevation>1.3845</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-10-15T00:00:00" endDate="2017-12-13T00:00:00">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.023400</Latitude>
+                <Longitude>47.308600</Longitude>
+                <Elevation>1384.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.023400</Latitude>
+                <Longitude>47.308600</Longitude>
+                <Elevation>1384.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I33H4" startDate="2001-10-15T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.006130</Latitude>
+            <Longitude>47.293733</Longitude>
+            <Elevation>1.38313</Elevation>
+            <Site>
+                <Name>I33MG ANTANANARIVO INFRASONIC H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-01-25T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.006130</Latitude>
+                <Longitude>47.293733</Longitude>
+                <Elevation>1.38313</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-10-15T00:00:00" endDate="2018-01-25T00:00:00">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.006130</Latitude>
+                <Longitude>47.293733</Longitude>
+                <Elevation>1.38313</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2001-10-15T00:00:00" endDate="2017-12-13T00:00:00">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.006100</Latitude>
+                <Longitude>47.293700</Longitude>
+                <Elevation>1383.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-14T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I33MG ANTANANARIVO INFRASONIC</Description>
+                </Sensor>
+                <Latitude>-19.006100</Latitude>
+                <Longitude>47.293700</Longitude>
+                <Elevation>1383.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

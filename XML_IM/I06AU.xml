@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>8</TotalNumberStations>
+        <Station code="I06H1" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+            <Latitude>-12.146450</Latitude>
+            <Longitude>96.820320</Longitude>
+            <Elevation>-0.01684</Elevation>
+            <Site>
+                <Name>I06AU H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I06AU</Description>
+                </Sensor>
+                <Latitude>-12.146450</Latitude>
+                <Longitude>96.820320</Longitude>
+                <Elevation>-0.01684</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I06H2" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+            <Latitude>-12.147520</Latitude>
+            <Longitude>96.818550</Longitude>
+            <Elevation>-0.01764</Elevation>
+            <Site>
+                <Name>I06AU H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I06AU</Description>
+                </Sensor>
+                <Latitude>-12.147520</Latitude>
+                <Longitude>96.818550</Longitude>
+                <Elevation>-0.01764</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I06H3" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+            <Latitude>-12.145090</Latitude>
+            <Longitude>96.817740</Longitude>
+            <Elevation>-0.02078</Elevation>
+            <Site>
+                <Name>I06AU H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I06AU</Description>
+                </Sensor>
+                <Latitude>-12.145090</Latitude>
+                <Longitude>96.817740</Longitude>
+                <Elevation>-0.02078</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I06H4" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+            <Latitude>-12.143540</Latitude>
+            <Longitude>96.818490</Longitude>
+            <Elevation>-0.01602</Elevation>
+            <Site>
+                <Name>I06AU H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I06AU</Description>
+                </Sensor>
+                <Latitude>-12.143540</Latitude>
+                <Longitude>96.818490</Longitude>
+                <Elevation>-0.01602</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I06H5" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+            <Latitude>-12.144700</Latitude>
+            <Longitude>96.820850</Longitude>
+            <Elevation>-0.01929</Elevation>
+            <Site>
+                <Name>I06AU H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I06AU</Description>
+                </Sensor>
+                <Latitude>-12.144700</Latitude>
+                <Longitude>96.820850</Longitude>
+                <Elevation>-0.01929</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I06H6" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+            <Latitude>-12.145850</Latitude>
+            <Longitude>96.824280</Longitude>
+            <Elevation>-0.02922</Elevation>
+            <Site>
+                <Name>I06AU H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I06AU</Description>
+                </Sensor>
+                <Latitude>-12.145850</Latitude>
+                <Longitude>96.824280</Longitude>
+                <Elevation>-0.02922</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I06H7" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+            <Latitude>-12.154220</Latitude>
+            <Longitude>96.826880</Longitude>
+            <Elevation>-0.01395</Elevation>
+            <Site>
+                <Name>I06AU H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I06AU</Description>
+                </Sensor>
+                <Latitude>-12.154220</Latitude>
+                <Longitude>96.826880</Longitude>
+                <Elevation>-0.01395</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I06H8" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+            <Latitude>-12.157240</Latitude>
+            <Longitude>96.821690</Longitude>
+            <Elevation>-0.01192</Elevation>
+            <Site>
+                <Name>I06AU H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2011-10-31T14:14:06" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I06AU</Description>
+                </Sensor>
+                <Latitude>-12.157240</Latitude>
+                <Longitude>96.821690</Longitude>
+                <Elevation>-0.01192</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>7</TotalNumberStations>
+        <Station code="I35H1" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.191350</Latitude>
+            <Longitude>17.576780</Longitude>
+            <Elevation>1.25253</Elevation>
+            <Site>
+                <Name>I35NA TSUMEB NAMIBIA H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.191350</Latitude>
+                <Longitude>17.576780</Longitude>
+                <Elevation>1.25253</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2020-11-13T00:00:00">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.191400</Latitude>
+                <Longitude>17.576800</Longitude>
+                <Elevation>1252.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.191400</Latitude>
+                <Longitude>17.576800</Longitude>
+                <Elevation>1252.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I35H2" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.182180</Latitude>
+            <Longitude>17.579840</Longitude>
+            <Elevation>1.25342</Elevation>
+            <Site>
+                <Name>I35NA TSUMEB NAMIBIA H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.182180</Latitude>
+                <Longitude>17.579840</Longitude>
+                <Elevation>1.25342</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2020-11-13T00:00:00">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.182200</Latitude>
+                <Longitude>17.579800</Longitude>
+                <Elevation>1253.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.182200</Latitude>
+                <Longitude>17.579800</Longitude>
+                <Elevation>1253.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I35H3" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.198860</Latitude>
+            <Longitude>17.583940</Longitude>
+            <Elevation>1.25069</Elevation>
+            <Site>
+                <Name>I35NA TSUMEB NAMIBIA H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.198860</Latitude>
+                <Longitude>17.583940</Longitude>
+                <Elevation>1.25069</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2020-11-13T00:00:00">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.198900</Latitude>
+                <Longitude>17.583900</Longitude>
+                <Elevation>1250.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.198900</Latitude>
+                <Longitude>17.583900</Longitude>
+                <Elevation>1250.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I35H4" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.193820</Latitude>
+            <Longitude>17.565170</Longitude>
+            <Elevation>1.25389</Elevation>
+            <Site>
+                <Name>I35NA TSUMEB NAMIBIA H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.193820</Latitude>
+                <Longitude>17.565170</Longitude>
+                <Elevation>1.25389</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2020-11-13T00:00:00">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.193800</Latitude>
+                <Longitude>17.565200</Longitude>
+                <Elevation>1253.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.193800</Latitude>
+                <Longitude>17.565200</Longitude>
+                <Elevation>1253.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I35H5" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.191460</Latitude>
+            <Longitude>17.574910</Longitude>
+            <Elevation>1.24974</Elevation>
+            <Site>
+                <Name>I35NA TSUMEB NAMIBIA H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.191460</Latitude>
+                <Longitude>17.574910</Longitude>
+                <Elevation>1.24974</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2020-11-13T00:00:00">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.191500</Latitude>
+                <Longitude>17.574900</Longitude>
+                <Elevation>1249.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.191500</Latitude>
+                <Longitude>17.574900</Longitude>
+                <Elevation>1249.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I35H6" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.189530</Latitude>
+            <Longitude>17.575170</Longitude>
+            <Elevation>1.25367</Elevation>
+            <Site>
+                <Name>I35NA TSUMEB NAMIBIA H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.189530</Latitude>
+                <Longitude>17.575170</Longitude>
+                <Elevation>1.25367</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2020-11-13T00:00:00">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.189500</Latitude>
+                <Longitude>17.575200</Longitude>
+                <Elevation>1253.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.189500</Latitude>
+                <Longitude>17.575200</Longitude>
+                <Elevation>1253.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I35H7" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-19.189680</Latitude>
+            <Longitude>17.576950</Longitude>
+            <Elevation>1.25484</Elevation>
+            <Site>
+                <Name>I35NA TSUMEB NAMIBIA H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.189680</Latitude>
+                <Longitude>17.576950</Longitude>
+                <Elevation>1.25484</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2003-03-19T00:00:00" endDate="2020-11-13T00:00:00">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.189700</Latitude>
+                <Longitude>17.577000</Longitude>
+                <Elevation>1254.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-11-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I35NA TSUMEB NAMIBIA</Description>
+                </Sensor>
+                <Latitude>-19.189700</Latitude>
+                <Longitude>17.577000</Longitude>
+                <Elevation>1254.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

@@ -2,7 +2,7 @@
 """
 convert_ims.py — Convert all_IMS_sts.xml → one XML file per IMS station in XML_IM/
 
-Copyright (c) 2024-2025 Islam Hamama
+Copyright (c) 2024-2026 Islam Hamama
 Contact: islam.hamama@nriag.sci.eg
 
 Licensed under the MIT License — see LICENSE for details.

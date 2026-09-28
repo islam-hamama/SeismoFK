@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>4</TotalNumberStations>
+        <Station code="I51H1" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+            <Latitude>32.361540</Latitude>
+            <Longitude>-64.698740</Longitude>
+            <Elevation>-0.0346</Elevation>
+            <Site>
+                <Name>I51GB BERMUDA H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.361540</Latitude>
+                <Longitude>-64.698740</Longitude>
+                <Elevation>-0.0346</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T17:26:44" endDate="2020-12-13T00:00:00">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.361500</Latitude>
+                <Longitude>-64.698700</Longitude>
+                <Elevation>-34.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2022-07-27T00:00:00">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.361500</Latitude>
+                <Longitude>-64.698700</Longitude>
+                <Elevation>-34.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-07-27T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.361500</Latitude>
+                <Longitude>-64.698700</Longitude>
+                <Elevation>-34.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I51H2" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+            <Latitude>32.354080</Latitude>
+            <Longitude>-64.686100</Longitude>
+            <Elevation>-0.03331</Elevation>
+            <Site>
+                <Name>I51GB BERMUDA H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.354080</Latitude>
+                <Longitude>-64.686100</Longitude>
+                <Elevation>-0.03331</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T17:26:44" endDate="2020-12-13T00:00:00">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.354100</Latitude>
+                <Longitude>-64.686100</Longitude>
+                <Elevation>-33.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2022-07-27T00:00:00">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.354100</Latitude>
+                <Longitude>-64.686100</Longitude>
+                <Elevation>-33.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-07-27T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.354100</Latitude>
+                <Longitude>-64.686100</Longitude>
+                <Elevation>-33.3</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I51H3" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+            <Latitude>32.341240</Latitude>
+            <Longitude>-64.702220</Longitude>
+            <Elevation>-0.0268</Elevation>
+            <Site>
+                <Name>I51GB BERMUDA H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.341240</Latitude>
+                <Longitude>-64.702220</Longitude>
+                <Elevation>-0.0268</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T17:26:44" endDate="2020-12-13T00:00:00">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.341200</Latitude>
+                <Longitude>-64.702200</Longitude>
+                <Elevation>-26.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2022-07-27T00:00:00">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.341200</Latitude>
+                <Longitude>-64.702200</Longitude>
+                <Elevation>-26.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-07-27T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.341200</Latitude>
+                <Longitude>-64.702200</Longitude>
+                <Elevation>-26.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I51H4" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+            <Latitude>32.349570</Latitude>
+            <Longitude>-64.711040</Longitude>
+            <Elevation>-0.0126</Elevation>
+            <Site>
+                <Name>I51GB BERMUDA H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T17:26:44" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.349570</Latitude>
+                <Longitude>-64.711040</Longitude>
+                <Elevation>-0.0126</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2008-11-10T17:26:44" endDate="2020-12-13T00:00:00">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.349600</Latitude>
+                <Longitude>-64.711000</Longitude>
+                <Elevation>-12.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2020-12-14T00:00:00" endDate="2022-07-27T00:00:00">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.349600</Latitude>
+                <Longitude>-64.711000</Longitude>
+                <Elevation>-12.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-07-27T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I51GB BERMUDA</Description>
+                </Sensor>
+                <Latitude>32.349600</Latitude>
+                <Longitude>-64.711000</Longitude>
+                <Elevation>-12.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8000</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

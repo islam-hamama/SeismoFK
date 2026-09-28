@@ -1,6 +1,103 @@
-# SeismoFK
+# SeismoFK — v1.2.1
 
 **SeismoFK** is a desktop application for **frequency–wavenumber (FK) array analysis** of infrasound data. It provides an interactive PyQt5 interface for loading MiniSEED waveforms, removing instrument response, running FK / beamforming array processing, visualising the results, and archiving classified events in a local database.
+
+The spectrogram data export and processing disclosure were informed by
+Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026),
+*Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents*,
+[arXiv:2609.00065](https://doi.org/10.48550/arXiv.2609.00065).
+
+---
+
+## New in v1.2.1
+
+This release adds modern array-analysis methods — now reachable **both** from the
+GUI and as importable modules / a batch CLI — and polishes the GUI results figure.
+The conventional-FK run pipeline is unchanged; the new methods are additive.
+
+- **High-resolution adaptive beamforming** — Capon / MVDR and MUSIC slowness
+  estimators alongside the classical Bartlett (conventional FK), with much
+  sharper slowness peaks and better separation of close/multiple arrivals
+  (`fk_analysis.fk_beamform`; in the GUI via **Slowness map · Capon / MUSIC**).
+- **PMCC detector with families** — multi-band, triplet-consistency detection
+  pixels with least-squares slowness (`pmcc.pmcc`). Pixels that are adjacent in
+  time and frequency and agree in back-azimuth and trace velocity are grouped
+  into **families**, one per coherent arrival (`pmcc.pmcc_families`). Each
+  pixel and family carries a **95% confidence interval** for back-azimuth and
+  trace velocity from an arrival-time error model. In a development study on
+  180 noisy synthetic plane waves the family intervals contained the true
+  values 98–100% of the time; the regression test requires at least 85% on 16
+  cases. The intervals have **not yet been validated against ground-truth
+  field events**, and they don't include model errors such as wavefront
+  curvature, topography or wind shear. Families in which the direction
+  changes, which usually means two merged sources, are flagged. Grouping uses
+  single linkage, so nearby sources can still chain into one family: the flag
+  reduces this risk but doesn't guarantee separation. A family
+  is the detection product used for bulletins, with its time span, frequency
+  range, back-azimuth ± spread and velocity. In the GUI, use the **PMCC
+  detector** button (families are shaded and listed, and can be exported); the
+  CLI archives them under `families/`.
+- **Noise levels** — time-domain RMS level of every sensor in consecutive
+  windows (seconds to an hour, 1 min by default) in **dB re 20 µPa**, with the
+  acoustic statistics L90 / L50 / L10 and Leq (a power average). Each sensor
+  is compared with the median of the others and flagged as a warning at 3 dB
+  or a fault at 6 dB (gain or metadata errors, wind-noise-reducer faults).
+  Hour-of-day medians show the diurnal wind cycle. In the GUI, use the
+  **Noise levels** button; for long records, `seismofk-cli --method noise`.
+- **Bootstrap uncertainty** — back-azimuth / apparent-velocity confidence
+  intervals and a slowness-space confidence ellipse (`fk_analysis.bootstrap_beam`;
+  in the GUI via the **“Estimate uncertainty (bootstrap)”** checkbox, which adds
+  `baz ± σ` / `vel ± σ` to the results title and a marker on the polar map).
+- **Array Response Function** — theoretical ARF for the current geometry, showing
+  spatial aliasing and slowness resolution (`fk_analysis.array_response`; in the
+  GUI via **Array response**).
+- **Long-term batch CLI** (`seismofk_cli.py`) — stream an arbitrary time range in
+  chunks and archive detections to a **Parquet** table + **JSON** metadata
+  sidecar + master `index.csv`, ideal for months/years of continuous data. It
+  indexes files *headers-only* and loads **one chunk at a time**, so peak memory
+  scales with `--chunk`, not total duration — a year-long run won’t exhaust RAM,
+  and an interrupted run keeps every completed chunk. Before processing, it
+  runs the same readiness checks as the GUI (`--check-only` to run just those),
+  skips chunks with too many missing samples (`--max-gap`), and records each
+  chunk's status, calibration units and gap fraction in `index.csv`.
+  `--method fk` runs the GUI's conventional FK pipeline, and
+  `--save-figures` writes a figure for every chunk plus a whole-run summary
+  without needing a display. For `fk` the figure is the GUI's six-panel figure;
+  for the other methods it shows the waveform plus detections.
+- **Results-figure layout fixes** — the semblance colorbar and polar plot title
+  have separate space, and the expected back-azimuth is labeled in the figure
+  heading without crowding the array geometry panel.
+- **Result windows** — FK, slowness, array response, and PMCC views use a shared
+  desktop layout with readable summaries and figure export controls, and the
+  spectrogram, waveform picker, event database and readiness dialogs share the
+  same style. The FK beam axis shows the units read from StationXML
+  (Pa for infrasound sensors, m/s for seismometers, or raw counts).
+- **Spectrogram reliability** — short picked windows use enough time slices to
+  show a signal; missing pressure calibration falls back to clearly labeled
+  raw-count PSD instead of leaving the plot blank. Picked spectrograms use the
+  main **Duration** rather than the short FK window, with adjustable smoothing.
+- **Data readiness** — check timing overlap, sample rates, frequency band,
+  array geometry, and pressure calibration before interpreting a run.
+- **Spectrogram data export** — save frequencies, UTC times, raw and displayed
+  PSD arrays, and processing settings to a NumPy `.npz` archive.
+- **Installable package** — `pip install .` provides `seismofk` and
+  `seismofk-cli` commands; use `pip install ".[parquet]"` for Parquet output.
+- **Fix:** JPEG auto-save now uses `pil_kwargs` (the removed `quality=` argument
+  broke figure auto-save — and the saved-event thumbnail — on matplotlib ≥3.3).
+
+### New GUI controls
+
+The main window places data sources and FK settings in a scrollable sidebar,
+with a large waveform explorer, clear run control, and a dedicated **Array methods**
+panel. Its three actions — **Array response**, **Slowness map · Capon / MUSIC**,
+and **PMCC detector** — each open their own window. They use the loaded waveforms
+and inventory (and, for the slowness map, the picked start time / window length),
+so no extra setup is needed. The **“Estimate uncertainty (bootstrap)”** checkbox
+sits in the FK configuration group and affects the normal FK run.
+
+All new routines are verified against a synthetic plane wave in `_selftest.py`
+(`python _selftest.py`). For full details and the JSON-vs-Parquet rationale see
+**[README_v1.2.1.md](README_v1.2.1.md)**.
 
 ---
 
@@ -27,7 +124,7 @@ SeismoFK is built primarily for **infrasound array monitoring** — for example,
 - **FK / beamforming array processing** (built on `obspy.signal.array_analysis.array_processing`) reporting semblance, Fisher ratio, FK power, back-azimuth, slowness and apparent velocity per window.
 - **Delay-and-sum beam** steered to the dominant detected back-azimuth and apparent velocity.
 - **Expected back-azimuth** computed from a user-supplied source latitude/longitude for direct comparison with the measurement.
-- **Optional event physics** — supply a known origin time and a celerity (typical infrasound range ~300–360 m/s) to overlay the expected infrasound arrival on the beam waveform.
+- **Optional event physics** — supply a known origin time and a celerity (typical infrasound range ~220–340 m/s) to overlay the expected infrasound arrival on the beam waveform.
 - **Mixed sampling-rate handling** — traces at different sample rates are resampled to a common rate before processing.
 - **Results window** with high-resolution figure export (300 DPI; PNG / PDF / SVG).
 - **Event database** — classify and archive each analysis in a local SQLite database (`fk_events.db`), with a built-in browser to review, edit and delete records, and CSV export. The analysis figure is stored alongside the metadata.
@@ -43,6 +140,16 @@ SeismoFK is built primarily for **infrasound array monitoring** — for example,
 |:---:|:---:|:---:|:---:|
 | ![Main window](screenshots/01_main_window.png)<br>**Main analysis window** | ![XML Creator](screenshots/02_xml_creator.png)<br>**XML Creator / Editor** | ![Event Database](screenshots/03_event_database.png)<br>**Event Database** | ![Waveform viewer](screenshots/04_waveform_viewer.jpg)<br>**Waveform viewer & time-picker** |
 | ![Spectrogram window](screenshots/05_spectrogram.jpg)<br>**Spectrogram window** *(new)* | ![Event Database notes](screenshots/06_event_database_notes.jpg)<br>**Event Database — Note column** | ![Edit event dialog](screenshots/07_event_database_edit.jpg)<br>**Edit event dialog** | ![FK analysis result](screenshots/08_fk_result_artemis.png)<br>**FK result — Artemis II re-entry** |
+
+![PMCC-style detector on a synthetic 120° / 340 m/s plane wave](screenshots/09_pmcc_synthetic.png)
+
+![FK results window for a synthetic 120° / 340 m/s plane wave](screenshots/12_results_window_synthetic.png)
+
+![Capon slowness map for a synthetic 120° / 340 m/s plane wave](screenshots/13_slowness_map_synthetic.png)
+
+![Spectrogram of three synthetic channels in raw-count mode](screenshots/11_spectrogram_synthetic.png)
+
+*PMCC-style detector with synthetic test data: the plane-wave burst stands out above the grey noise windows, and the summary reports 119.2° and 339 m/s.*
 
 ---
 
@@ -60,8 +167,12 @@ SeismoFK is built primarily for **infrasound array monitoring** — for example,
 | pandas | `>=2.0` | Tabular results / CSV output |
 | matplotlib | `>=3.7` | Plotting (Qt5Agg backend) |
 | ObsPy | `>=1.4` | MiniSEED I/O, StationXML, response removal, array processing |
+| SciPy | `>=1.10` | Capon/MUSIC, PMCC correlation, bootstrap statistics, spectrogram |
+| pyarrow | `>=12.0` | Parquet detection archive for the long-term CLI *(optional — falls back to CSV)* |
 
-> The spectrogram utility additionally uses **SciPy** (`scipy.signal`). If you intend to use `plot_spectrogram_window.py`, install SciPy as well (`pip install scipy`).
+> SciPy is now a core dependency (used by the v1.2.1 methods and the spectrogram
+> utility). **pyarrow** is only needed for Parquet output from `seismofk_cli.py`;
+> without it the CLI transparently writes CSV instead.
 
 ---
 
@@ -70,14 +181,15 @@ SeismoFK is built primarily for **infrasound array monitoring** — for example,
 ```bash
 # 1. Clone the repository
 git clone https://github.com/islam-hamama/SeismoFK.git
-cd SeismoFK_v1
+cd SeismoFK
 
 # 2. (Recommended) create and activate a virtual environment
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
-# 3. Install dependencies
-pip install -r requirements.txt
+# 3. Install the application and its required dependencies
+pip install .
+# Optional: pip install ".[parquet]" for Parquet archives
 ```
 
 ---
@@ -87,10 +199,16 @@ pip install -r requirements.txt
 The application entry point is **`Infra_Analysis.py`**:
 
 ```bash
-python Infra_Analysis.py
+seismofk
 ```
 
 This opens the main **SeismoFK — Infrasound FK Array Analysis** window.
+Running `python Infra_Analysis.py` from a source checkout still works.
+
+Added StationXML files and new event databases are stored in
+`~/.seismofk/` by default. Set `SEISMOFK_DATA_DIR` to use another directory.
+Existing `XML/`, `XML_IM/`, and `fk_events.db` beside the source files remain
+available when running from a checkout.
 
 > For a full, step-by-step walkthrough of every panel and tool, see **[USAGE.md](USAGE.md)**.
 
@@ -104,11 +222,34 @@ This opens the main **SeismoFK — Infrasound FK Array Analysis** window.
 6. **Review results** — the results window shows the FK detections, the steered beam, and the array geometry. Export the figure at 300 DPI if needed.
 7. **Save to database** — classify the event (explosion, mining, volcanic, microbaroms, etc.) and archive it, with the figure, in the local SQLite database.
 
+### Long-term batch analysis (command line)
+
+For continuous monitoring over days, months or years, use the v1.2.1 batch
+driver, which streams the time range in chunks and archives detections to
+Parquet + JSON (see [README_v1.2.1.md](README_v1.2.1.md) and
+[USAGE.md §7.4](USAGE.md#74-seismofk_clipy--long-term-batch-array-analysis)):
+
+```bash
+# High-resolution Capon FK, hourly chunks, with bootstrap uncertainty
+python seismofk_cli.py \
+    --mseed "data/2025-05/*.mseed" --inventory XML_IM/ \
+    --start 2025-05-01T00:00:00 --end 2025-06-01T00:00:00 \
+    --method capon --fmin 0.5 --fmax 4.0 \
+    --win-length 30 --chunk 3600 \
+    --array-name I31 --out-dir results/ --bootstrap
+
+# PMCC-style detection pixels, 6 log-spaced bands
+python seismofk_cli.py --mseed data/ --inventory XML_IM/ \
+    --start 2025-05-01 --end 2025-05-02 \
+    --method pmcc --fmin 0.1 --fmax 8.0 --pmcc-bands 6 \
+    --win-length 30 --array-name I31 --out-dir results/
+```
+
 ---
 
 ## Station metadata (XML inventories)
 
-This repository does **not** include station XML files. IMS infrasound station metadata is subject to CTBTO/IRIS data-distribution policies and cannot be redistributed. The local HLW (Helwan) station file is also not bundled.
+The repository includes StationXML inventories for the IMS infrasound arrays in **`XML_IM/`** (I01AR–I60US), converted from FDSN StationXML with `convert_ims.py`. They are provided as-is. Check that each station's epochs and sensitivities suit your analysis: some, such as I48TN, contain overlapping epochs, and SeismoFK resolves those to the most recent calibration and reports it in **Check data readiness**. Your own files in `XML/` are not tracked by Git.
 
 **You can supply your own.** Two options:
 
@@ -124,9 +265,12 @@ On startup (and whenever you click *⟳ Refresh*), SeismoFK scans two directorie
 - **`XML_IM/`** — intended for IMS / multi-station array inventories. If this directory contains any `.xml` files, a single **"★ All IMS Stations (XML_IM/)"** entry is added first; selecting it loads and merges *every* `.xml` file in the directory into one combined inventory. Each individual file in `XML_IM/` is also listed separately, tagged `[IMS]`.
 - **`XML/`** — for individual / custom station files. Each `.xml` file is listed as its own entry.
 
-If neither directory exists the app warns that no inventory was found. The **+ Add XML** button copies a chosen StationXML file into `XML/` and refreshes the list. When an entry that points to a *directory* is selected, SeismoFK merges all the XML files in that directory at analysis time.
+The **+ Add XML** button copies a chosen StationXML file into `~/.seismofk/XML/`
+and refreshes the list. The XML Creator also saves there by default. Existing
+`XML/` and `XML_IM/` files in a checkout remain discoverable. When an entry
+points to a directory, SeismoFK merges its XML files at analysis time.
 
-> **Note:** `convert_ims.py` currently uses absolute input/output paths defined at the top of the file (`SRC_FILE` and `OUT_DIR`). Review and adjust them for your environment before running it.
+`convert_ims.py` defaults to `all_IMS_sts.xml` and `XML_IM/` beside the script; pass a source file and `-o` to override them.
 
 ---
 
@@ -135,7 +279,11 @@ If neither directory exists the app warns that no inventory was found. The **+ A
 | File | Role |
 |---|---|
 | `Infra_Analysis.py` | Main application and GUI entry point. |
-| `fk_analysis.py` | Core FK / beamforming routines (`fk_array`, `compute_beam`, inventory loading, coordinate lookup). |
+| `fk_analysis.py` | Core FK / beamforming routines (`fk_array`, `compute_beam`, inventory loading, coordinate lookup) **plus the v1.2.1 high-resolution beamformers** (`fk_beamform`: Capon/MUSIC/Bartlett), windowed scanner (`fk_scan`), bootstrap (`bootstrap_beam`) and array response (`array_response`). |
+| `pmcc.py` | **(v1.2.1)** Progressive Multi-Channel Correlation detector for infrasound (`pmcc`, `log_bands`). |
+| `results_io.py` | **(v1.2.1)** Parquet + JSON-sidecar + `index.csv` writers for the long-term detection archive. |
+| `seismofk_cli.py` | **(v1.2.1)** Command-line batch driver for long-term analysis (`bartlett` / `capon` / `music` / `pmcc`). |
+| `gui_methods.py` | **(v1.2.1)** GUI dialogs for the new methods — Array Response, Capon/MUSIC slowness map, and the PMCC detector window. |
 | `xml_creator.py` | Standalone StationXML Creator / Editor — also launchable from the main window. Supports multi-station arrays, per-channel sensitivity, sensor presets, loading/editing existing XMLs and CSV import. |
 | `convert_ims.py` | Converts a combined `all_IMS_sts.xml` FDSN StationXML into one XML file per IMS station in `XML_IM/`. |
 | `export_stations.py` | Alternative IMS station splitter that exports individual stations from `all_IMS_sts.xml`. |
@@ -162,7 +310,6 @@ python xml_creator.py
 
 Released under the **MIT License** — see [LICENSE](LICENSE).
 
-> **Note for review:** the bundled `LICENSE` file currently lists a placeholder copyright holder. Update it to match the source headers (which credit *Islam Hamama, 2024–2025*) before the public launch.
 
 ---
 
@@ -170,7 +317,11 @@ Released under the **MIT License** — see [LICENSE](LICENSE).
 
 If you use SeismoFK in your research, please cite it. Citation metadata is provided in [`CITATION.cff`](CITATION.cff) (Citation File Format 1.2.0); GitHub renders this as a *"Cite this repository"* button.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20301796.svg)](https://doi.org/10.5281/zenodo.20301796)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20301795.svg)](https://doi.org/10.5281/zenodo.20301795)
+
+Hamama, I. (2026). SeismoFK (v1.2.1). Zenodo. https://doi.org/10.5281/zenodo.20301795
+
+The DOI above is the *concept* DOI, which always resolves to the latest version. Each release also has its own version DOI, listed on the Zenodo record (v1.2.0: [10.5281/zenodo.20301796](https://doi.org/10.5281/zenodo.20301796)).
 
 ---
 

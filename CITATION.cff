@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata from this file."
 title: "SeismoFK"
+version: "1.2.1"
 abstract: >-
   SeismoFK is a desktop application for frequency-wavenumber (FK) array
   analysis of infrasound and seismic array data. It provides an interactive
@@ -16,4 +17,5 @@ authors:
     orcid: "https://orcid.org/0000-0001-9296-412X"
 license: MIT
 repository-code: "https://github.com/islam-hamama/SeismoFK"
-doi: "10.5281/zenodo.20301796"
+doi: "10.5281/zenodo.20301795"
+date-released: "2026-09-28"

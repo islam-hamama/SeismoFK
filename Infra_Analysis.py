@@ -1,7 +1,7 @@
 """
 Infra_Analysis.py — SeismoFK Infrasound FK Array Analysis GUI
 
-Copyright (c) 2024-2025 Islam Hamama
+Copyright (c) 2024-2026 Islam Hamama
 Contact: islam.hamama@nriag.sci.eg
 
 Licensed under the MIT License — see LICENSE for details.
@@ -9,6 +9,8 @@ Licensed under the MIT License — see LICENSE for details.
 import sys
 import os
 import shutil
+import json
+import html
 
 import matplotlib
 matplotlib.use('Qt5Agg')
@@ -22,11 +24,11 @@ from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QPushButton, QLabel, QLineEdit, QFileDialog, QMessageBox,
     QDoubleSpinBox, QDateTimeEdit, QProgressBar, QDialog, QFrame,
-    QComboBox, QStyledItemDelegate, QGroupBox, QSizePolicy,
+    QComboBox, QStyledItemDelegate, QGroupBox, QSizePolicy, QScrollArea,
     QTextEdit, QTableWidget, QTableWidgetItem, QHeaderView, QCheckBox,
 )
 from PyQt5.QtCore  import Qt, QDateTime, QThread, pyqtSignal
-from PyQt5.QtGui   import QPixmap, QStandardItem, QStandardItemModel
+from PyQt5.QtGui   import QFontDatabase, QPixmap, QStandardItem, QStandardItemModel
 
 from matplotlib.backends.backend_qt5agg import (
     FigureCanvasQTAgg as FigureCanvas,
@@ -34,13 +36,41 @@ from matplotlib.backends.backend_qt5agg import (
 )
 
 from obspy import read, read_inventory, UTCDateTime
+import fk_analysis as fk
 from fk_analysis import fk_array
 import db_manager
+from app_paths import inventory_dir
+import result_plots
+
+result_plots.apply_plot_style()
+from matplotlib.ticker import FuncFormatter
+from result_ui import (PALETTE, _track, apply_app_theme, apply_main_style,
+                       apply_result_style, metric_card, result_header,
+                       style_plot_toolbar)
 
 
 # ═══════════════════════════════════════════════════════════════════════════
 #  Background worker thread
 # ═══════════════════════════════════════════════════════════════════════════
+def _envelope(data, delta, offset, max_points=6000):
+    """
+    Display envelope of a trace: (times_s, values), demeaned.  Long traces
+    are reduced to per-bin min/max pairs, which keeps every spike visible
+    while drawing a fixed number of points.
+    """
+    data = np.asarray(data, dtype=float)
+    data = data - data.mean() if data.size else data
+    n = data.size
+    if n <= max_points:
+        return offset + np.arange(n) * delta, data
+    bins = max_points // 2
+    step = n // bins
+    blocks = data[:bins * step].reshape(bins, step)
+    centres = offset + (np.arange(bins) * step + step / 2.0) * delta
+    return (np.repeat(centres, 2),
+            np.column_stack([blocks.min(axis=1), blocks.max(axis=1)]).ravel())
+
+
 class ProcessThread(QThread):
     finished = pyqtSignal(dict)
     progress = pyqtSignal(int)
@@ -79,6 +109,9 @@ class ProcessThread(QThread):
                 self.status.emit(f"Loaded {len(xml_files)} station files ...")
             else:
                 inv = read_inventory(inv_path)
+            # One channel epoch per trace (latest calibration wins) so response
+            # removal, sensitivity and coordinates all use the same metadata.
+            inv = fk.resolve_epochs(inv, st)
             self.progress.emit(35)
 
             # ── Step 3: Merge and clean masked arrays ─────────────────────
@@ -88,26 +121,41 @@ class ProcessThread(QThread):
                     tr.data = tr.data.filled(0)
             self.progress.emit(45)
 
-            # ── Step 4: Full instrument response removal → output in Pa ──────
+            # ── Step 4: Full instrument response removal ──────────────────
+            # Pressure sensors come out in Pa (ObsPy applies a PA response
+            # as-is even with output='VEL'); units are read from StationXML.
             self.status.emit("Removing instrument response ...")
             try:
-                st.remove_response(
+                fk.require_response_stages(inv, st)
+                calibrated = st.copy()
+                calibrated.remove_response(
                     inventory=inv,
                     output='VEL',
                     pre_filt=(0.1, 0.5, 9.0, 10.0),
                     water_level=60,
                 )
+                st = calibrated
+                trace_units = [fk.calibrated_units(inv, tr, 'VEL') for tr in st]
             except Exception as e:
                 # Fallback: scalar sensitivity division if response removal fails
                 self.status.emit(f"Response removal failed ({e}), using scalar sensitivity ...")
+                trace_units = []
                 for tr in st:
+                    unit = "counts"
                     try:
                         resp = inv.get_response(tr.id, datetime=tr.stats.starttime)
-                        sens = resp.instrument_sensitivity.value
-                        if sens and sens != 0:
+                        sens = float(resp.instrument_sensitivity.value)
+                        if np.isfinite(sens) and sens > 0:
                             tr.data = tr.data.astype(float) / sens
+                            unit = fk.calibrated_units(inv, tr, 'DEF')
                     except Exception:
                         pass   # keep raw counts if no response found
+                    trace_units.append(unit)
+            uncalibrated = [tr.id for tr, unit in zip(st, trace_units)
+                            if unit == "counts"]
+            if uncalibrated:
+                self.status.emit("No response for " + ", ".join(uncalibrated)
+                                 + " — beam amplitude is in raw counts.")
             self.progress.emit(60)
 
             # ── Step 5: FK analysis ───────────────────────────────────────
@@ -131,6 +179,8 @@ class ProcessThread(QThread):
             self.status.emit("Done.")
             # Pass semb_thresh through so _show_results can use it
             result['semb_thresh'] = self.params.get('semb_thresh', 0.3)
+            result['beam_units'] = (trace_units[0] if len(set(trace_units)) == 1
+                                    else "mixed units")
             self.finished.emit(result)
 
         except Exception as e:
@@ -148,21 +198,17 @@ class FooterWidget(QWidget):
         layout = QHBoxLayout(self)
         layout.setContentsMargins(4, 2, 4, 2)
 
-        logo_label = QLabel()
-        logo_label.setStyleSheet(
-            "border-radius:8px; background:rgba(0,0,0,0.05); padding:4px;")
         logo_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo.png")
         if os.path.exists(logo_path):
+            logo_label = QLabel()
             pix = QPixmap(logo_path).scaled(28, 28, Qt.KeepAspectRatio,
                                              Qt.SmoothTransformation)
             logo_label.setPixmap(pix)
-        layout.addWidget(logo_label)
+            layout.addWidget(logo_label)
         layout.addStretch()
 
-        copy_label = QLabel("© 2024-2025 Islam Hamama  |  islam.hamama@nriag.sci.eg")
-        copy_label.setStyleSheet(
-            "font-weight:bold; color:#666; padding:4px;"
-            "background:rgba(0,0,0,0.05); border-radius:4px;")
+        copy_label = QLabel("© 2024-2026 Islam Hamama  |  islam.hamama@nriag.sci.eg")
+        copy_label.setObjectName("footerText")
         copy_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(copy_label)
 
@@ -176,15 +222,6 @@ class SaveEventDialog(QDialog):
     and persist everything to the SQLite database.
     """
 
-    _STYLE = """
-        QGroupBox { font-weight:bold; border:1px solid #ccc;
-                    border-radius:6px; margin-top:8px; padding-top:6px; }
-        QGroupBox::title { subcontrol-origin:margin; left:10px; color:#2c3e50; }
-        QTextEdit { border:1px solid #bdc3c7; border-radius:4px;
-                    background:white; padding:4px; }
-        QComboBox { padding:5px; border:1px solid #bdc3c7;
-                    border-radius:4px; background:white; }
-    """
 
     def __init__(self, result: dict, params: dict, fig=None, parent=None):
         super().__init__(parent)
@@ -192,11 +229,16 @@ class SaveEventDialog(QDialog):
         self.params = params
         self.fig    = fig
         self.setWindowTitle("Save Event to Database")
-        self.setMinimumWidth(520)
-        self.setStyleSheet(self._STYLE)
+        self.setMinimumWidth(620)
+        self.resize(680, 650)
+        apply_result_style(self)
 
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(16, 16, 16, 12)
         layout.setSpacing(10)
+        layout.addWidget(result_header(
+            "Save event", "Classify this analysis and add a note to the archive",
+            kicker="SEISMOFK / EVENT ARCHIVE", badge="REVIEW"))
 
         # ── Summary box ───────────────────────────────────────────────────
         summ_grp    = QGroupBox("Analysis Summary")
@@ -220,9 +262,8 @@ class SaveEventDialog(QDialog):
         if params.get('celerity'):
             lines.append(f"Celerity:     {params['celerity']:.1f} m/s")
         lbl = QLabel('\n'.join(lines))
-        lbl.setStyleSheet(
-            "font-family:monospace; font-size:9pt; color:#2c3e50;"
-            "background:#f0f4f8; border-radius:4px; padding:8px;")
+        lbl.setObjectName("monoSummary")
+        lbl.setFont(QFontDatabase.systemFont(QFontDatabase.FixedFont))
         summ_layout.addWidget(lbl)
         summ_grp.setLayout(summ_layout)
         layout.addWidget(summ_grp)
@@ -250,16 +291,10 @@ class SaveEventDialog(QDialog):
 
         # ── Buttons ───────────────────────────────────────────────────────
         btn_row  = QHBoxLayout()
-        save_btn = QPushButton("💾  Save")
-        save_btn.setStyleSheet(
-            "QPushButton{background:#27ae60;color:white;font-weight:bold;"
-            "padding:8px 20px;border-radius:5px;}"
-            "QPushButton:hover{background:#1e8449;}")
+        save_btn = QPushButton("Save to database")
+        save_btn.setObjectName("primaryAction")
         save_btn.clicked.connect(self._save)
         cancel_btn = QPushButton("Cancel")
-        cancel_btn.setStyleSheet(
-            "QPushButton{background:#95a5a6;color:white;padding:8px 20px;"
-            "border-radius:5px;} QPushButton:hover{background:#7f8c8d;}")
         cancel_btn.clicked.connect(self.reject)
         btn_row.addStretch()
         btn_row.addWidget(cancel_btn)
@@ -335,14 +370,21 @@ class DatabaseBrowserDialog(QDialog):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+        apply_result_style(self)
         self.setWindowTitle("SeismoFK — Event Database")
-        self.setGeometry(120, 80, 1150, 620)
+        self.setMinimumSize(900, 520)
+        self.resize(1150, 660)
         self._all_rows = []
         self._build_ui()
         self._load()
 
     def _build_ui(self):
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(16, 16, 16, 12)
+        layout.setSpacing(10)
+        layout.addWidget(result_header(
+            "Event database", "Review, classify and export archived analyses",
+            kicker="SEISMOFK / EVENT ARCHIVE", badge="DATABASE"))
 
         # ── Filter bar ────────────────────────────────────────────────────
         filter_row = QHBoxLayout()
@@ -354,7 +396,7 @@ class DatabaseBrowserDialog(QDialog):
         filter_row.addWidget(self.filter_combo)
         filter_row.addStretch()
 
-        refresh_btn = QPushButton("⟳ Refresh")
+        refresh_btn = QPushButton("Refresh")
         refresh_btn.clicked.connect(self._load)
         filter_row.addWidget(refresh_btn)
         layout.addLayout(filter_row)
@@ -368,40 +410,34 @@ class DatabaseBrowserDialog(QDialog):
         self.table.setAlternatingRowColors(True)
         self.table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
         self.table.horizontalHeader().setStretchLastSection(True)
-        self.table.setStyleSheet(
-            "QTableWidget { font-size:9pt; }"
-            "QHeaderView::section { background:#2c3e50; color:white;"
-            "  font-weight:bold; padding:4px; }")
-        layout.addWidget(self.table)
+        self.table.verticalHeader().setVisible(False)
+        layout.addWidget(self.table, stretch=1)
 
         # ── Row count label ───────────────────────────────────────────────
         self.count_lbl = QLabel("")
-        self.count_lbl.setStyleSheet("color:#555; font-style:italic;")
+        self.count_lbl.setObjectName("mutedText")
         layout.addWidget(self.count_lbl)
 
         # ── Action buttons ────────────────────────────────────────────────
         btn_row = QHBoxLayout()
 
-        edit_btn = QPushButton("✏  Edit Classification / Note")
-        edit_btn.clicked.connect(self._edit_row)
-        view_fig_btn = QPushButton("🖼  View Figure")
-        view_fig_btn.setStyleSheet(
-            "QPushButton{background:#2980b9;color:white;border-radius:5px;"
-            "padding:6px 14px;} QPushButton:hover{background:#1f618d;}")
+        view_fig_btn = QPushButton("View figure")
+        view_fig_btn.setObjectName("primaryAction")
         view_fig_btn.clicked.connect(self._view_figure)
-        delete_btn = QPushButton("🗑  Delete Selected")
-        delete_btn.setStyleSheet(
-            "QPushButton{background:#e74c3c;color:white;border-radius:5px;"
-            "padding:6px 14px;} QPushButton:hover{background:#c0392b;}")
-        delete_btn.clicked.connect(self._delete_row)
-        export_btn = QPushButton("📤  Export to CSV")
+        edit_btn = QPushButton("Edit classification…")
+        edit_btn.clicked.connect(self._edit_row)
+        export_btn = QPushButton("Export CSV…")
         export_btn.clicked.connect(self._export)
-        close_btn  = QPushButton("✖  Close")
+        delete_btn = QPushButton("Delete…")
+        delete_btn.setObjectName("dangerAction")
+        delete_btn.clicked.connect(self._delete_row)
+        close_btn  = QPushButton("Close")
         close_btn.clicked.connect(self.close)
 
-        for b in (edit_btn, view_fig_btn, delete_btn, export_btn):
+        for b in (view_fig_btn, edit_btn, export_btn):
             btn_row.addWidget(b)
         btn_row.addStretch()
+        btn_row.addWidget(delete_btn)
         btn_row.addWidget(close_btn)
         layout.addLayout(btn_row)
 
@@ -457,11 +493,19 @@ class DatabaseBrowserDialog(QDialog):
         pixmap.loadFromData(QByteArray(blob))
 
         dlg = QDialog(self)
+        apply_result_style(dlg)
         title = (f"Figure — {row_data.get('event_name','?')}  "
                  f"[{row_data.get('saved_at','?')}]")
         dlg.setWindowTitle(title)
         dlg.setMinimumSize(900, 650)
         vlay = QVBoxLayout(dlg)
+        vlay.setContentsMargins(16, 16, 16, 12)
+        vlay.setSpacing(10)
+        vlay.addWidget(result_header(
+            row_data.get('event_name') or f"Event #{event_id}",
+            f"Saved {row_data.get('saved_at', '?')}  ·  "
+            f"{row_data.get('classification') or 'Unclassified'}",
+            kicker="SEISMOFK / EVENT ARCHIVE", badge=f"#{event_id}"))
 
         scroll_lbl = QLabel()
         scroll_lbl.setPixmap(
@@ -476,12 +520,12 @@ class DatabaseBrowserDialog(QDialog):
 
         # Save button
         btn_row = QHBoxLayout()
-        save_btn = QPushButton("💾  Save as PNG")
+        save_btn = QPushButton("Save PNG…")
         save_btn.clicked.connect(lambda: self._save_blob_png(blob, row_data))
-        close_btn = QPushButton("✖  Close")
+        close_btn = QPushButton("Close")
         close_btn.clicked.connect(dlg.close)
-        btn_row.addWidget(save_btn)
         btn_row.addStretch()
+        btn_row.addWidget(save_btn)
         btn_row.addWidget(close_btn)
         vlay.addLayout(btn_row)
         dlg.exec_()
@@ -508,9 +552,15 @@ class DatabaseBrowserDialog(QDialog):
         row_data = next((r for r in self._all_rows if r.get('id') == event_id), {})
 
         dlg = QDialog(self)
+        apply_result_style(dlg)
         dlg.setWindowTitle(f"Edit Event #{event_id}")
-        dlg.setMinimumWidth(420)
+        dlg.setMinimumWidth(480)
         vlay = QVBoxLayout(dlg)
+        vlay.setContentsMargins(16, 16, 16, 12)
+        vlay.setSpacing(8)
+        vlay.addWidget(result_header(
+            f"Edit event #{event_id}", row_data.get('event_name') or "",
+            kicker="SEISMOFK / EVENT ARCHIVE", badge="EDIT"))
 
         vlay.addWidget(QLabel("Classification:"))
         cls_combo = QComboBox()
@@ -527,10 +577,8 @@ class DatabaseBrowserDialog(QDialog):
         vlay.addWidget(note_edit)
 
         btn_row = QHBoxLayout()
-        ok_btn  = QPushButton("✔  Update")
-        ok_btn.setStyleSheet(
-            "QPushButton{background:#27ae60;color:white;border-radius:5px;"
-            "padding:6px 16px;} QPushButton:hover{background:#1e8449;}")
+        ok_btn  = QPushButton("Update")
+        ok_btn.setObjectName("primaryAction")
         ok_btn.clicked.connect(dlg.accept)
         cn_btn = QPushButton("Cancel")
         cn_btn.clicked.connect(dlg.reject)
@@ -582,35 +630,72 @@ class DatabaseBrowserDialog(QDialog):
 class ResultsWindow(QDialog):
     def __init__(self, fig, result=None, params=None, parent=None):
         super().__init__(parent)
+        apply_result_style(self)
         self.setWindowTitle("SeismoFK — Analysis Results")
-        self.setGeometry(150, 100, 1300, 1050)
+        self.setMinimumSize(860, 620)
+        self.resize(1220, 840)
         self.fig    = fig
         self.result = result or {}
         self.params = params or {}
 
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(16, 16, 16, 10)
+        layout.setSpacing(10)
+        event_name = self.params.get("event_name") or "Untitled event"
+        sensors = self.result.get("n_stations")
+        start = self.params.get("start_time") or ""
+        layout.addWidget(result_header(
+            f"FK results · {event_name}",
+            f"{sensors} sensors  ·  {start}" if sensors else str(start),
+            kicker="SEISMOFK / ARRAY ANALYSIS", badge="RESULTS"))
+
+        def metric(value, spec, suffix=""):
+            try:
+                number = float(value)
+                return f"{number:{spec}}{suffix}" if np.isfinite(number) else "—"
+            except (TypeError, ValueError):
+                return "—"
+
+        semblance = np.asarray(self.result.get("semblance", []))
+        threshold = float(self.params.get("semb_thresh", 0.3))
+        detections = int(np.sum(semblance >= threshold))
+        summary = QHBoxLayout()
+        summary.setSpacing(10)
+        for label, value in (
+                ("Back-azimuth", metric(self.result.get("med_baz"), ".1f", "°")),
+                ("Trace velocity", metric(self.result.get("med_vel"), ".0f", " m/s")),
+                ("Detected windows", f"{detections} / {len(semblance)}"),
+                ("Expected direction", metric(
+                    self.result.get("expected_bazi"), ".1f", "°"))):
+            summary.addWidget(metric_card(label, value), stretch=1)
+        layout.addLayout(summary)
+
+        plot_card = QFrame()
+        plot_card.setObjectName("resultCard")
+        plot_layout = QVBoxLayout(plot_card)
+        plot_layout.setContentsMargins(10, 7, 10, 10)
+        plot_layout.setSpacing(3)
         self.canvas  = FigureCanvas(self.fig)
         self.toolbar = NavigationToolbar(self.canvas, self)
-        layout.addWidget(self.toolbar)
-        layout.addWidget(self.canvas)
+        style_plot_toolbar(self.toolbar)
+        plot_layout.addWidget(self.toolbar)
+        plot_layout.addWidget(self.canvas, stretch=1)
+        layout.addWidget(plot_card, stretch=1)
 
         btn_row = QHBoxLayout()
-        save_fig_btn = QPushButton("💾  Save Figure (300 DPI)")
+        save_fig_btn = QPushButton("Export figure")
         save_fig_btn.clicked.connect(self.save_figure)
 
-        save_db_btn = QPushButton("🗄  Save to Database")
-        save_db_btn.setStyleSheet(
-            "QPushButton{background:#8e44ad;color:white;font-weight:bold;"
-            "padding:7px 16px;border-radius:5px;}"
-            "QPushButton:hover{background:#6c3483;}")
+        save_db_btn = QPushButton("Save event")
+        save_db_btn.setObjectName("primaryAction")
         save_db_btn.clicked.connect(self._save_to_db)
 
-        close_btn = QPushButton("✖  Close")
+        close_btn = QPushButton("Close")
         close_btn.clicked.connect(self.close)
 
+        btn_row.addStretch()
         btn_row.addWidget(save_fig_btn)
         btn_row.addWidget(save_db_btn)
-        btn_row.addStretch()
         btn_row.addWidget(close_btn)
         layout.addLayout(btn_row)
         layout.addWidget(FooterWidget(self))
@@ -655,7 +740,7 @@ class SpectrogramWindow(QDialog):
     params : dict
         Initial parameters. Recognised keys (all optional, with defaults):
         ``filter_freqmin``, ``filter_freqmax``, ``freq_max``, ``nperseg``,
-        ``noverlap``, ``reference_pressure``.
+        ``noverlap``, ``smooth_bins``, ``reference_pressure``.
     """
 
     # Fixed defaults mirror plot_spectrogram_window.py's standalone values.
@@ -665,13 +750,16 @@ class SpectrogramWindow(QDialog):
         "freq_max": 5.0,
         "nperseg": 512,
         "noverlap": 460,
+        "smooth_bins": 1.0,
         "reference_pressure": 20e-6,
     }
 
     def __init__(self, stream, inventory, params=None, parent=None):
         super().__init__(parent)
+        apply_result_style(self)
         self.setWindowTitle("SeismoFK — Spectrograms")
-        self.setGeometry(140, 90, 1300, 1000)
+        self.setMinimumSize(900, 680)
+        self.resize(1250, 900)
 
         self.stream    = stream
         self.inventory = inventory
@@ -679,36 +767,75 @@ class SpectrogramWindow(QDialog):
         if params:
             cfg.update({k: v for k, v in params.items() if v is not None})
         self.reference_pressure = float(cfg["reference_pressure"])
+        from plot_spectrogram_window import get_sensitivity_counts_per_pa
+        try:
+            if inventory is None:
+                raise ValueError("No StationXML inventory selected")
+            for trace in stream:
+                get_sensitivity_counts_per_pa(inventory, trace)
+            self.units_mode = "pressure"
+            self.calibration_note = "Calibrated pressure"
+        except Exception as error:
+            self.units_mode = "counts"
+            self.calibration_note = f"Raw counts · pressure calibration unavailable: {error}"
 
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(16, 16, 16, 10)
+        layout.setSpacing(10)
+        if stream:
+            first_sample = min(tr.stats.starttime for tr in stream)
+            last_sample = max(tr.stats.endtime for tr in stream)
+            data_range = (
+                f"{len(stream)} channels  ·  "
+                f"{first_sample.strftime('%Y-%m-%d %H:%M:%S')} to "
+                f"{last_sample.strftime('%H:%M:%S')} UTC  "
+                f"({last_sample - first_sample:.0f} s)")
+        else:
+            data_range = "No waveform data loaded"
+        layout.addWidget(result_header(
+            "Spectrograms", data_range,
+            kicker="SEISMOFK / TIME–FREQUENCY",
+            badge="Pa" if self.units_mode == "pressure" else "COUNTS"))
 
         # ── In-window control row (Option C) ──────────────────────────────
-        ctrl_group  = QGroupBox("Spectrogram Parameters")
-        ctrl_layout = QHBoxLayout()
+        ctrl_group  = QFrame()
+        ctrl_group.setObjectName("resultCard")
+        ctrl_layout = QHBoxLayout(ctrl_group)
+        ctrl_layout.setContentsMargins(14, 10, 14, 10)
+        ctrl_layout.setSpacing(8)
         self.freqmin_input  = QLineEdit(f"{cfg['filter_freqmin']:g}")
         self.freqmax_input  = QLineEdit(f"{cfg['filter_freqmax']:g}")
         self.freq_max_input = QLineEdit(f"{cfg['freq_max']:g}")
         self.nperseg_input  = QLineEdit(str(int(cfg["nperseg"])))
         self.noverlap_input = QLineEdit(str(int(cfg["noverlap"])))
+        self.smoothing_input = QDoubleSpinBox()
+        self.smoothing_input.setRange(0.0, 3.0)
+        self.smoothing_input.setDecimals(1)
+        self.smoothing_input.setSingleStep(0.2)
+        self.smoothing_input.setValue(float(cfg["smooth_bins"]))
+        self.smoothing_input.setToolTip(
+            "Smooth adjacent PSD bins before display. Set 0 for the original bins.")
         for w in (self.freqmin_input, self.freqmax_input, self.freq_max_input,
-                  self.nperseg_input, self.noverlap_input):
+                  self.nperseg_input, self.noverlap_input, self.smoothing_input):
             w.setMaximumWidth(80)
-        recompute_btn = QPushButton("↻  Recompute")
-        recompute_btn.setStyleSheet(
-            "QPushButton{background:#2980b9;color:white;font-weight:bold;"
-            "padding:6px 14px;border-radius:5px;}"
-            "QPushButton:hover{background:#1f618d;}")
+        recompute_btn = QPushButton("Recompute")
+        recompute_btn.setObjectName("primaryAction")
         recompute_btn.clicked.connect(self._recompute)
         for w in (QLabel("Bandpass min (Hz):"), self.freqmin_input,
                   QLabel("max (Hz):"),          self.freqmax_input,
                   QLabel("Freq. max (Hz):"),    self.freq_max_input,
                   QLabel("nperseg:"),           self.nperseg_input,
                   QLabel("noverlap:"),          self.noverlap_input,
+                  QLabel("Smooth:"),            self.smoothing_input,
                   recompute_btn):
             ctrl_layout.addWidget(w)
         ctrl_layout.addStretch()
-        ctrl_group.setLayout(ctrl_layout)
         layout.addWidget(ctrl_group)
+
+        self.feedback = QLabel(self.calibration_note)
+        self.feedback.setObjectName("mutedText")
+        self.feedback.setWordWrap(True)
+        layout.addWidget(self.feedback)
 
         # ── Canvas + toolbar ──────────────────────────────────────────────
         # Use Figure() directly (not plt.figure()) so the figure is NOT
@@ -719,24 +846,37 @@ class SpectrogramWindow(QDialog):
         self.fig    = Figure(figsize=(13, 9), facecolor="white")
         self.canvas = FigureCanvas(self.fig)
         self.toolbar = NavigationToolbar(self.canvas, self)
-        layout.addWidget(self.toolbar)
-        layout.addWidget(self.canvas, stretch=1)
+        style_plot_toolbar(self.toolbar)
+        plot_card = QFrame()
+        plot_card.setObjectName("resultCard")
+        plot_layout = QVBoxLayout(plot_card)
+        plot_layout.setContentsMargins(10, 7, 10, 10)
+        plot_layout.setSpacing(3)
+        plot_layout.addWidget(self.toolbar)
+        plot_layout.addWidget(self.canvas, stretch=1)
+        layout.addWidget(plot_card, stretch=1)
 
         # ── Action buttons ────────────────────────────────────────────────
         btn_row = QHBoxLayout()
-        save_fig_btn = QPushButton("💾  Save Figure (300 DPI)")
+        save_fig_btn = QPushButton("Export figure")
         save_fig_btn.clicked.connect(self.save_figure)
-        close_btn = QPushButton("✖  Close")
+        save_data_btn = QPushButton("Save plotted data")
+        save_data_btn.setToolTip(
+            "Export UTC times, frequencies, raw PSD, displayed PSD, and processing settings.")
+        save_data_btn.clicked.connect(self.save_data)
+        close_btn = QPushButton("Close")
         close_btn.clicked.connect(self.close)
-        btn_row.addWidget(save_fig_btn)
         btn_row.addStretch()
+        btn_row.addWidget(save_data_btn)
+        btn_row.addWidget(save_fig_btn)
         btn_row.addWidget(close_btn)
         layout.addLayout(btn_row)
         layout.addWidget(FooterWidget(self))
 
         # Initial render using the seeded parameters.
         self._render(cfg["filter_freqmin"], cfg["filter_freqmax"],
-                     cfg["freq_max"], int(cfg["nperseg"]), int(cfg["noverlap"]))
+                     cfg["freq_max"], int(cfg["nperseg"]), int(cfg["noverlap"]),
+                     float(cfg["smooth_bins"]))
 
     # ── Parameter parsing ─────────────────────────────────────────────────
     def _read_params(self):
@@ -759,7 +899,8 @@ class SpectrogramWindow(QDialog):
             raise ValueError("nperseg must be a positive integer.")
         if noverlap < 0 or noverlap >= nperseg:
             raise ValueError("noverlap must satisfy 0 <= noverlap < nperseg.")
-        return freqmin, freqmax, freq_max, nperseg, noverlap
+        return (freqmin, freqmax, freq_max, nperseg, noverlap,
+                self.smoothing_input.value())
 
     def _recompute(self):
         try:
@@ -771,7 +912,7 @@ class SpectrogramWindow(QDialog):
 
     # ── Rendering ─────────────────────────────────────────────────────────
     def _render(self, filter_freqmin, filter_freqmax, freq_max,
-                nperseg, noverlap):
+                nperseg, noverlap, smooth_bins):
         """Compute spectrograms for every trace and (re)draw the canvas."""
         from plot_spectrogram_window import compute_spectrogram
 
@@ -790,6 +931,8 @@ class SpectrogramWindow(QDialog):
                     nperseg=nperseg,
                     noverlap=noverlap,
                     reference_pressure=self.reference_pressure,
+                    units=self.units_mode,
+                    smooth_bins=smooth_bins,
                 )
             except Exception as e:               # noqa: BLE001 — per-trace isolation
                 skipped.append(f"{trace.id}: {e}")
@@ -797,11 +940,27 @@ class SpectrogramWindow(QDialog):
             panels.append((trace, freqs, time_nums, power_db))
 
         if not panels:
+            self._panels = []
+            self.fig.text(0.5, 0.52, "NO SPECTROGRAM DATA",
+                          ha="center", va="center", fontsize=16,
+                          color="#34556a", fontweight="bold")
+            self.fig.text(0.5, 0.45,
+                          "Check the selected window, filter band, and sample rate.",
+                          ha="center", va="center", fontsize=10,
+                          color="#78909e")
+            self.feedback.setText("No traces could be plotted. " + "; ".join(skipped))
             self.canvas.draw()
-            QMessageBox.critical(
-                self, "Spectrogram failed",
-                "No trace could be processed.\n\n" + "\n".join(skipped))
             return
+
+        self._panels = panels
+        self._last_plot_params = dict(
+            filter_freqmin=filter_freqmin, filter_freqmax=filter_freqmax,
+            freq_max=freq_max, nperseg=nperseg, noverlap=noverlap,
+            smooth_bins=smooth_bins, units=self.units_mode,
+            reference_pressure_pa=self.reference_pressure,
+            psd_reference=(f"({self.reference_pressure * 1e6:g} µPa)²/Hz"
+                           if self.units_mode == "pressure" else "1 count²/Hz"),
+            smoothing_method="Gaussian on linear PSD before dB conversion")
 
         vmin = min(np.percentile(p[3], 15) for p in panels)
         vmax = max(np.percentile(p[3], 98) for p in panels)
@@ -809,7 +968,7 @@ class SpectrogramWindow(QDialog):
         gs = gridspec.GridSpec(
             len(panels), 2, width_ratios=[40, 1.8],
             hspace=0.14, wspace=0.08,
-            left=0.08, right=0.91, top=0.92, bottom=0.08, figure=self.fig)
+            left=0.08, right=0.91, top=0.88, bottom=0.08, figure=self.fig)
         cax = self.fig.add_subplot(gs[:, 1])
 
         axes = []
@@ -820,8 +979,9 @@ class SpectrogramWindow(QDialog):
             axes.append(ax)
             last_mesh = ax.pcolormesh(
                 time_nums, freqs, power_db,
-                shading="auto", cmap="magma", vmin=vmin, vmax=vmax)
-            ax.set_ylabel(f"{trace.stats.station}\nHz", rotation=0, labelpad=28)
+                shading="gouraud" if min(len(freqs), len(time_nums)) > 1
+                else "auto", cmap="magma", vmin=vmin, vmax=vmax)
+            ax.set_ylabel("Hz", rotation=0, labelpad=18)
             ax.set_ylim(0, freq_max)
             ax.spines["top"].set_visible(False)
             ax.spines["right"].set_visible(False)
@@ -832,12 +992,12 @@ class SpectrogramWindow(QDialog):
                 bbox=dict(facecolor="black", alpha=0.28,
                           edgecolor="none", pad=3.0))
 
-        ref_label = f"{self.reference_pressure * 1e6:g} µPa"
         self.fig.suptitle(
-            f"{panels[0][0].stats.station} Spectrograms\n"
-            f"PSD referenced to {ref_label}  ·  "
-            f"bandpass {filter_freqmin:g}-{filter_freqmax:g} Hz",
-            fontsize=14, fontweight="semibold", y=0.975)
+            f"Time–frequency power  ·  {len(panels)} channels  ·  "
+            f"{filter_freqmin:g}–{filter_freqmax:g} Hz bandpass  ·  "
+            + (f"Gaussian σ={smooth_bins:g} bins" if smooth_bins
+               else "unsmoothed"),
+            fontsize=13, fontweight="semibold", y=0.965)
 
         axes[-1].set_xlabel("Time (UTC)")
         locator   = mdates.AutoDateLocator()
@@ -849,16 +1009,58 @@ class SpectrogramWindow(QDialog):
 
         if last_mesh is not None:
             cbar = self.fig.colorbar(last_mesh, cax=cax)
-            cbar.set_label("PSD (dB re 20 µPa²/Hz)")
+            # compute_spectrogram divides by reference², i.e. dB re (p_ref)²/Hz.
+            cbar.set_label(f"PSD (dB re ({self.reference_pressure * 1e6:g} µPa)²/Hz)"
+                           if self.units_mode == "pressure"
+                           else "PSD (dB re 1 count²/Hz)")
             cbar.outline.set_linewidth(0.8)
 
         self.canvas.draw()
 
-        if skipped:
-            QMessageBox.warning(
-                self, "Some traces skipped",
-                "These traces could not be processed and were omitted:\n\n"
-                + "\n".join(skipped))
+        self.feedback.setText(
+            f"{self.calibration_note} · {len(panels)} trace(s) plotted · "
+            f"smoothing {smooth_bins:g} bins"
+            + (f" · {len(skipped)} skipped (hover for details)" if skipped else ""))
+        self.feedback.setToolTip("\n".join(skipped))
+
+    def save_data(self):
+        if not getattr(self, "_panels", None):
+            QMessageBox.warning(self, "No plotted data", "Recompute a valid spectrogram first.")
+            return
+        filename, _ = QFileDialog.getSaveFileName(
+            self, "Save spectrogram data", "spectrogram_data.npz",
+            "NumPy archive (*.npz)")
+        if not filename:
+            return
+        if not filename.lower().endswith(".npz"):
+            filename += ".npz"
+        from plot_spectrogram_window import compute_spectrogram
+
+        try:
+            arrays = {}
+            metadata = dict(self._last_plot_params)
+            metadata["traces"] = []
+            for index, (trace, freqs, time_nums, displayed_db) in enumerate(self._panels):
+                _, _, raw_db = compute_spectrogram(
+                    trace, self.inventory,
+                    filter_freqmin=metadata["filter_freqmin"],
+                    filter_freqmax=metadata["filter_freqmax"],
+                    freq_max=metadata["freq_max"],
+                    nperseg=metadata["nperseg"], noverlap=metadata["noverlap"],
+                    reference_pressure=self.reference_pressure,
+                    units=self.units_mode, smooth_bins=0)
+                key = f"trace_{index}"
+                metadata["traces"].append({"key": key, "id": trace.id})
+                arrays[f"{key}_frequency_hz"] = freqs
+                arrays[f"{key}_time_utc"] = np.array(
+                    [mdates.num2date(value).isoformat() for value in time_nums])
+                arrays[f"{key}_raw_psd_db"] = raw_db
+                arrays[f"{key}_display_psd_db"] = displayed_db
+            arrays["metadata_json"] = np.array(json.dumps(metadata, sort_keys=True))
+            np.savez_compressed(filename, **arrays)
+            QMessageBox.information(self, "Saved", f"Spectrogram data saved:\n{filename}")
+        except Exception as error:
+            QMessageBox.critical(self, "Save error", str(error))
 
     def save_figure(self):
         filename, _ = QFileDialog.getSaveFileName(
@@ -883,54 +1085,72 @@ class WaveformViewer(QDialog):
 
     def __init__(self, stream, parent=None):
         super().__init__(parent)
+        apply_result_style(self)
         self.setWindowTitle("SeismoFK — Waveform Viewer")
-        self.setGeometry(80, 80, 1280, 650)
+        self.setMinimumSize(900, 560)
+        self.resize(1250, 720)
         self.stream          = stream
         self.original_stream = stream.copy()
         self.selected_time   = None
 
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(16, 16, 16, 10)
+        layout.setSpacing(10)
+        layout.addWidget(result_header(
+            "Pick analysis start",
+            "Click a waveform to set the analysis window start time",
+            kicker="SEISMOFK / WAVEFORMS", badge=f"{len(stream)} TRACES"))
 
         # ── Filter controls ───────────────────────────────────────────────
-        filter_group  = QGroupBox("Band-pass Filter")
-        filter_layout = QHBoxLayout()
+        filter_group  = QFrame()
+        filter_group.setObjectName("resultCard")
+        filter_layout = QHBoxLayout(filter_group)
+        filter_layout.setContentsMargins(14, 10, 14, 10)
         self.low_freq_input  = QLineEdit("0.5")
         self.high_freq_input = QLineEdit("5.0")
         apply_btn = QPushButton("Apply Filter")
         reset_btn = QPushButton("Reset")
         apply_btn.clicked.connect(self.apply_filter)
         reset_btn.clicked.connect(self.reset_filter)
-        for w in (QLabel("Low (Hz):"), self.low_freq_input,
-                  QLabel("High (Hz):"), self.high_freq_input,
+        for w in (QLabel("Band-pass low (Hz):"), self.low_freq_input,
+                  QLabel("high (Hz):"), self.high_freq_input,
                   apply_btn, reset_btn):
             filter_layout.addWidget(w)
-        filter_group.setLayout(filter_layout)
+        for w in (self.low_freq_input, self.high_freq_input):
+            w.setMaximumWidth(80)
+        filter_layout.addStretch()
         layout.addWidget(filter_group)
 
-        instr = QLabel("⬤  Left-click on waveform to pick analysis start time")
-        instr.setStyleSheet("color:#2980b9; font-weight:bold; padding:4px;")
-        layout.addWidget(instr)
-
-        self.fig_wv, self.ax_wv = plt.subplots(figsize=(13, 5))
-        self.fig_wv.patch.set_facecolor('white')
+        # Figure() rather than plt.subplots() so each viewer does not leave a
+        # figure registered in pyplot for the life of the process.
+        self.fig_wv = Figure(figsize=(13, 5), facecolor='white')
+        self.ax_wv = self.fig_wv.add_subplot(111)
         self.canvas_wv  = FigureCanvas(self.fig_wv)
         self.toolbar_wv = NavigationToolbar(self.canvas_wv, self)
-        layout.addWidget(self.toolbar_wv)
-        layout.addWidget(self.canvas_wv)
+        style_plot_toolbar(self.toolbar_wv)
+        plot_card = QFrame()
+        plot_card.setObjectName("resultCard")
+        plot_layout = QVBoxLayout(plot_card)
+        plot_layout.setContentsMargins(10, 7, 10, 10)
+        plot_layout.addWidget(self.toolbar_wv)
+        plot_layout.addWidget(self.canvas_wv, stretch=1)
+        layout.addWidget(plot_card, stretch=1)
 
         self._draw_waveforms(self.stream)
         self.canvas_wv.mpl_connect('button_press_event', self._on_click)
 
         btn_row = QHBoxLayout()
         self.time_label = QLabel("Selected time: —")
-        self.time_label.setStyleSheet("font-weight:bold; color:#c0392b;")
-        confirm_btn = QPushButton("✔  Confirm")
-        confirm_btn.clicked.connect(self.confirm_selection)
-        cancel_btn  = QPushButton("✖  Cancel")
+        self.time_label.setObjectName("resultInfo")
+        self.confirm_btn = QPushButton("Use this start time")
+        self.confirm_btn.setObjectName("primaryAction")
+        self.confirm_btn.setEnabled(False)
+        self.confirm_btn.clicked.connect(self.confirm_selection)
+        cancel_btn  = QPushButton("Cancel")
         cancel_btn.clicked.connect(self.reject)
         btn_row.addWidget(self.time_label, stretch=1)
-        btn_row.addWidget(confirm_btn)
         btn_row.addWidget(cancel_btn)
+        btn_row.addWidget(self.confirm_btn)
         layout.addLayout(btn_row)
         layout.addWidget(FooterWidget(self))
 
@@ -955,6 +1175,7 @@ class WaveformViewer(QDialog):
             return
         self.selected_time = self.stream[0].stats.starttime + event.xdata
         self.time_label.setText(f"Selected time: {self.selected_time}")
+        self.confirm_btn.setEnabled(True)
         self._draw_waveforms(self.stream,
                              title=f"Waveforms  [pick: {self.selected_time}]")
 
@@ -988,29 +1209,10 @@ class WaveformViewer(QDialog):
 # ═══════════════════════════════════════════════════════════════════════════
 class FKAnalysisGUI(QMainWindow):
 
-    _STYLE = """
-        QMainWindow, QDialog { background:#f4f6f8; }
-        QWidget              { font-family:'Segoe UI',Arial,sans-serif;
-                               font-size:10pt; }
-        QGroupBox            { font-weight:bold; border:1px solid #ccc;
-                               border-radius:6px; margin-top:8px; padding-top:6px; }
-        QGroupBox::title     { subcontrol-origin:margin; left:10px; color:#2c3e50; }
-        QPushButton          { background:#2980b9; color:white; border:none;
-                               padding:7px 16px; border-radius:5px;
-                               font-weight:bold; min-width:80px; }
-        QPushButton:hover    { background:#1f618d; }
-        QPushButton:disabled { background:#bdc3c7; color:#7f8c8d; }
-        QLineEdit, QComboBox, QDoubleSpinBox, QDateTimeEdit {
-                               padding:5px; border:1px solid #bdc3c7;
-                               border-radius:4px; background:white; }
-        QLabel               { color:#2c3e50; }
-        QProgressBar         { border:2px solid #bdc3c7; border-radius:8px;
-                               text-align:center; height:18px; }
-    """
 
     def __init__(self):
         super().__init__()
-        self.setStyleSheet(self._STYLE)
+        apply_main_style(self)
         self.setWindowTitle("SeismoFK  —  Infrasound FK Array Analysis")
         self.setGeometry(80, 60, 1280, 920)
 
@@ -1027,58 +1229,141 @@ class FKAnalysisGUI(QMainWindow):
     def _build_ui(self):
         root   = QWidget()
         layout = QVBoxLayout(root)
-        layout.setSpacing(8)
+        layout.setSpacing(12)
+        layout.setContentsMargins(16, 14, 16, 10)
         self.setCentralWidget(root)
 
+        hero = QFrame()
+        hero.setObjectName("hero")
+        hero_row = QHBoxLayout(hero)
+        hero_row.setContentsMargins(21, 13, 21, 13)
+        hero_text = QVBoxLayout()
+        title = QLabel("SeismoFK")
+        title.setObjectName("heroTitle")
+        subtitle = QLabel("INFRASOUND ARRAY ANALYSIS")
+        subtitle.setObjectName("heroSubtitle")
+        _track(subtitle, 1.6)
+        hero_text.setSpacing(1)
+        hero_text.addWidget(title)
+        hero_text.addWidget(subtitle)
+        hero_row.addLayout(hero_text)
+        hero_row.addStretch()
+
+        # Workspace tools live in the header band, away from analysis actions.
+        xml_creator_btn = QPushButton("StationXML editor")
+        xml_creator_btn.clicked.connect(self._open_xml_creator)
+        db_btn = QPushButton("Event database")
+        db_btn.clicked.connect(self._open_db_browser)
+        self.spectro_btn = QPushButton("Spectrogram")
+        self.spectro_btn.clicked.connect(self._open_spectrogram)
+        for button in (self.spectro_btn, db_btn, xml_creator_btn):
+            button.setObjectName("heroAction")
+            hero_row.addWidget(button)
+        hero_row.addSpacing(6)
+        badge = QLabel("v1.2.1")
+        badge.setObjectName("versionBadge")
+        hero_row.addWidget(badge)
+        layout.addWidget(hero)
+
+        content = QHBoxLayout()
+        content.setSpacing(14)
+        layout.addLayout(content, stretch=1)
+
+        sidebar_scroll = QScrollArea()
+        sidebar_scroll.setWidgetResizable(True)
+        sidebar_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        sidebar_scroll.setFixedWidth(390)
+        sidebar = QWidget()
+        sidebar.setObjectName("sidebar")
+        side_layout = QVBoxLayout(sidebar)
+        side_layout.setContentsMargins(0, 0, 5, 0)
+        side_layout.setSpacing(12)
+        sidebar_scroll.setWidget(sidebar)
+        # Let the window background show behind the section titles.
+        sidebar_scroll.viewport().setAutoFillBackground(False)
+        sidebar.setAutoFillBackground(False)
+        content.addWidget(sidebar_scroll)
+
+        workspace = QVBoxLayout()
+        workspace.setSpacing(11)
+        content.addLayout(workspace, stretch=1)
+
         # ── 1. File selection ─────────────────────────────────────────────
-        file_grp    = QGroupBox("File Selection")
+        file_grp    = QGroupBox("DATA SOURCE")
         file_layout = QVBoxLayout()
+        file_layout.setSpacing(8)
 
         mseed_row = QHBoxLayout()
         self.mseed_edit = QLineEdit()
+        self.mseed_edit.setReadOnly(True)
         self.mseed_edit.setPlaceholderText("Select a MiniSEED file …")
         browse_mseed = QPushButton("Browse")
         browse_mseed.clicked.connect(self.load_mseed)
-        mseed_row.addWidget(QLabel("MiniSEED:"))
+        mseed_caption = QLabel("Waveform  ·  MiniSEED")
+        mseed_caption.setObjectName("fieldLabel")
+        file_layout.addWidget(mseed_caption)
         mseed_row.addWidget(self.mseed_edit, stretch=1)
         mseed_row.addWidget(browse_mseed)
         file_layout.addLayout(mseed_row)
 
         inv_row = QHBoxLayout()
         self.inv_combo = QComboBox()
-        self.inv_combo.setMinimumWidth(280)
+        self.inv_combo.setMinimumWidth(0)
+        self.inv_combo.setPlaceholderText("Select matching StationXML inventory")
         self.inv_combo.setItemDelegate(QStyledItemDelegate())
-        refresh_btn = QPushButton("⟳ Refresh")
+        refresh_btn = QPushButton("Refresh")
         refresh_btn.clicked.connect(self.refresh_inventory_list)
         add_xml_btn = QPushButton("+ Add XML")
         add_xml_btn.clicked.connect(self.add_inventory_file)
-        inv_row.addWidget(QLabel("Inventory:"))
+        inv_caption = QLabel("Station metadata  ·  StationXML")
+        inv_caption.setObjectName("fieldLabel")
+        file_layout.addWidget(inv_caption)
         inv_row.addWidget(self.inv_combo, stretch=1)
-        inv_row.addWidget(refresh_btn)
-        inv_row.addWidget(add_xml_btn)
         file_layout.addLayout(inv_row)
+        inv_actions = QHBoxLayout()
+        inv_actions.addWidget(refresh_btn)
+        inv_actions.addWidget(add_xml_btn)
+        file_layout.addLayout(inv_actions)
+        self.check_data_btn = QPushButton("Check data readiness")
+        self.check_data_btn.setToolTip(
+            "Check timing, sample rates, array geometry, and StationXML before analysis.")
+        self.check_data_btn.clicked.connect(self._show_readiness)
+        file_layout.addWidget(self.check_data_btn)
         file_grp.setLayout(file_layout)
-        layout.addWidget(file_grp)
+        side_layout.addWidget(file_grp)
 
         # ── 2. Waveform preview ───────────────────────────────────────────
-        wave_grp    = QGroupBox("Waveform Preview  (click to pick analysis start)")
+        wave_grp    = QGroupBox("WAVEFORM EXPLORER")
         wave_layout = QVBoxLayout()
+        wave_hint = QLabel("Click a trace to set the analysis start time. Drag to zoom or use the toolbar.")
+        wave_hint.setObjectName("sectionHint")
+        wave_layout.addWidget(wave_hint)
 
-        self.figure = plt.figure(figsize=(11, 3))
-        self.figure.patch.set_facecolor('white')
+        self.figure = Figure(figsize=(11, 3), facecolor='white')
+        self.figure.text(0.5, 0.54, "No waveform loaded",
+                         ha='center', va='center', color=PALETTE['ink'],
+                         fontsize=14, fontweight='semibold')
+        self.figure.text(0.5, 0.45,
+                         "Browse for a MiniSEED file to inspect traces and pick an analysis window.",
+                         ha='center', va='center', color=PALETTE['muted'], fontsize=10)
+        self._preview_axes = []
+        self._window_artists = []
         self.canvas  = FigureCanvas(self.figure)
+        # Connected once; _update_preview only redraws.
+        self.canvas.mpl_connect('button_press_event', self._on_preview_click)
         self.canvas.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         self.toolbar = NavigationToolbar(self.canvas, self)
+        style_plot_toolbar(self.toolbar)
         wave_layout.addWidget(self.toolbar)
         wave_layout.addWidget(self.canvas)
 
         pick_row = QHBoxLayout()
         self.time_label = QLabel("Pick: —")
-        self.time_label.setStyleSheet("font-weight:bold; color:#c0392b;")
-        self.clear_pick_btn = QPushButton("✖ Clear Pick")
+        self.time_label.setObjectName("pickLabel")
+        self.clear_pick_btn = QPushButton("Clear pick")
         self.clear_pick_btn.clicked.connect(self.clear_time_pick)
         self.clear_pick_btn.setEnabled(False)
-        self.view_window_btn = QPushButton("⤢ Open in Window")
+        self.view_window_btn = QPushButton("Open larger")
         self.view_window_btn.clicked.connect(self.view_waveform)
         self.view_window_btn.setEnabled(False)
         pick_row.addWidget(self.time_label, stretch=1)
@@ -1086,13 +1371,13 @@ class FKAnalysisGUI(QMainWindow):
         pick_row.addWidget(self.view_window_btn)
         wave_layout.addLayout(pick_row)
         wave_grp.setLayout(wave_layout)
-        layout.addWidget(wave_grp, stretch=1)
+        workspace.addWidget(wave_grp, stretch=1)
 
         # ── 3. Parameters ─────────────────────────────────────────────────
-        param_grp    = QGroupBox("Analysis Parameters")
+        param_grp    = QGroupBox("FK CONFIGURATION")
         param_layout = QVBoxLayout()
+        param_layout.setSpacing(10)
 
-        row1 = QHBoxLayout()
         self.min_freq = QDoubleSpinBox()
         self.min_freq.setRange(0.01, 100); self.min_freq.setValue(0.5)
         self.max_freq = QDoubleSpinBox()
@@ -1106,18 +1391,34 @@ class FKAnalysisGUI(QMainWindow):
         self.semb_thresh = QDoubleSpinBox()
         self.semb_thresh.setRange(0.0, 1.0); self.semb_thresh.setValue(0.3)
         self.semb_thresh.setSingleStep(0.05); self.semb_thresh.setDecimals(2)
-        for label, widget in [
-            ("Min Freq (Hz):", self.min_freq),
-            ("Max Freq (Hz):", self.max_freq),
-            ("Window (s):",    self.win_len),
-            ("Overlap:",       self.overlap),
-            ("Semb. Threshold:", self.semb_thresh),
-        ]:
-            row1.addWidget(QLabel(label)); row1.addWidget(widget)
-        param_layout.addLayout(row1)
+        def fields_row(fields):
+            row = QHBoxLayout()
+            row.setSpacing(8)
+            for label, widget in fields:
+                column = QVBoxLayout()
+                column.setSpacing(4)
+                caption = QLabel(label)
+                caption.setObjectName("fieldLabel")
+                column.addWidget(caption)
+                widget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+                column.addWidget(widget)
+                row.addLayout(column, stretch=1)
+            return row
 
-        row2 = QHBoxLayout()
-        self.start_time_input = QDateTimeEdit(QDateTime.currentDateTime())
+        param_layout.addLayout(fields_row([
+            ("Minimum frequency · Hz", self.min_freq),
+            ("Maximum frequency · Hz", self.max_freq),
+        ]))
+        param_layout.addLayout(fields_row([
+            ("Window length", self.win_len),
+            ("Window step", self.overlap),
+        ]))
+        param_layout.addLayout(fields_row([
+            ("Semblance threshold", self.semb_thresh),
+        ]))
+
+        self.start_time_input = QDateTimeEdit(QDateTime.currentDateTimeUtc())
+        self.start_time_input.setTimeSpec(Qt.UTC)
         self.start_time_input.setDisplayFormat("yyyy-MM-dd HH:mm:ss")
         self.duration = QDoubleSpinBox()
         self.duration.setRange(1, 86400); self.duration.setValue(900)
@@ -1127,30 +1428,29 @@ class FKAnalysisGUI(QMainWindow):
         self.event_lat.setRange(-90, 90); self.event_lat.setDecimals(4)
         self.event_lon  = QDoubleSpinBox()
         self.event_lon.setRange(-180, 180); self.event_lon.setDecimals(4)
-        for label, widget in [
-            ("Start Time:", self.start_time_input),
-            ("Duration:",   self.duration),
-            ("Event Name:", self.event_name),
-            ("Lat:",        self.event_lat),
-            ("Lon:",        self.event_lon),
-        ]:
-            row2.addWidget(QLabel(label)); row2.addWidget(widget)
-        param_layout.addLayout(row2)
-        # ── row3 — optional origin time & celerity ────────────────────────
-        row3 = QHBoxLayout()
+        param_layout.addLayout(fields_row([("Start time · UTC", self.start_time_input)]))
+        param_layout.addLayout(fields_row([
+            ("Duration", self.duration), ("Event name", self.event_name),
+        ]))
+        param_layout.addLayout(fields_row([
+            ("Event latitude", self.event_lat),
+            ("Event longitude", self.event_lon),
+        ]))
+        # Optional origin time and propagation speed.
 
         self.origin_time_chk = QCheckBox("Origin Time:")
         self.origin_time_chk.setToolTip(
             "Known event origin time — used together with Celerity\n"
             "to draw the expected infrasound arrival on the beam.")
-        self.origin_time_input = QDateTimeEdit(QDateTime.currentDateTime())
+        self.origin_time_input = QDateTimeEdit(QDateTime.currentDateTimeUtc())
+        self.origin_time_input.setTimeSpec(Qt.UTC)
         self.origin_time_input.setDisplayFormat("yyyy-MM-dd HH:mm:ss")
         self.origin_time_input.setEnabled(False)
         self.origin_time_chk.toggled.connect(self.origin_time_input.setEnabled)
 
         self.celerity_chk = QCheckBox("Celerity (m/s):")
         self.celerity_chk.setToolTip(
-            "Infrasound propagation speed.  Typical range: 300–360 m/s.\n"
+            "Infrasound propagation speed.  Typical range: 220–340 m/s.\n"
             "Requires Origin Time to be set.")
         self.celerity_spin = QDoubleSpinBox()
         self.celerity_spin.setRange(100.0, 500.0)
@@ -1160,67 +1460,96 @@ class FKAnalysisGUI(QMainWindow):
         self.celerity_spin.setEnabled(False)
         self.celerity_chk.toggled.connect(self.celerity_spin.setEnabled)
 
-        row3.addWidget(self.origin_time_chk)
-        row3.addWidget(self.origin_time_input)
-        row3.addSpacing(24)
-        row3.addWidget(self.celerity_chk)
-        row3.addWidget(self.celerity_spin)
-        row3.addStretch()
+        param_layout.addWidget(self.origin_time_chk)
+        param_layout.addWidget(self.origin_time_input)
+        param_layout.addWidget(self.celerity_chk)
+        param_layout.addWidget(self.celerity_spin)
+        arrival_note = QLabel("Optional: show expected arrival on the beam trace.")
+        arrival_note.setObjectName("sectionHint")
+        param_layout.addWidget(arrival_note)
 
-        note = QLabel("  ← optional: draw expected arrival on beam waveform")
-        note.setStyleSheet("color:#888; font-style:italic; font-size:8pt;")
-        row3.addWidget(note)
-
-        param_layout.addLayout(row3)
+        # Bootstrap uncertainty in the result summary.
+        self.bootstrap_chk = QCheckBox("Estimate uncertainty (bootstrap)")
+        self.bootstrap_chk.setToolTip(
+            "Bootstrap the detected back-azimuth / apparent velocity to report\n"
+            "baz ± σ and vel ± σ, and overlay the uncertainty on the polar map.")
+        param_layout.addWidget(self.bootstrap_chk)
 
         param_grp.setLayout(param_layout)
-        layout.addWidget(param_grp)
+        side_layout.addWidget(param_grp)
+        side_layout.addStretch()
 
         # ── 4. Status + Progress + Run ────────────────────────────────────
-        self.status_label = QLabel("Ready.")
-        self.status_label.setStyleSheet(
-            "font-style:italic; color:#555; padding:2px 6px;"
-            "background:rgba(0,0,0,0.04); border-radius:4px;")
-        layout.addWidget(self.status_label)
+        run_frame = QFrame()
+        run_frame.setObjectName("resultCard")
+        run_layout = QHBoxLayout(run_frame)
+        run_layout.setContentsMargins(15, 12, 15, 12)
+        run_info = QVBoxLayout()
+        run_title = QLabel("FK BEAMFORMING")
+        run_title.setObjectName("sectionTitle")
+        run_info.addWidget(run_title)
+        self.status_label = QLabel("Load a waveform and select StationXML")
+        self.status_label.setObjectName("mutedText")
+        run_info.addWidget(self.status_label)
+        run_layout.addLayout(run_info, stretch=1)
 
         self.progress_bar = QProgressBar()
         self.progress_bar.setVisible(False)
-        layout.addWidget(self.progress_bar)
+        workspace.addWidget(self.progress_bar)
 
-        self.process_btn = QPushButton("▶  Run FK Analysis")
-        self.process_btn.setStyleSheet(
-            "QPushButton{background:#27ae60;font-size:11pt;padding:10px;}"
-            "QPushButton:hover{background:#1e8449;}")
+        self.process_btn = QPushButton("Run FK analysis  →")
+        self.process_btn.setObjectName("primaryAction")
         self.process_btn.clicked.connect(self.process_data)
-        layout.addWidget(self.process_btn)
+        run_layout.addWidget(self.process_btn)
+        workspace.addWidget(run_frame)
 
-        sep = QFrame(); sep.setFrameShape(QFrame.HLine); sep.setFrameShadow(QFrame.Sunken)
-        layout.addWidget(sep)
+        # ── Advanced array methods (v1.2.1) ───────────────────────────────
+        methods_frame = QGroupBox("ARRAY METHODS")
+        methods_layout = QVBoxLayout(methods_frame)
+        methods_hint = QLabel("Explore array geometry and time–frequency detections")
+        methods_hint.setObjectName("sectionHint")
+        methods_layout.addWidget(methods_hint)
+        methods_row = QHBoxLayout()
 
-        tools_row = QHBoxLayout()
-        xml_creator_btn = QPushButton("🛠  XML Creator / Editor")
-        xml_creator_btn.setStyleSheet(
-            "QPushButton{background:#8e44ad;padding:6px 14px;}"
-            "QPushButton:hover{background:#6c3483;}")
-        xml_creator_btn.clicked.connect(self._open_xml_creator)
-        tools_row.addWidget(xml_creator_btn)
+        self.arf_btn = QPushButton("Array response")
+        arf_btn = self.arf_btn
+        arf_btn.setToolTip("Theoretical array response function (ARF) for the "
+                           "current geometry — shows aliasing and resolution.")
+        arf_btn.setObjectName("methodAction")
+        arf_btn.clicked.connect(self._open_array_response)
+        methods_row.addWidget(arf_btn)
 
-        db_btn = QPushButton("🗄  Event Database")
-        db_btn.setStyleSheet(
-            "QPushButton{background:#16a085;padding:6px 14px;}"
-            "QPushButton:hover{background:#1abc9c;}")
-        db_btn.clicked.connect(self._open_db_browser)
-        tools_row.addWidget(db_btn)
+        self.slowness_btn = QPushButton("Slowness map · Capon / MUSIC")
+        slowness_btn = self.slowness_btn
+        slowness_btn.setToolTip("High-resolution adaptive beamforming slowness "
+                                "map for the picked window.")
+        slowness_btn.setObjectName("methodAction")
+        slowness_btn.clicked.connect(self._open_slowness_map)
+        methods_row.addWidget(slowness_btn)
 
-        spectro_btn = QPushButton("📊  Plot Spectrogram")
-        spectro_btn.setStyleSheet(
-            "QPushButton{background:#d35400;padding:6px 14px;}"
-            "QPushButton:hover{background:#a04000;}")
-        spectro_btn.clicked.connect(self._open_spectrogram)
-        tools_row.addWidget(spectro_btn)
+        self.pmcc_btn = QPushButton("PMCC detector")
+        pmcc_btn = self.pmcc_btn
+        pmcc_btn.setToolTip("PMCC-style time–frequency detection pixels with "
+                            "back-azimuth and trace velocity estimates.")
+        pmcc_btn.setObjectName("methodAction")
+        pmcc_btn.clicked.connect(self._open_pmcc)
+        methods_row.addWidget(pmcc_btn)
 
-        tools_row.addStretch()
-        layout.addLayout(tools_row)
+        self.noise_btn = QPushButton("Noise levels")
+        self.noise_btn.setToolTip(
+            "RMS noise level per sensor in 1-minute (adjustable) windows over "
+            "the whole record, in dB re 20 µPa, with L90/L50/L10/Leq and "
+            "sensor checks.")
+        self.noise_btn.setObjectName("methodAction")
+        self.noise_btn.clicked.connect(self._open_noise_levels)
+        methods_row.addWidget(self.noise_btn)
+        methods_layout.addLayout(methods_row)
+        workspace.addWidget(methods_frame)
+
+        self.inv_combo.currentIndexChanged.connect(self._update_analysis_actions)
+        self.start_time_input.dateTimeChanged.connect(self._draw_analysis_window)
+        self.duration.valueChanged.connect(self._draw_analysis_window)
+        self._update_analysis_actions()
 
         layout.addWidget(FooterWidget(self))
 
@@ -1239,8 +1568,17 @@ class FKAnalysisGUI(QMainWindow):
         dlg.exec_()
 
     # ── Spectrogram launcher ──────────────────────────────────────────────
-    def _resolve_inventory(self):
-        """Resolve the inventory selected in inv_combo into an Inventory.
+    def _resolve_inventory(self, resolve_epochs=True):
+        """Return the selected inventory; with a stream loaded and
+        *resolve_epochs* set, reduced to one channel epoch per trace (see
+        ``fk_analysis.resolve_epochs``)."""
+        inv = self._read_selected_inventory()
+        if resolve_epochs and self.stream:
+            inv = fk.resolve_epochs(inv, self.stream)
+        return inv
+
+    def _read_selected_inventory(self):
+        """Read the inventory selected in inv_combo into an Inventory.
 
         The combo's UserRole data is either a single .xml file path or a
         directory ("★ All IMS Stations") whose .xml files are merged.
@@ -1290,21 +1628,22 @@ class FKAnalysisGUI(QMainWindow):
                 "Load a MiniSEED file before plotting a spectrogram.")
             return
 
-        # ── 2. Resolve the inventory robustly ─────────────────────────────
-        try:
-            inventory = self._resolve_inventory()
-        except ValueError as e:
-            QMessageBox.warning(self, "Inventory required", str(e))
-            return
+        # Pressure calibration is optional; the viewer labels raw counts.
+        inventory = None
+        if self.inv_combo.currentIndex() >= 0:
+            try:
+                inventory = self._resolve_inventory()
+            except ValueError as e:
+                QMessageBox.warning(self, "Inventory unavailable", str(e))
 
-        # ── 3. Time window — picked window, else whole stream ─────────────
+        # ── 3. Time range — the FK duration, not the short FK window ──────
         # self.selected_time is a relative-seconds offset into the preview;
         # absolute start = stream[0].starttime + selected_time.
         stream = self.stream
         if self.selected_time is not None:
             try:
                 t0 = self.stream[0].stats.starttime + float(self.selected_time)
-                t1 = t0 + float(self.win_len.value())
+                t1 = t0 + float(self.duration.value())
                 windowed = self.stream.slice(t0, t1)
                 if windowed and any(tr.stats.npts > 0 for tr in windowed):
                     stream = windowed
@@ -1320,12 +1659,24 @@ class FKAnalysisGUI(QMainWindow):
                     "Using the full loaded stream instead.")
 
         # ── 4. Seed parameters ────────────────────────────────────────────
+        sample_counts = [tr.stats.npts for tr in stream if tr.stats.npts >= 32]
+        if not sample_counts:
+            QMessageBox.warning(
+                self, "No spectrogram data",
+                "The selected time range has too few samples. Pick an earlier "
+                "start time or increase Duration in FK Configuration.")
+            return
+        nyquist = min(tr.stats.sampling_rate / 2 for tr in stream
+                      if tr.stats.npts >= 32)
+        band_high = min(self.max_freq.value(), nyquist * 0.9)
+        band_low = min(self.min_freq.value(), band_high * 0.5)
+        segment = min(512, max(32, int(np.median(sample_counts)) // 4))
         params = {
-            "filter_freqmin": self.min_freq.value(),
-            "filter_freqmax": self.max_freq.value(),
-            "freq_max":   5.0,
-            "nperseg":    512,
-            "noverlap":   460,
+            "filter_freqmin": band_low,
+            "filter_freqmax": band_high,
+            "freq_max": min(self.max_freq.value(), nyquist),
+            "nperseg": segment,
+            "noverlap": int(segment * 0.75),
         }
 
         # ── 5. Open the window ────────────────────────────────────────────
@@ -1338,12 +1689,180 @@ class FKAnalysisGUI(QMainWindow):
             return
         win.exec_()
 
+    def _show_readiness(self):
+        from data_readiness import Finding, assess_stream
+
+        inventory = None
+        inventory_error = None
+        if self.inv_combo.currentIndex() >= 0:
+            try:
+                # Unresolved, so the check can report overlapping epochs.
+                inventory = self._resolve_inventory(resolve_epochs=False)
+            except ValueError as error:
+                inventory_error = str(error)
+        findings = assess_stream(
+            self.stream, inventory, fmin=self.min_freq.value(),
+            fmax=self.max_freq.value(), start=self._window_start(),
+            duration=self.duration.value())
+        if inventory_error:
+            findings.append(Finding("error", "StationXML could not be read",
+                                    inventory_error))
+
+        errors = sum(item.severity == "error" for item in findings)
+        warnings = sum(item.severity == "warning" for item in findings)
+        dialog = QDialog(self)
+        apply_result_style(dialog)
+        dialog.setWindowTitle("Data readiness · SeismoFK")
+        dialog.resize(680, 520)
+        column = QVBoxLayout(dialog)
+        column.setContentsMargins(16, 16, 16, 12)
+        column.setSpacing(10)
+        verdict = ("Not ready — fix blocking issues first" if errors else
+                   "Ready, with warnings" if warnings else "Ready for analysis")
+        column.addWidget(result_header(
+            verdict, f"{errors} blocking issue(s)  ·  {warnings} warning(s)",
+            kicker="SEISMOFK / DATA READINESS",
+            badge="BLOCKED" if errors else "READY"))
+        colours = {"error": "#a33a2c", "warning": "#9a6a00"}
+        rank = {"error": 0, "warning": 1}
+        detail = QTextEdit()
+        detail.setReadOnly(True)
+        detail.setHtml("".join(
+            f"<p><b style='color:{colours.get(item.severity, '#24455c')}'>"
+            f"{html.escape(item.severity.upper())}</b> &nbsp;"
+            f"<b>{html.escape(item.title)}</b><br>"
+            f"<span style='color:#4a6474'>"
+            f"{html.escape(item.detail).replace(chr(10), '<br>')}</span></p>"
+            for item in sorted(findings, key=lambda f: rank.get(f.severity, 2))))
+        column.addWidget(detail, stretch=1)
+        close = QPushButton("Close")
+        close.setObjectName("primaryAction")
+        close.clicked.connect(dialog.accept)
+        column.addWidget(close, alignment=Qt.AlignRight)
+        dialog.exec_()
+
+    # ── v1.2.1 advanced array methods ─────────────────────────────────────
+    def _array_stream_with_coords(self):
+        """Return a copy of the loaded stream with coordinates attached and a
+        common sampling rate — shared by the ARF / slowness-map / PMCC dialogs.
+        Raises ValueError with a user-friendly message on any problem."""
+        if not self.stream:
+            raise ValueError("Load a MiniSEED file before running this method.")
+        inv = self._resolve_inventory()
+        st = self.stream.copy()
+        rates = {tr.stats.sampling_rate for tr in st}
+        if len(rates) > 1:
+            target = min(rates)
+            for tr in st:
+                if tr.stats.sampling_rate != target:
+                    tr.resample(target)
+        fk.attach_coordinates(st, inv, verbose=False)
+        if len(st) < 2:
+            raise ValueError("Array analysis needs at least 2 channels with "
+                             "coordinates in the inventory.")
+        # Physical units for waveform panels; direction and velocity do not
+        # depend on this scaling.
+        st.units = fk.scalar_calibrate(st, inv)
+        return st
+
+    def _window_start(self):
+        """Absolute UTC start for single-window methods: the picked time if set,
+        otherwise the Start Time field."""
+        if self.selected_time is not None and self.stream:
+            return self.stream[0].stats.starttime + float(self.selected_time)
+        return UTCDateTime(self.start_time_input.dateTime()
+                           .toString("yyyy-MM-dd HH:mm:ss"))
+
+    def _open_array_response(self):
+        from gui_methods import ArrayResponseDialog
+        try:
+            st = self._array_stream_with_coords()
+        except ValueError as e:
+            QMessageBox.warning(self, "Array Response", str(e))
+            return
+        ArrayResponseDialog(st, self.min_freq.value(), self.max_freq.value(),
+                            parent=self).exec_()
+
+    def _open_slowness_map(self):
+        from gui_methods import SlownessMapDialog
+        try:
+            st = self._array_stream_with_coords()
+        except ValueError as e:
+            QMessageBox.warning(self, "Slowness Map", str(e))
+            return
+        exp_baz = None
+        try:
+            from obspy.geodetics import gps2dist_azimuth
+            exp_baz = gps2dist_azimuth(
+                self.event_lat.value(), self.event_lon.value(),
+                st[0].stats.coordinates.latitude,
+                st[0].stats.coordinates.longitude)[2]
+        except Exception:
+            pass
+        SlownessMapDialog(st, self.min_freq.value(), self.max_freq.value(),
+                          self._window_start(), self.win_len.value(),
+                          expected_baz=exp_baz, parent=self).exec_()
+
+    def _open_noise_levels(self):
+        """Noise levels over the whole loaded record; calibrated to Pa with
+        the StationXML sensitivities when an inventory is selected."""
+        from gui_methods import NoiseLevelsDialog
+        if not self.stream:
+            return
+        st = self.stream.copy()
+        units = "counts"
+        if self.inv_combo.currentIndex() >= 0:
+            try:
+                units = fk.scalar_calibrate(st, self._resolve_inventory())
+            except ValueError as e:
+                QMessageBox.warning(self, "Noise levels", str(e))
+        NoiseLevelsDialog(st, self.min_freq.value(), self.max_freq.value(),
+                          units=units, parent=self).exec_()
+
+    def _open_pmcc(self):
+        from gui_methods import PMCCWindow
+        try:
+            st = self._array_stream_with_coords()
+        except ValueError as e:
+            QMessageBox.warning(self, "PMCC", str(e))
+            return
+        PMCCWindow(st, self.min_freq.value(), self.max_freq.value(),
+                   self._window_start(), self.duration.value(),
+                   window_sec=self.win_len.value(),
+                   units=getattr(st, "units", "counts"), parent=self).exec_()
+
     # ── inventory helpers ─────────────────────────────────────────────────
+    def _set_start_time_utc(self, when):
+        timestamp = QDateTime(when.year, when.month, when.day, when.hour,
+                              when.minute, when.second,
+                              int(when.microsecond / 1000))
+        timestamp.setTimeSpec(Qt.UTC)
+        self.start_time_input.setDateTime(timestamp)
+
+    def _update_analysis_actions(self):
+        ready = bool(self.stream) and self.inv_combo.currentIndex() >= 0
+        for button in (self.process_btn, self.arf_btn, self.slowness_btn,
+                       self.pmcc_btn):
+            button.setEnabled(ready)
+            button.setToolTip("" if ready else
+                              "Load a MiniSEED waveform and select StationXML first.")
+        self.spectro_btn.setEnabled(bool(self.stream))
+        self.noise_btn.setEnabled(bool(self.stream))
+        self.check_data_btn.setEnabled(bool(self.stream))
+        self.spectro_btn.setToolTip(
+            "Plot loaded waveforms; without pressure metadata, values use raw counts."
+            if self.stream else "Load a MiniSEED waveform first.")
+        if not ready:
+            self.status_label.setText("Load a waveform and select StationXML")
+        elif self.process_thread is None or not self.process_thread.isRunning():
+            self.status_label.setText("Ready to analyze")
+
     def refresh_inventory_list(self):
         self.inv_combo.clear()
         base_dir = os.path.dirname(os.path.abspath(__file__))
         xml_dir    = os.path.join(base_dir, 'XML')
         xml_im_dir = os.path.join(base_dir, 'XML_IM')
+        user_xml_dir = inventory_dir()
 
         model = QStandardItemModel()
         self.inv_combo.setModel(model)
@@ -1369,17 +1888,20 @@ class FKAnalysisGUI(QMainWindow):
                 item = QStandardItem(display)
                 item.setData(os.path.join(xml_dir, f), Qt.UserRole)
                 model.appendRow(item)
-        elif not os.path.isdir(xml_im_dir):
-            QMessageBox.warning(self, "Warning", "No XML or XML_IM directory found.")
+        if user_xml_dir.is_dir() and str(user_xml_dir.resolve()) != os.path.realpath(xml_dir):
+            for path in sorted(user_xml_dir.glob('*.xml')):
+                item = QStandardItem(f"{path.stem}  [User]")
+                item.setData(str(path), Qt.UserRole)
+                model.appendRow(item)
+        self.inv_combo.setCurrentIndex(-1)
 
     def add_inventory_file(self):
         fname, _ = QFileDialog.getOpenFileName(
             self, "Select XML Inventory", "", "XML Files (*.xml);;All Files (*)")
         if not fname:
             return
-        xml_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'XML')
-        os.makedirs(xml_dir, exist_ok=True)
-        dest = os.path.join(xml_dir, os.path.basename(fname))
+        xml_dir = inventory_dir(create=True)
+        dest = str(xml_dir / os.path.basename(fname))
         if os.path.exists(dest):
             if QMessageBox.question(
                     self, "Overwrite?",
@@ -1408,68 +1930,80 @@ class FKAnalysisGUI(QMainWindow):
                 if isinstance(tr.data, np.ma.MaskedArray):
                     tr.data = tr.data.filled(0)
             self.stream = combined
+            self.selected_time = None
+            self.time_label.setText("Pick: —")
+            self.clear_pick_btn.setEnabled(False)
+            first = self.stream[0].stats.starttime
+            self._set_start_time_utc(first)
             if len(fnames) == 1:
                 self.mseed_edit.setText(fnames[0])
             else:
                 self.mseed_edit.setText(
                     f"{len(fnames)} files merged  [{', '.join(os.path.basename(f) for f in fnames)}]")
             self._update_preview()
+            self._update_analysis_actions()
         except Exception as e:
             QMessageBox.critical(self, "Load Error", str(e))
 
     # ── Waveform preview ──────────────────────────────────────────────────
     def _update_preview(self):
+        """Draw each trace as a min/max envelope (instant even for long
+        records) on a shared UTC time axis, labelled inside its panel."""
         if not self.stream:
             return
-
-        n     = len(self.stream)
-        colors = plt.cm.tab10.colors
-
+        t0 = self.stream[0].stats.starttime
         self.figure.clear()
-        axes = self.figure.subplots(n, 1, sharex=True)
-        if n == 1:
-            axes = [axes]
-
-        for i, tr in enumerate(self.stream):
-            ax    = axes[i]
-            times = np.arange(len(tr.data)) * tr.stats.delta
-            norm  = np.max(np.abs(tr.data)) or 1
-            data  = tr.data / norm
-            col   = colors[i % len(colors)]
-
-            ax.plot(times, data, color=col, lw=0.7)
-            ax.fill_between(times, data, 0, where=data >= 0,
-                            color=col, alpha=0.20)
-            ax.fill_between(times, data, 0, where=data <  0,
-                            color=col, alpha=0.20)
-            ax.set_ylim(-1.15, 1.15)
-            ax.set_ylabel("Norm.", fontsize=7)
-            ax.grid(True, alpha=0.25, ls='--')
-            ax.tick_params(labelsize=7)
-
-            label = (f"{tr.stats.network}.{tr.stats.station}."
-                     f"{tr.stats.channel}  "
-                     f"Fs={tr.stats.sampling_rate:.0f} Hz  "
-                     f"[{tr.stats.starttime.strftime('%Y-%m-%d %H:%M:%S')}]")
-            ax.set_title(label, fontsize=8, loc='left', pad=2)
-
-            if self.selected_time is not None:
-                ax.axvline(self.selected_time, color='red',
-                           lw=1.4, ls='--', alpha=0.85)
-                if i == 0:
-                    pt = tr.stats.starttime + self.selected_time
-                    ax.annotate(
-                        f"Start: {pt.strftime('%H:%M:%S')}",
-                        xy=(self.selected_time, 0.9), xytext=(6, 0),
-                        textcoords='offset points', color='red', fontsize=8,
-                        bbox=dict(boxstyle='round,pad=0.3',
-                                  fc='white', ec='red', alpha=0.85))
-
-        axes[-1].set_xlabel("Time (s)", fontsize=8)
-        self.figure.tight_layout(pad=0.4, h_pad=0.3)
-        self.canvas.mpl_connect('button_press_event', self._on_preview_click)
+        axes = self.figure.subplots(len(self.stream), 1, sharex=True,
+                                    squeeze=False)[:, 0]
+        self._preview_axes = list(axes)
+        self._window_artists = []
+        for ax, tr in zip(axes, self.stream):
+            x, y = _envelope(tr.data, tr.stats.delta,
+                             float(tr.stats.starttime - t0))
+            ax.plot(x, y / (np.max(np.abs(y)) or 1.0),
+                    color=PALETTE['ink_2'], lw=0.55)
+            ax.set_ylim(-1.12, 1.12)
+            ax.set_yticks([])
+            for side in ('top', 'right', 'left'):
+                ax.spines[side].set_visible(False)
+            ax.spines['bottom'].set_color('#e6ebef')
+            ax.tick_params(axis='x', length=0)
+            ax.grid(axis='x', color='#eef2f5', lw=0.6)
+            ax.text(0.004, 0.9, f"{tr.stats.station}  {tr.stats.channel}",
+                    transform=ax.transAxes, va='top', fontsize=8,
+                    fontweight='semibold', color=PALETTE['ink_2'],
+                    bbox=dict(boxstyle='round,pad=0.2', fc='white',
+                              ec='none', alpha=0.85))
+        last = axes[-1]
+        last.spines['bottom'].set_color('#a9b7c2')
+        last.tick_params(axis='x', length=3, labelsize=8)
+        last.xaxis.set_major_formatter(
+            FuncFormatter(lambda x, _: (t0 + x).strftime('%H:%M:%S')))
+        last.set_xlabel(
+            f"UTC  ·  {t0.strftime('%Y-%m-%d')}  ·  {len(self.stream)} traces"
+            f"  ·  {self.stream[0].stats.sampling_rate:g} Hz", fontsize=8)
+        self.figure.tight_layout(pad=0.4, h_pad=0.05)
+        self._draw_analysis_window()
         self.view_window_btn.setEnabled(True)
-        self.canvas.draw()
+
+    def _draw_analysis_window(self, *_):
+        """Shade [start, start + Duration] on every trace; follows the start
+        time and Duration fields as they change."""
+        if not (self.stream and self._preview_axes):
+            return
+        for artist in self._window_artists:
+            artist.remove()
+        self._window_artists = []
+        t0 = self.stream[0].stats.starttime
+        start = float(self._window_start() - t0)
+        xlim = self._preview_axes[0].get_xlim()      # keep the user's zoom
+        for ax in self._preview_axes:
+            self._window_artists += [
+                ax.axvspan(start, start + self.duration.value(),
+                           color=PALETTE['accent'], alpha=0.08, lw=0, zorder=0),
+                ax.axvline(start, color=PALETTE['accent'], lw=1.1, zorder=3)]
+        self._preview_axes[0].set_xlim(xlim)
+        self.canvas.draw_idle()
 
     def _on_preview_click(self, event):
         if not (event.inaxes and event.button == 1):
@@ -1479,18 +2013,18 @@ class FKAnalysisGUI(QMainWindow):
         pt = self.stream[0].stats.starttime + self.selected_time
         self.time_label.setText(
             f"Pick: {pt.strftime('%Y-%m-%d %H:%M:%S.%f')[:-4]}")
-        self.start_time_input.setDateTime(QDateTime(
-            pt.year, pt.month, pt.day, pt.hour, pt.minute, pt.second,
-            int(pt.microsecond / 1000)))
+        self._set_start_time_utc(pt)
         self.clear_pick_btn.setEnabled(True)
-        self._update_preview()
+        self._draw_analysis_window()
 
     def clear_time_pick(self):
         self.selected_time = None
         self.time_label.setText("Pick: —")
         self.clear_pick_btn.setEnabled(False)
-        self.start_time_input.setDateTime(QDateTime.currentDateTime())
-        self._update_preview()
+        if self.stream:
+            first = self.stream[0].stats.starttime
+            self._set_start_time_utc(first)
+        self._draw_analysis_window()
 
     def view_waveform(self):
         if not self.stream:
@@ -1502,8 +2036,7 @@ class FKAnalysisGUI(QMainWindow):
     def _apply_viewer_pick(self, time_str):
         try:
             t = UTCDateTime(time_str)
-            self.start_time_input.setDateTime(QDateTime(
-                t.year, t.month, t.day, t.hour, t.minute, t.second))
+            self._set_start_time_utc(t)
         except Exception as e:
             QMessageBox.critical(self, "Time Error", str(e))
 
@@ -1547,6 +2080,7 @@ class FKAnalysisGUI(QMainWindow):
                               if self.origin_time_chk.isChecked() else None),
             celerity       = (self.celerity_spin.value()
                               if self.celerity_chk.isChecked() else None),
+            bootstrap      = self.bootstrap_chk.isChecked(),
         )
 
         self._last_params = params          # kept for DB save dialog
@@ -1563,11 +2097,6 @@ class FKAnalysisGUI(QMainWindow):
 
     def _on_progress(self, val):
         self.progress_bar.setValue(val)
-        clr = "#e74c3c" if val < 34 else "#f39c12" if val < 67 else "#27ae60"
-        self.progress_bar.setStyleSheet(f"""
-            QProgressBar {{ border:2px solid {clr}; border-radius:8px;
-                            text-align:center; }}
-            QProgressBar::chunk {{ background:{clr}; border-radius:6px; }}""")
 
     def _on_finished(self, result):
         self.progress_bar.setVisible(False)
@@ -1591,249 +2120,23 @@ class FKAnalysisGUI(QMainWindow):
         event_name  = self.event_name.text()
         fmin        = self.min_freq.value()
         fmax        = self.max_freq.value()
-        n_sta       = int(r.get('n_stations', 0))
-        exp_baz     = r['expected_bazi']
 
-        fig = plt.figure(figsize=(15, 11))
-
-        gs = gridspec.GridSpec(
-            4, 2,
-            width_ratios=[2.5, 1.2],
-            hspace=0.45, wspace=0.32,
-            left=0.08, right=0.97,
-            top=0.84,  bottom=0.07,
-        )
-
-        ax1 = fig.add_subplot(gs[0, 0])
-        ax2 = fig.add_subplot(gs[1, 0], sharex=ax1)
-        ax3 = fig.add_subplot(gs[2, 0], sharex=ax1)
-        ax4 = fig.add_subplot(gs[3, 0], sharex=ax1)
-        ax5 = fig.add_subplot(gs[0:2, 1], projection='polar')  # BAZ detection map
-        ax6 = fig.add_subplot(gs[2:4, 1])   # Array geometry
-
-        semb     = r['semblance']
-        det_mask = semb >= semb_thresh
-        noi_mask = ~det_mask
-        n_det    = int(np.sum(det_mask))
-
-        # ── Visual encoding ────────────────────────────────────────────────
-        # Noise:      tiny, light-grey, very transparent → recedes to background
-        # Detection:  larger (scaled by semblance), plasma colormap, black edge
-        det_sizes = 6 + 20 * ((semb[det_mask] - semb_thresh) /
-                              max(1 - semb_thresh, 1e-6))
-
-        kw_noise = dict(color='#cccccc', alpha=0.25, s=4,
-                        linewidths=0, zorder=1)
-        kw_det   = dict(c=semb[det_mask], cmap='plasma',
-                        vmin=semb_thresh, vmax=1.0,
-                        s=det_sizes, alpha=0.95,
-                        edgecolors='black', linewidths=0.5, zorder=3)
-
-        # ── Panel 1 — Fisher ──────────────────────────────────────────────
-        ax1.scatter(r['time'][noi_mask], r['fisher'][noi_mask], **kw_noise)
-        sc = ax1.scatter(r['time'][det_mask], r['fisher'][det_mask], **kw_det)
-        # Threshold line
-        fisher_thresh = (n_sta - 1) * semb_thresh / (1 - semb_thresh + 1e-9)
-        ax1.axhline(fisher_thresh, color='crimson', ls='--', lw=1.2,
-                    label=f"Threshold (semb={semb_thresh:.2f})")
-        ax1.set_ylabel('Fisher', fontsize=9)
-        ax1.legend(loc='upper right', fontsize=7)
-        ax1.set_facecolor('#fafafa')
-        ax1.grid(True, alpha=0.3)
-
-        # ── Panel 2 — Back-azimuth ─────────────────────────────────────────
-        ax2.scatter(r['time'][noi_mask], r['bazi'][noi_mask], **kw_noise)
-        ax2.scatter(r['time'][det_mask], r['bazi'][det_mask], **kw_det)
-        ax2.axhline(exp_baz, color='royalblue', ls='--', lw=1.6,
-                    label=f"Expected  {int(exp_baz)}°", zorder=4)
-        # ±20° acceptance band
-        baz_lo = (exp_baz - 20) % 360
-        baz_hi = (exp_baz + 20) % 360
-        if baz_lo < baz_hi:
-            ax2.axhspan(baz_lo, baz_hi, color='royalblue', alpha=0.08, zorder=0)
-        ax2.set_ylim(0, 360); ax2.set_yticks([0, 90, 180, 270, 360])
-        ax2.set_ylabel('Back-Az (°)', fontsize=9)
-        ax2.legend(loc='upper right', fontsize=7)
-        ax2.set_facecolor('#fafafa')
-        ax2.grid(True, alpha=0.3)
-
-        # ── Panel 3 — Apparent velocity ────────────────────────────────────
-        ax3.scatter(r['time'][noi_mask], r['app_vel'][noi_mask], **kw_noise)
-        ax3.scatter(r['time'][det_mask], r['app_vel'][det_mask], **kw_det)
-        ax3.axhspan(300, 380, color='limegreen', alpha=0.08, zorder=0,
-                    label='300–380 m/s')
-        ax3.set_ylabel('App. Vel. (m/s)', fontsize=9)
-        ax3.set_ylim(200, 450)
-        ax3.legend(loc='upper right', fontsize=7)
-        ax3.set_facecolor('#fafafa')
-        ax3.grid(True, alpha=0.3)
-
-        # ── Panel 4 — Beam waveform ────────────────────────────────────────
-        bwave   = r['beam_waveform']
-        btim    = r['beam_times']
-        max_val = float(np.max(np.abs(bwave))) if len(bwave) > 0 else 1.0
-
-        ax4.plot(btim, bwave, color='#333333', lw=0.8, zorder=2)
-        ax4.fill_between(btim, 0, bwave, where=bwave >= 0,
-                         color='steelblue', alpha=0.5, zorder=1)
-        ax4.fill_between(btim, 0, bwave, where=bwave <  0,
-                         color='tomato',    alpha=0.5, zorder=1)
-        ax4.set_ylabel('Pressure (Pa)', fontsize=9)
-        ax4.set_facecolor('#fafafa')
-        ax4.grid(True, alpha=0.3)
-        ax4.text(0.02, 0.94, f"Max |p| = {max_val:.4f} Pa",
-                 transform=ax4.transAxes, fontsize=8,
-                 bbox=dict(boxstyle='round,pad=0.3',
-                           facecolor='white', edgecolor='grey', alpha=0.85))
-
-        # ── Celerity arrival line (optional) ──────────────────────────────
-        origin_time_str = params.get('origin_time')
-        celerity_ms     = params.get('celerity')
-        if origin_time_str and celerity_ms:
-            try:
-                from obspy.geodetics import gps2dist_azimuth
-                arr_lat  = r.get('array_lat', 0)
-                arr_lon  = r.get('array_lon', 0)
-                src_lat  = params.get('event_lat', 0)
-                src_lon  = params.get('event_lon', 0)
-
-                dist_m    = gps2dist_azimuth(src_lat, src_lon,
-                                             arr_lat,  arr_lon)[0]
-                travel_s  = dist_m / celerity_ms
-                arrival   = UTCDateTime(origin_time_str) + travel_s
-                arr_mpl   = mdates.date2num(arrival.datetime)
-
-                ax4.axvline(arr_mpl, color='darkorange', lw=2.0,
-                            ls='--', zorder=5,
-                            label=(f'Expected arrival\n'
-                                   f'c = {celerity_ms:.0f} m/s\n'
-                                   f'Δ = {dist_m/1000:.1f} km   '
-                                   f'Δt = {travel_s:.0f} s'))
-                ax4.legend(loc='upper right', fontsize=7,
-                           framealpha=0.9, edgecolor='darkorange')
-            except Exception as _cel_err:
-                print(f"[WARN] Could not plot celerity line: {_cel_err}")
-
-        # Detection count annotation on Fisher panel
-        ax1.text(0.99, 0.94,
-                 f"{n_det}/{len(semb)} windows detected",
-                 transform=ax1.transAxes, fontsize=8, ha='right',
-                 color='crimson', fontweight='bold',
-                 bbox=dict(boxstyle='round,pad=0.3',
-                           facecolor='white', edgecolor='crimson', alpha=0.85))
-
-        # ── Shared time axis formatting ────────────────────────────────────
-        fmt = mdates.DateFormatter('%H:%M:%S')
-        for ax in (ax1, ax2, ax3, ax4):
-            ax.xaxis.set_major_locator(mdates.AutoDateLocator())
-            ax.xaxis.set_major_formatter(fmt)
-        for ax in (ax1, ax2, ax3):
-            plt.setp(ax.get_xticklabels(), visible=False)
-        fig.autofmt_xdate(rotation=25, ha='right')
-
-        # ── Panel 5 — Back-Azimuth Detection Map (polar) ──────────────────
-        ax5.set_theta_zero_location('N')   # North at top
-        ax5.set_theta_direction(-1)         # Clockwise like a compass
-
-        baz_det  = r['bazi'][det_mask]
-        vel_det  = r['app_vel'][det_mask]
-        semb_det = semb[det_mask]
-
-        # Rose histogram bars — semblance-weighted count per 10° bin
-        n_bins     = 36
-        bin_edges  = np.linspace(0, 360, n_bins + 1)
-        if len(baz_det) > 0:
-            counts, _ = np.histogram(baz_det, bins=bin_edges, weights=semb_det)
-            counts_n  = counts / max(counts.max(), 1e-9)
-        else:
-            counts_n  = np.zeros(n_bins)
-
-        bin_centers = np.deg2rad(0.5 * (bin_edges[:-1] + bin_edges[1:]))
-        bin_width   = np.deg2rad(360 / n_bins)
-        bars = ax5.bar(bin_centers, counts_n,
-                       width=bin_width * 0.9, bottom=0,
-                       color='steelblue', alpha=0.22,
-                       edgecolor='steelblue', linewidth=0.4, zorder=1)
-
-        # Detection scatter: theta=baz, r=app_vel, colour=semblance
-        if len(baz_det) > 0:
-            sc5 = ax5.scatter(
-                np.deg2rad(baz_det), vel_det,
-                c=semb_det, cmap='plasma',
-                vmin=semb_thresh, vmax=1.0,
-                s=6 + 20 * (semb_det - semb_thresh) /
-                  max(1 - semb_thresh, 1e-6),
-                alpha=0.80, edgecolors='black',
-                linewidths=0.5, zorder=3)
-        else:
-            sc5 = ax5.scatter([], [], c=[], cmap='plasma',
-                              vmin=semb_thresh, vmax=1.0)
-
-        # Expected BAZ line
-        exp_rad = np.deg2rad(exp_baz)
-        ax5.plot([exp_rad, exp_rad], [200, 450],
-                 color='royalblue', lw=2.0, ls='--',
-                 label=f'Expected {int(exp_baz)}°', zorder=4)
-
-        # Radial axis = apparent velocity
-        ax5.set_ylim(200, 450)
-        ax5.set_yticks([250, 300, 350, 400, 450])
-        ax5.set_yticklabels(['250', '300', '350', '400', '450\nm/s'],
-                            fontsize=6, color='#444')
-        ax5.set_rlabel_position(45)
-
-        # Cardinal labels
-        ax5.set_thetagrids(range(0, 360, 45),
-                           ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'],
-                           fontsize=8)
-        ax5.set_title('Back-Azimuth Detection Map',
-                      fontsize=10, fontweight='bold', pad=14)
-        ax5.legend(loc='upper right', fontsize=7,
-                   bbox_to_anchor=(1.35, 1.12))
-        ax5.grid(True, alpha=0.3)
-
-        # Panel 6 — Array Geometry ─────────────────────────────────────────
-        x_km    = r.get('station_x_km', np.array([]))
-        y_km    = r.get('station_y_km', np.array([]))
-        sta_ids = r.get('station_ids',  [])
-
-        ax6.scatter(x_km, y_km, s=60, color='steelblue',
-                    edgecolors='k', linewidths=0.7, zorder=3)
-        for xi, yi, sid in zip(x_km, y_km, sta_ids):
-            ax6.annotate(sid, (xi, yi),
-                         textcoords='offset points', xytext=(5, 5),
-                         fontsize=7, color='#2c3e50')
-        ax6.plot(0, 0, 'k+', ms=12, mew=2, zorder=4, label='Centroid')
-        ax6.set_xlabel('East offset  (km)', fontsize=9)
-        ax6.set_ylabel('North offset  (km)', fontsize=9)
-        ax6.set_title('Array Geometry', fontsize=10, fontweight='bold')
-        ax6.set_aspect('equal', adjustable='datalim')
-        ax6.legend(fontsize=7, loc='upper right')
-        ax6.grid(True, alpha=0.25, ls='--')
-
-        # Suptitle ─────────────────────────────────────────────────────────
-        fig.suptitle(
-            f"Event: {event_name}    "
-            f"Filter: {fmin}–{fmax} Hz    "
-            f"Sensors: {n_sta}    "
-            f"Expected BAZ: {int(exp_baz)}°    "
-            f"Detections: {n_det}/{len(semb)}",
-            fontsize=11, y=0.98, fontweight='bold')
-
-        # Semblance colorbar (detections only, plasma scale) ──────────────
-        cbar_ax = fig.add_axes([0.08, 0.895, 0.89, 0.012])
-        cb = fig.colorbar(sc, cax=cbar_ax, orientation='horizontal', extend='min')
-        cb.set_label(f'Semblance  (detections ≥ {semb_thresh:.2f}  |  grey = noise)',
-                     fontsize=9, fontweight='bold', labelpad=-1)
-        cb.ax.tick_params(labelsize=8)
+        # Figure() rather than plt.figure() so results windows are not kept
+        # alive by pyplot; the same figure is drawn by the batch CLI.
+        fig = Figure(figsize=(15, 11))
+        result_plots.fk_results_figure(
+            fig, r, params, event_name=event_name, fmin=fmin, fmax=fmax,
+            semb_thresh=semb_thresh)
 
         # Auto-save JPG ────────────────────────────────────────────────────
         safe_name = "".join(c if c.isalnum() or c in '-_' else '_'
                             for c in event_name)
         jpg_file  = f"FK_{safe_name}.jpg"
         try:
+            # matplotlib ≥3.3 moved JPEG quality into pil_kwargs (the old
+            # `quality=` kwarg was removed and raised on newer versions).
             fig.savefig(jpg_file, dpi=300, bbox_inches='tight',
-                        format='jpeg', quality=92)
+                        format='jpeg', pil_kwargs={'quality': 92})
             print(f"[INFO] Figure saved → {jpg_file}")
         except Exception as e:
             print(f"[WARN] Could not auto-save figure: {e}")
@@ -1846,8 +2149,13 @@ class FKAnalysisGUI(QMainWindow):
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-if __name__ == '__main__':
+def main():
     app = QApplication(sys.argv)
+    apply_app_theme(app)
     win = FKAnalysisGUI()
     win.show()
-    sys.exit(app.exec_())
+    return app.exec_()
+
+
+if __name__ == '__main__':
+    sys.exit(main())

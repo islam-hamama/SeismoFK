@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>5</TotalNumberStations>
+        <Station code="I02H1" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+            <Latitude>-54.580570</Latitude>
+            <Longitude>-67.309230</Longitude>
+            <Elevation>0.094</Elevation>
+            <Site>
+                <Name>I02AR H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I02AR</Description>
+                </Sensor>
+                <Latitude>-54.580570</Latitude>
+                <Longitude>-67.309230</Longitude>
+                <Elevation>0.094</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I02H2" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+            <Latitude>-54.574900</Latitude>
+            <Longitude>-67.315030</Longitude>
+            <Elevation>0.069</Elevation>
+            <Site>
+                <Name>I02AR H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I02AR</Description>
+                </Sensor>
+                <Latitude>-54.574900</Latitude>
+                <Longitude>-67.315030</Longitude>
+                <Elevation>0.069</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I02H3" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+            <Latitude>-54.577830</Latitude>
+            <Longitude>-67.295080</Longitude>
+            <Elevation>0.0785</Elevation>
+            <Site>
+                <Name>I02AR H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I02AR</Description>
+                </Sensor>
+                <Latitude>-54.577830</Latitude>
+                <Longitude>-67.295080</Longitude>
+                <Elevation>0.0785</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I02H4" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+            <Latitude>-54.587280</Latitude>
+            <Longitude>-67.308830</Longitude>
+            <Elevation>0.1211</Elevation>
+            <Site>
+                <Name>I02AR H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I02AR</Description>
+                </Sensor>
+                <Latitude>-54.587280</Latitude>
+                <Longitude>-67.308830</Longitude>
+                <Elevation>0.1211</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I02H5" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+            <Latitude>-54.582740</Latitude>
+            <Longitude>-67.314340</Longitude>
+            <Elevation>0.0957</Elevation>
+            <Site>
+                <Name>I02AR H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2006-05-04T08:16:34" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I02AR</Description>
+                </Sensor>
+                <Latitude>-54.582740</Latitude>
+                <Longitude>-67.314340</Longitude>
+                <Elevation>0.0957</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

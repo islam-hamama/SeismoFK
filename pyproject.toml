@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seismofk"
+version = "1.2.1"
+description = "Infrasound array analysis and PMCC detection desktop application"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "Islam Hamama"}]
+dependencies = [
+  "PyQt5>=5.15,<6.0",
+  "numpy>=1.24,<3.0",
+  "scipy>=1.10",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "obspy>=1.4,<2.0",
+]
+
+[project.optional-dependencies]
+parquet = ["pyarrow>=12.0"]
+
+[project.scripts]
+seismofk = "Infra_Analysis:main"
+seismofk-cli = "seismofk_cli:main"
+
+[tool.setuptools]
+py-modules = [
+  "Infra_Analysis", "app_paths", "data_readiness", "seismofk_cli",
+  "fk_analysis", "pmcc", "results_io", "db_manager", "gui_methods",
+  "result_ui", "result_plots", "noise_levels",
+  "plot_spectrogram_window", "xml_creator", "convert_ims", "export_stations",
+]

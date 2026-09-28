@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>8</TotalNumberStations>
+        <Station code="I14H1" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-33.653790</Latitude>
+            <Longitude>-78.795980</Longitude>
+            <Elevation>0.3879</Elevation>
+            <Site>
+                <Name>I14CL ROBINSON CRUSOE H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-05-11T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.653790</Latitude>
+                <Longitude>-78.795980</Longitude>
+                <Elevation>0.3879</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6961.36</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2016-05-10T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.653790</Latitude>
+                <Longitude>-78.795980</Longitude>
+                <Elevation>0.3879</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2016-05-11T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.653800</Latitude>
+                <Longitude>-78.796000</Longitude>
+                <Elevation>387.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I14H2" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-33.641730</Latitude>
+            <Longitude>-78.796280</Longitude>
+            <Elevation>0.2704</Elevation>
+            <Site>
+                <Name>I14CL ROBINSON CRUSOE H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-05-11T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.641730</Latitude>
+                <Longitude>-78.796280</Longitude>
+                <Elevation>0.2704</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6973.5</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-10T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.641730</Latitude>
+                <Longitude>-78.796280</Longitude>
+                <Elevation>0.2704</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2004-11-09T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.641700</Latitude>
+                <Longitude>-78.796300</Longitude>
+                <Elevation>270.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-11T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.641700</Latitude>
+                <Longitude>-78.796300</Longitude>
+                <Elevation>270.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I14H3" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-33.658960</Latitude>
+            <Longitude>-78.787610</Longitude>
+            <Elevation>0.3628</Elevation>
+            <Site>
+                <Name>I14CL ROBINSON CRUSOE H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-05-11T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658960</Latitude>
+                <Longitude>-78.787610</Longitude>
+                <Elevation>0.3628</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6956.52</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-10T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658960</Latitude>
+                <Longitude>-78.787610</Longitude>
+                <Elevation>0.3628</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2004-11-09T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.659000</Latitude>
+                <Longitude>-78.787600</Longitude>
+                <Elevation>362.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-11T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.659000</Latitude>
+                <Longitude>-78.787600</Longitude>
+                <Elevation>362.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I14H4" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-33.651030</Latitude>
+            <Longitude>-78.809170</Longitude>
+            <Elevation>0.4951</Elevation>
+            <Site>
+                <Name>I14CL ROBINSON CRUSOE H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-05-11T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.651030</Latitude>
+                <Longitude>-78.809170</Longitude>
+                <Elevation>0.4951</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6958.94</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-10T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.651030</Latitude>
+                <Longitude>-78.809170</Longitude>
+                <Elevation>0.4951</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2004-11-09T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.651000</Latitude>
+                <Longitude>-78.809200</Longitude>
+                <Elevation>495.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-11T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.651000</Latitude>
+                <Longitude>-78.809200</Longitude>
+                <Elevation>495.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I14H5" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-33.642530</Latitude>
+            <Longitude>-78.806960</Longitude>
+            <Elevation>0.354</Elevation>
+            <Site>
+                <Name>I14CL ROBINSON CRUSOE H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-05-11T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.642530</Latitude>
+                <Longitude>-78.806960</Longitude>
+                <Elevation>0.354</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6980.8</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-10T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.642530</Latitude>
+                <Longitude>-78.806960</Longitude>
+                <Elevation>0.354</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2004-11-09T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.642500</Latitude>
+                <Longitude>-78.807000</Longitude>
+                <Elevation>354</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-11T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.642500</Latitude>
+                <Longitude>-78.807000</Longitude>
+                <Elevation>354</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I14H6" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-33.658260</Latitude>
+            <Longitude>-78.786480</Longitude>
+            <Elevation>0.3498</Elevation>
+            <Site>
+                <Name>I14CL ROBINSON CRUSOE H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-05-11T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658260</Latitude>
+                <Longitude>-78.786480</Longitude>
+                <Elevation>0.3498</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6973.5</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-10T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658260</Latitude>
+                <Longitude>-78.786480</Longitude>
+                <Elevation>0.3498</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2004-11-09T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658300</Latitude>
+                <Longitude>-78.786500</Longitude>
+                <Elevation>349.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-11T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658300</Latitude>
+                <Longitude>-78.786500</Longitude>
+                <Elevation>349.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I14H7" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-33.659610</Latitude>
+            <Longitude>-78.787140</Longitude>
+            <Elevation>0.3865</Elevation>
+            <Site>
+                <Name>I14CL ROBINSON CRUSOE H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-05-11T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.659610</Latitude>
+                <Longitude>-78.787140</Longitude>
+                <Elevation>0.3865</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6975.93</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-10T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.659610</Latitude>
+                <Longitude>-78.787140</Longitude>
+                <Elevation>0.3865</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2004-11-09T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.659600</Latitude>
+                <Longitude>-78.787100</Longitude>
+                <Elevation>386.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-11T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.659600</Latitude>
+                <Longitude>-78.787100</Longitude>
+                <Elevation>386.5</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I14H8" startDate="2004-04-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-33.658630</Latitude>
+            <Longitude>-78.788700</Longitude>
+            <Elevation>0.3541</Elevation>
+            <Site>
+                <Name>I14CL ROBINSON CRUSOE H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2016-05-11T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658630</Latitude>
+                <Longitude>-78.788700</Longitude>
+                <Elevation>0.3541</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>6973.5</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-10T23:59:59">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658630</Latitude>
+                <Longitude>-78.788700</Longitude>
+                <Elevation>0.3541</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-04-24T00:00:00" endDate="2004-11-09T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658600</Latitude>
+                <Longitude>-78.788700</Longitude>
+                <Elevation>354.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2004-11-10T00:00:00" endDate="2016-05-11T00:00:00">
+                <Sensor>
+                    <Description>I14CL ROBINSON CRUSOE</Description>
+                </Sensor>
+                <Latitude>-33.658600</Latitude>
+                <Longitude>-78.788700</Longitude>
+                <Elevation>354.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

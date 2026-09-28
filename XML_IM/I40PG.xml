@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>8</TotalNumberStations>
+        <Station code="I40H1" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-4.299191</Latitude>
+            <Longitude>152.023450</Longitude>
+            <Elevation>0.091586</Elevation>
+            <Site>
+                <Name>I40PG KERAVAT H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-09T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.299191</Latitude>
+                <Longitude>152.023450</Longitude>
+                <Elevation>0.091586</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-12-08T00:00:00" endDate="2018-08-09T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.299191</Latitude>
+                <Longitude>152.023450</Longitude>
+                <Elevation>0.091586</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-04-10T12:00:00" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.299200</Latitude>
+                <Longitude>152.023500</Longitude>
+                <Elevation>91.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.299200</Latitude>
+                <Longitude>152.023500</Longitude>
+                <Elevation>91.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I40H2" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-4.301105</Latitude>
+            <Longitude>152.024660</Longitude>
+            <Elevation>0.094138</Elevation>
+            <Site>
+                <Name>I40PG KERAVAT H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-09T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.301105</Latitude>
+                <Longitude>152.024660</Longitude>
+                <Elevation>0.094138</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-12-08T00:00:00" endDate="2018-08-09T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.301105</Latitude>
+                <Longitude>152.024660</Longitude>
+                <Elevation>0.094138</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-04-10T12:00:00" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.301100</Latitude>
+                <Longitude>152.024700</Longitude>
+                <Elevation>94.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.301100</Latitude>
+                <Longitude>152.024700</Longitude>
+                <Elevation>94.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I40H3" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-4.302751</Latitude>
+            <Longitude>152.024870</Longitude>
+            <Elevation>0.096376</Elevation>
+            <Site>
+                <Name>I40PG KERAVAT H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-09T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.302751</Latitude>
+                <Longitude>152.024870</Longitude>
+                <Elevation>0.096376</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-12-08T00:00:00" endDate="2018-08-09T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.302751</Latitude>
+                <Longitude>152.024870</Longitude>
+                <Elevation>0.096376</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-04-10T12:00:00" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.302800</Latitude>
+                <Longitude>152.024900</Longitude>
+                <Elevation>96.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.302800</Latitude>
+                <Longitude>152.024900</Longitude>
+                <Elevation>96.4</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I40H4" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-4.302777</Latitude>
+            <Longitude>152.022480</Longitude>
+            <Elevation>0.092067</Elevation>
+            <Site>
+                <Name>I40PG KERAVAT H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-09T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.302777</Latitude>
+                <Longitude>152.022480</Longitude>
+                <Elevation>0.092067</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-12-08T00:00:00" endDate="2018-08-09T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.302777</Latitude>
+                <Longitude>152.022480</Longitude>
+                <Elevation>0.092067</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-04-10T12:00:00" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.302800</Latitude>
+                <Longitude>152.022500</Longitude>
+                <Elevation>92.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.302800</Latitude>
+                <Longitude>152.022500</Longitude>
+                <Elevation>92.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I40H5" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-4.300767</Latitude>
+            <Longitude>152.021850</Longitude>
+            <Elevation>0.09165</Elevation>
+            <Site>
+                <Name>I40PG KERAVAT H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-09T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.300767</Latitude>
+                <Longitude>152.021850</Longitude>
+                <Elevation>0.09165</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-12-08T00:00:00" endDate="2018-08-09T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.300767</Latitude>
+                <Longitude>152.021850</Longitude>
+                <Elevation>0.09165</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-04-10T12:00:00" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.300800</Latitude>
+                <Longitude>152.021900</Longitude>
+                <Elevation>91.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.300800</Latitude>
+                <Longitude>152.021900</Longitude>
+                <Elevation>91.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I40H6" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-4.291673</Latitude>
+            <Longitude>152.027710</Longitude>
+            <Elevation>0.091834</Elevation>
+            <Site>
+                <Name>I40PG KERAVAT H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-09T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.291673</Latitude>
+                <Longitude>152.027710</Longitude>
+                <Elevation>0.091834</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-12-08T00:00:00" endDate="2018-08-09T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.291673</Latitude>
+                <Longitude>152.027710</Longitude>
+                <Elevation>0.091834</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-04-10T12:00:00" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.291700</Latitude>
+                <Longitude>152.027700</Longitude>
+                <Elevation>91.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.291700</Latitude>
+                <Longitude>152.027700</Longitude>
+                <Elevation>91.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I40H7" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-4.306836</Latitude>
+            <Longitude>152.026640</Longitude>
+            <Elevation>0.097836</Elevation>
+            <Site>
+                <Name>I40PG KERAVAT H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2018-08-09T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.306836</Latitude>
+                <Longitude>152.026640</Longitude>
+                <Elevation>0.097836</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-12-08T00:00:00" endDate="2018-08-09T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.306836</Latitude>
+                <Longitude>152.026640</Longitude>
+                <Elevation>0.097836</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-04-10T12:00:00" endDate="2017-12-12T00:00:00">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.306800</Latitude>
+                <Longitude>152.026600</Longitude>
+                <Elevation>97.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2017-12-13T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.306800</Latitude>
+                <Longitude>152.026600</Longitude>
+                <Elevation>97.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I40H8" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-4.298968</Latitude>
+            <Longitude>152.011700</Longitude>
+            <Elevation>0.084772</Elevation>
+            <Site>
+                <Name>I40PG KERAVAT H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2014-12-08T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.298968</Latitude>
+                <Longitude>152.011700</Longitude>
+                <Elevation>0.084772</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2014-04-10T12:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I40PG KERAVAT</Description>
+                </Sensor>
+                <Latitude>-4.299000</Latitude>
+                <Longitude>152.011700</Longitude>
+                <Elevation>84.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10000</Value>
+                        <Frequency>1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>

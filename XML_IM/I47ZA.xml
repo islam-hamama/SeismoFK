@@ -1,0 +1,2144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1">
+    <Source>CTBTO</Source>
+    <Created>2026-04-14T00:00:00</Created>
+    <Network code="IM" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+        <TotalNumberStations>24</TotalNumberStations>
+        <Station code="I47L1" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621123</Latitude>
+            <Longitude>25.235228</Longitude>
+            <Elevation>1.30568</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY L1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621123</Latitude>
+                <Longitude>25.235228</Longitude>
+                <Elevation>1.30568</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2019-12-04T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621100</Latitude>
+                <Longitude>25.235200</Longitude>
+                <Elevation>1305.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-12-05T00:00:00" endDate="2021-05-23T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621100</Latitude>
+                <Longitude>25.235200</Longitude>
+                <Elevation>1305.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47L2" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.622731</Latitude>
+            <Longitude>25.234921</Longitude>
+            <Elevation>1.30778</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY L2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.622731</Latitude>
+                <Longitude>25.234921</Longitude>
+                <Elevation>1.30778</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2019-12-04T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.234900</Longitude>
+                <Elevation>1307.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-12-05T00:00:00" endDate="2021-05-23T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.234900</Longitude>
+                <Elevation>1307.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47L3" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621702</Latitude>
+            <Longitude>25.233507</Longitude>
+            <Elevation>1.30767</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY L3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621702</Latitude>
+                <Longitude>25.233507</Longitude>
+                <Elevation>1.30767</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2019-12-04T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.233500</Longitude>
+                <Elevation>1307.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-12-05T00:00:00" endDate="2021-05-23T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.233500</Longitude>
+                <Elevation>1307.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47L4" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.615143</Latitude>
+            <Longitude>25.238688</Longitude>
+            <Elevation>1.31294</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY L4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.615143</Latitude>
+                <Longitude>25.238688</Longitude>
+                <Elevation>1.31294</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2019-12-04T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.615100</Latitude>
+                <Longitude>25.238700</Longitude>
+                <Elevation>1312.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-12-05T00:00:00" endDate="2021-05-23T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.615100</Latitude>
+                <Longitude>25.238700</Longitude>
+                <Elevation>1312.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47L5" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621703</Latitude>
+            <Longitude>25.243419</Longitude>
+            <Elevation>1.31224</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY L5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621703</Latitude>
+                <Longitude>25.243419</Longitude>
+                <Elevation>1.31224</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2019-12-04T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.243400</Longitude>
+                <Elevation>1312.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-12-05T00:00:00" endDate="2021-05-23T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.243400</Longitude>
+                <Elevation>1312.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47L6" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.629747</Latitude>
+            <Longitude>25.237351</Longitude>
+            <Elevation>1.29908</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY L6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.629747</Latitude>
+                <Longitude>25.237351</Longitude>
+                <Elevation>1.29908</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2019-12-04T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.629700</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1299.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-12-05T00:00:00" endDate="2021-05-23T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.629700</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1299.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47L7" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.625532</Latitude>
+            <Longitude>25.226638</Longitude>
+            <Elevation>1.30263</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY L7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.625532</Latitude>
+                <Longitude>25.226638</Longitude>
+                <Elevation>1.30263</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2019-12-04T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.625500</Latitude>
+                <Longitude>25.226600</Longitude>
+                <Elevation>1302.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-12-05T00:00:00" endDate="2021-05-23T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.625500</Latitude>
+                <Longitude>25.226600</Longitude>
+                <Elevation>1302.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47L8" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.617145</Latitude>
+            <Longitude>25.227847</Longitude>
+            <Elevation>1.30898</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY L8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.617145</Latitude>
+                <Longitude>25.227847</Longitude>
+                <Elevation>1.30898</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>0</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10485.8</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2005-11-08T08:44:53" endDate="2019-12-05T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.227800</Longitude>
+                <Elevation>1309</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.1</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2019-12-05T00:00:00" endDate="2021-05-23T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF SOUTH AFRICA INFRASONIC ARRAY</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.227800</Longitude>
+                <Elevation>1309</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47C1" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621100</Latitude>
+            <Longitude>25.235200</Longitude>
+            <Elevation>1305.7</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF C1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621100</Latitude>
+                <Longitude>25.235200</Longitude>
+                <Elevation>1305.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621100</Latitude>
+                <Longitude>25.235200</Longitude>
+                <Elevation>1305.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621100</Latitude>
+                <Longitude>25.235200</Longitude>
+                <Elevation>1305.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8620.69</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47C2" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.622700</Latitude>
+            <Longitude>25.234900</Longitude>
+            <Elevation>1307.8</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF C2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.234900</Longitude>
+                <Elevation>1307.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.234900</Longitude>
+                <Elevation>1307.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.234900</Longitude>
+                <Elevation>1307.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8771.93</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47C3" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621700</Latitude>
+            <Longitude>25.233500</Longitude>
+            <Elevation>1307.7</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF C3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.233500</Longitude>
+                <Elevation>1307.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.233500</Longitude>
+                <Elevation>1307.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.233500</Longitude>
+                <Elevation>1307.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8547.01</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47C4" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.615100</Latitude>
+            <Longitude>25.238700</Longitude>
+            <Elevation>1312.9</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF C4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.615100</Latitude>
+                <Longitude>25.238700</Longitude>
+                <Elevation>1312.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.615100</Latitude>
+                <Longitude>25.238700</Longitude>
+                <Elevation>1312.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.615100</Latitude>
+                <Longitude>25.238700</Longitude>
+                <Elevation>1312.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8547.01</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47C5" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621700</Latitude>
+            <Longitude>25.243400</Longitude>
+            <Elevation>1312.2</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF C5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.243400</Longitude>
+                <Elevation>1312.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.243400</Longitude>
+                <Elevation>1312.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.243400</Longitude>
+                <Elevation>1312.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>7874.02</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47C6" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.629700</Latitude>
+            <Longitude>25.237400</Longitude>
+            <Elevation>1299.1</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF C6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.629700</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1299.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.629700</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1299.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.629700</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1299.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8474.58</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47C7" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.625500</Latitude>
+            <Longitude>25.226600</Longitude>
+            <Elevation>1302.6</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF C7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.625500</Latitude>
+                <Longitude>25.226600</Longitude>
+                <Elevation>1302.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.625500</Latitude>
+                <Longitude>25.226600</Longitude>
+                <Elevation>1302.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.625500</Latitude>
+                <Longitude>25.226600</Longitude>
+                <Elevation>1302.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8474.58</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47C8" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.617100</Latitude>
+            <Longitude>25.227800</Longitude>
+            <Elevation>1309</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF C8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.227800</Longitude>
+                <Elevation>1309</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.227800</Longitude>
+                <Elevation>1309</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8403.36</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.227800</Longitude>
+                <Elevation>1309</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>8474.58</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47H1" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621100</Latitude>
+            <Longitude>25.235200</Longitude>
+            <Elevation>1305.7</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF H1</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2021-06-16T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621100</Latitude>
+                <Longitude>25.235200</Longitude>
+                <Elevation>1305.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-17T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.620900</Latitude>
+                <Longitude>25.235100</Longitude>
+                <Elevation>1270.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.620900</Latitude>
+                <Longitude>25.235100</Longitude>
+                <Elevation>1270.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.620900</Latitude>
+                <Longitude>25.235100</Longitude>
+                <Elevation>1270.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47H2" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.622700</Latitude>
+            <Longitude>25.234900</Longitude>
+            <Elevation>1307.8</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF H2</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2021-06-14T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.234900</Longitude>
+                <Elevation>1307.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-14T00:00:00" endDate="2021-06-16T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.234900</Longitude>
+                <Elevation>1307.8</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-17T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.235100</Longitude>
+                <Elevation>1269.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.235100</Longitude>
+                <Elevation>1269.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.622700</Latitude>
+                <Longitude>25.235100</Longitude>
+                <Elevation>1269.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47H3" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621700</Latitude>
+            <Longitude>25.233500</Longitude>
+            <Elevation>1307.7</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF H3</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2021-06-16T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.233500</Longitude>
+                <Elevation>1307.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-17T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621600</Latitude>
+                <Longitude>25.233300</Longitude>
+                <Elevation>1269.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621600</Latitude>
+                <Longitude>25.233300</Longitude>
+                <Elevation>1269.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621600</Latitude>
+                <Longitude>25.233300</Longitude>
+                <Elevation>1269.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10869.6</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47H4" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.615100</Latitude>
+            <Longitude>25.238700</Longitude>
+            <Elevation>1312.9</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF H4</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2021-06-16T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.615100</Latitude>
+                <Longitude>25.238700</Longitude>
+                <Elevation>1312.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-17T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.615200</Latitude>
+                <Longitude>25.238900</Longitude>
+                <Elevation>1278.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.615200</Latitude>
+                <Longitude>25.238900</Longitude>
+                <Elevation>1278.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.615200</Latitude>
+                <Longitude>25.238900</Longitude>
+                <Elevation>1278.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47H5" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.621700</Latitude>
+            <Longitude>25.243400</Longitude>
+            <Elevation>1312.2</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF H5</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2021-06-16T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621700</Latitude>
+                <Longitude>25.243400</Longitude>
+                <Elevation>1312.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-17T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621600</Latitude>
+                <Longitude>25.243200</Longitude>
+                <Elevation>1277.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621600</Latitude>
+                <Longitude>25.243200</Longitude>
+                <Elevation>1277.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.621600</Latitude>
+                <Longitude>25.243200</Longitude>
+                <Elevation>1277.7</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47H6" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.629700</Latitude>
+            <Longitude>25.237400</Longitude>
+            <Elevation>1299.1</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF H6</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2021-06-16T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.629700</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1299.1</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-17T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.629500</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1265.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.629500</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1265.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.629500</Latitude>
+                <Longitude>25.237400</Longitude>
+                <Elevation>1265.2</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10752.7</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47H7" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.625500</Latitude>
+            <Longitude>25.226600</Longitude>
+            <Elevation>1302.6</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF H7</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2021-06-16T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.625500</Latitude>
+                <Longitude>25.226600</Longitude>
+                <Elevation>1302.6</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11111.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-17T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.625400</Latitude>
+                <Longitude>25.226700</Longitude>
+                <Elevation>1263.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11111.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.625400</Latitude>
+                <Longitude>25.226700</Longitude>
+                <Elevation>1263.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11111.1</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.625400</Latitude>
+                <Longitude>25.226700</Longitude>
+                <Elevation>1263.9</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10526.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+        <Station code="I47H8" startDate="2021-05-24T00:00:00" endDate="2050-12-31T23:59:59">
+            <Latitude>-28.617100</Latitude>
+            <Longitude>25.227800</Longitude>
+            <Elevation>1309</Elevation>
+            <Site>
+                <Name>I47ZA BOSHOF H8</Name>
+            </Site>
+            <Channel code="BDF" locationCode="" startDate="2021-05-24T00:00:00" endDate="2021-06-16T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.227800</Longitude>
+                <Elevation>1309</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2021-06-17T00:00:00" endDate="2022-04-27T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.228000</Longitude>
+                <Elevation>1272</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-04-27T00:00:00" endDate="2022-06-28T00:00:00">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.228000</Longitude>
+                <Elevation>1272</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>11236</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+            <Channel code="BDF" locationCode="" startDate="2022-06-28T00:00:00" endDate="2050-12-31T23:59:59">
+                <Sensor>
+                    <Description>I47ZA BOSHOF</Description>
+                </Sensor>
+                <Latitude>-28.617100</Latitude>
+                <Longitude>25.228000</Longitude>
+                <Elevation>1272</Elevation>
+                <Depth>0</Depth>
+                <Azimuth>0</Azimuth>
+                <Dip>-90</Dip>
+                <SampleRate>20</SampleRate>
+                <Response>
+                    <InstrumentSensitivity>
+                        <Value>10638.3</Value>
+                        <Frequency>0.25</Frequency>
+                        <InputUnits>
+                            <Name>PA</Name>
+                        </InputUnits>
+                        <OutputUnits>
+                            <Name>COUNTS</Name>
+                        </OutputUnits>
+                    </InstrumentSensitivity>
+                </Response>
+            </Channel>
+        </Station>
+    </Network>
+</FDSNStationXML>
