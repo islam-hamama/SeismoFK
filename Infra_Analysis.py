@@ -1155,19 +1155,34 @@ class WaveformViewer(QDialog):
         layout.addWidget(FooterWidget(self))
 
     def _draw_waveforms(self, stream, title="Waveforms"):
-        self.ax_wv.clear()
+        """Same style as the main waveform explorer: one ink colour, traces
+        stacked top to bottom with station labels, UTC time axis; x values
+        stay seconds from the first trace start (used by the click pick)."""
+        ax = self.ax_wv
+        ax.clear()
+        t0 = stream[0].stats.starttime
+        n = len(stream)
         for i, tr in enumerate(stream):
-            t    = tr.times()
-            norm = np.max(np.abs(tr.data)) or 1
-            self.ax_wv.plot(t, tr.data / norm + i, lw=0.7, label=tr.id)
-        self.ax_wv.set_xlabel("Time (s)")
-        self.ax_wv.set_ylabel("Norm. Amplitude + offset")
-        self.ax_wv.set_title(title)
-        self.ax_wv.legend(fontsize=7, loc='upper right')
-        self.ax_wv.grid(True, alpha=0.3)
+            x, y = _envelope(tr.data, tr.stats.delta,
+                             float(tr.stats.starttime - t0))
+            ax.plot(x, 0.45 * y / (np.max(np.abs(y)) or 1.0) + (n - 1 - i),
+                    color=PALETTE['ink_2'], lw=0.55)
+        ax.set_yticks(range(n))
+        ax.set_yticklabels([f"{tr.stats.station} {tr.stats.channel}"
+                            for tr in reversed(stream)], fontsize=8)
+        ax.set_ylim(-0.7, n - 0.3)
+        for side in ('top', 'right', 'left'):
+            ax.spines[side].set_visible(False)
+        ax.tick_params(axis='y', length=0)
+        ax.grid(axis='x', color='#eef2f5', lw=0.6)
+        ax.xaxis.set_major_formatter(
+            FuncFormatter(lambda x, _: (t0 + x).strftime('%H:%M:%S')))
+        ax.set_xlabel(f"UTC  ·  {t0.strftime('%Y-%m-%d')}", fontsize=8)
+        ax.set_title(title, loc='left', fontsize=10)
         if self.selected_time is not None:
-            rel = self.selected_time - stream[0].stats.starttime
-            self.ax_wv.axvline(rel, color='red', lw=1.4, ls='--', alpha=0.85)
+            ax.axvline(self.selected_time - t0, color=PALETTE['accent'],
+                       lw=1.4)
+        self.fig_wv.tight_layout(pad=0.6)
         self.canvas_wv.draw()
 
     def _on_click(self, event):

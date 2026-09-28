@@ -183,7 +183,8 @@ class SlownessMapDialog(_MplDialog):
         self.nsrc_spin.setValue(1)
         self.controls.addWidget(self.nsrc_spin)
 
-        recompute = QPushButton("↻ Recompute")
+        recompute = QPushButton("Recompute")
+        recompute.setObjectName("primaryAction")
         recompute.clicked.connect(self._draw)
         self.controls.addWidget(recompute)
         self.controls.addStretch()

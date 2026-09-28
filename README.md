@@ -136,20 +136,19 @@ SeismoFK is built primarily for **infrasound array monitoring** — for example,
 
 ## Screenshots
 
-| | | | |
-|:---:|:---:|:---:|:---:|
-| ![Main window](screenshots/01_main_window.png)<br>**Main analysis window** | ![XML Creator](screenshots/02_xml_creator.png)<br>**XML Creator / Editor** | ![Event Database](screenshots/03_event_database.png)<br>**Event Database** | ![Waveform viewer](screenshots/04_waveform_viewer.jpg)<br>**Waveform viewer & time-picker** |
-| ![Spectrogram window](screenshots/05_spectrogram.jpg)<br>**Spectrogram window** *(new)* | ![Event Database notes](screenshots/06_event_database_notes.jpg)<br>**Event Database — Note column** | ![Edit event dialog](screenshots/07_event_database_edit.jpg)<br>**Edit event dialog** | ![FK analysis result](screenshots/08_fk_result_artemis.png)<br>**FK result — Artemis II re-entry** |
+All screenshots show the v1.2.1 interface with synthetic data (a 120° / 340 m/s plane wave), except the Artemis II example.
 
-![PMCC-style detector on a synthetic 120° / 340 m/s plane wave](screenshots/09_pmcc_synthetic.png)
+| | |
+|:---:|:---:|
+| ![Main window](screenshots/01_main_window.png)<br>**Main window** | ![PMCC families](screenshots/09_pmcc_synthetic.png)<br>**PMCC detector with families** |
+| ![FK results](screenshots/12_results_window_synthetic.png)<br>**FK results with bootstrap 95% CI** | ![Noise levels](screenshots/14_noise_levels.png)<br>**Noise levels (dB re 20 µPa), sensor S5 flagged** |
+| ![Slowness map](screenshots/13_slowness_map_synthetic.png)<br>**Capon slowness map** | ![Spectrogram](screenshots/05_spectrogram.png)<br>**Spectrogram (Pa)** |
+| ![Waveform picker](screenshots/04_waveform_viewer.png)<br>**Waveform picker** | ![Data readiness](screenshots/15_data_readiness.png)<br>**Data readiness check** |
+| ![StationXML editor](screenshots/02_xml_creator.png)<br>**StationXML editor** | ![Event database](screenshots/03_event_database.png)<br>**Event database** |
+| ![Stored figure](screenshots/06_event_figure.png)<br>**Stored event figure** | ![Edit event](screenshots/07_event_database_edit.png)<br>**Edit event dialog** |
 
-![FK results window for a synthetic 120° / 340 m/s plane wave](screenshots/12_results_window_synthetic.png)
-
-![Capon slowness map for a synthetic 120° / 340 m/s plane wave](screenshots/13_slowness_map_synthetic.png)
-
-![Spectrogram of three synthetic channels in raw-count mode](screenshots/11_spectrogram_synthetic.png)
-
-*PMCC-style detector with synthetic test data: the plane-wave burst stands out above the grey noise windows, and the summary reports 119.2° and 339 m/s.*
+![FK analysis result for the Artemis II re-entry](screenshots/08_fk_result_artemis.png)
+*Real-data example: FK result for the Artemis II Orion re-entry at I57US (produced with v1.2.0).*
 
 ---
 
