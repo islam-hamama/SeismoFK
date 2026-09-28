@@ -2,11 +2,6 @@
 
 **SeismoFK** is a desktop application for **frequency–wavenumber (FK) array analysis** of infrasound data. It provides an interactive PyQt5 interface for loading MiniSEED waveforms, removing instrument response, running FK / beamforming array processing, visualising the results, and archiving classified events in a local database.
 
-The spectrogram data export and processing disclosure were informed by
-Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026),
-*Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents*,
-[arXiv:2609.00065](https://doi.org/10.48550/arXiv.2609.00065).
-
 ---
 
 ## New in v1.2.1
@@ -88,12 +83,13 @@ The conventional-FK run pipeline is unchanged; the new methods are additive.
 ### New GUI controls
 
 The main window places data sources and FK settings in a scrollable sidebar,
-with a large waveform explorer, clear run control, and a dedicated **Array methods**
-panel. Its three actions — **Array response**, **Slowness map · Capon / MUSIC**,
-and **PMCC detector** — each open their own window. They use the loaded waveforms
-and inventory (and, for the slowness map, the picked start time / window length),
-so no extra setup is needed. The **“Estimate uncertainty (bootstrap)”** checkbox
-sits in the FK configuration group and affects the normal FK run.
+a large waveform explorer (UTC time axis, analysis window shaded) in the centre,
+and the workspace tools — **Spectrogram**, **Event database**, **StationXML
+editor** — in the header band. The **Array methods** card holds **Array
+response**, **Slowness map · Capon / MUSIC**, **PMCC detector** and **Noise
+levels**, each in its own window using the loaded waveforms and inventory, so no
+extra setup is needed. The **“Estimate uncertainty (bootstrap)”** checkbox sits
+in the FK configuration card and affects the normal FK run.
 
 All new routines are verified against a synthetic plane wave in `_selftest.py`
 (`python _selftest.py`). For full details and the JSON-vs-Parquet rationale see
@@ -126,11 +122,14 @@ SeismoFK is built primarily for **infrasound array monitoring** — for example,
 - **Expected back-azimuth** computed from a user-supplied source latitude/longitude for direct comparison with the measurement.
 - **Optional event physics** — supply a known origin time and a celerity (typical infrasound range ~220–340 m/s) to overlay the expected infrasound arrival on the beam waveform.
 - **Mixed sampling-rate handling** — traces at different sample rates are resampled to a common rate before processing.
-- **Results window** with high-resolution figure export (300 DPI; PNG / PDF / SVG).
+- **Results window** with summary cards and high-resolution figure export (300 DPI; PNG / PDF / SVG).
+- **Array methods** — array response, Capon / MUSIC slowness maps, a PMCC detector with families and 95% confidence intervals, and noise levels in dB re 20 µPa.
+- **Data-readiness check** — flags missing metadata, collinear geometry, bands above Nyquist, gaps and overlapping metadata epochs before analysis.
 - **Event database** — classify and archive each analysis in a local SQLite database (`fk_events.db`), with a built-in browser to review, edit and delete records, and CSV export. The analysis figure is stored alongside the metadata.
-- **Built-in XML Creator / Editor** — define custom station arrays interactively without hand-writing StationXML.
+- **Built-in StationXML editor** — define custom station arrays interactively without hand-writing StationXML.
 - **CSV output** — each FK run also writes an `Output_<event>.csv` table of per-window results.
-- **Spectrogram utility** (`plot_spectrogram_window.py`) for supplementary signal inspection.
+- **Spectrogram window** with calibrated PSD in dB re (20 µPa)²/Hz and data export.
+- **Long-term batch CLI** (`seismofk-cli`) for FK, Capon, MUSIC, PMCC and noise levels over months of data.
 
 ---
 
@@ -217,9 +216,9 @@ available when running from a checkout.
 2. **Select an inventory** — choose a station XML from the *Inventory* dropdown (see the station-metadata section below).
 3. **Pick a start time** — click the waveform preview to set the FK analysis start time, or set it manually.
 4. **Set parameters** — minimum/maximum frequency, FK window length, window overlap, semblance threshold, analysis duration, event name, and the expected source latitude/longitude. Optionally enable *Origin Time* and *Celerity* to overlay the expected infrasound arrival.
-5. **Run FK Analysis** — processing runs in a background thread (response removal → filtering → FK array processing → beamforming).
+5. **Run FK analysis →** — processing runs in a background thread (response removal → filtering → FK array processing → beamforming).
 6. **Review results** — the results window shows the FK detections, the steered beam, and the array geometry. Export the figure at 300 DPI if needed.
-7. **Save to database** — classify the event (explosion, mining, volcanic, microbaroms, etc.) and archive it, with the figure, in the local SQLite database.
+7. **Save event** — classify the event (explosion, mining, volcanic, microbaroms, etc.) and archive it, with the figure, in the local SQLite database.
 
 ### Long-term batch analysis (command line)
 
@@ -259,7 +258,7 @@ Place generated files in `XML/` or `XML_IM/` next to `Infra_Analysis.py`; the ap
 
 ### How auto-discovery works
 
-On startup (and whenever you click *⟳ Refresh*), SeismoFK scans two directories next to `Infra_Analysis.py` and populates the *Inventory* dropdown:
+On startup (and whenever you click *Refresh*), SeismoFK scans two directories next to `Infra_Analysis.py` and populates the *Inventory* dropdown:
 
 - **`XML_IM/`** — intended for IMS / multi-station array inventories. If this directory contains any `.xml` files, a single **"★ All IMS Stations (XML_IM/)"** entry is added first; selecting it loads and merges *every* `.xml` file in the directory into one combined inventory. Each individual file in `XML_IM/` is also listed separately, tagged `[IMS]`.
 - **`XML/`** — for individual / custom station files. Each `.xml` file is listed as its own entry.

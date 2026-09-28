@@ -2,7 +2,7 @@
 
 A step-by-step walkthrough of **SeismoFK**, the desktop tool for **frequency–wavenumber (FK) array analysis** of infrasound and seismic array data.
 
-This manual covers the everyday workflow in the GUI, the three tools reachable from the bottom of the main window (XML Creator, Event Database, Plot Spectrogram), the standalone command-line scripts, and the output files SeismoFK produces. For background on what FK array analysis is and for installation instructions, see [`README.md`](README.md).
+This manual covers the everyday workflow in the GUI, the array methods (Array response, Slowness map, PMCC detector, Noise levels), the tools in the header band (Spectrogram, Event database, StationXML editor), the command-line scripts, and the output files SeismoFK produces. For background on what FK array analysis is and for installation instructions, see [`README.md`](README.md).
 
 ---
 
@@ -40,24 +40,25 @@ This manual assumes SeismoFK is already installed (see the README's *Installatio
 From the project directory, with your Python environment active:
 
 ```bash
-python Infra_Analysis.py
+seismofk                   # after pip install -e .   (or: python Infra_Analysis.py)
 ```
 
 This opens the main window, titled **SeismoFK — Infrasound FK Array Analysis**.
 
 ![Main analysis window](screenshots/01_main_window.png)
 
-The main window is organised top-to-bottom into:
+The main window is organised as follows:
 
-1. **File Selection** — choose a MiniSEED waveform file and a station inventory (XML).
-2. **Waveform Preview** — a multi-trace plot of the loaded data; click on it to pick the analysis start time.
-3. **Analysis Parameters** — the FK frequency band, window settings, start time, duration, event name, expected source location, and the optional origin-time / celerity controls.
-4. **Status / Progress / Run** — a status line, a progress bar, and the green **Run FK Analysis** button.
-5. **Tools row** — three buttons: **XML Creator / Editor**, **Event Database**, and **Plot Spectrogram**.
+1. **Header band** — the workspace tools **Spectrogram**, **Event database** and **StationXML editor**, and the version badge.
+2. **Data source** (left sidebar) — choose MiniSEED waveforms and a StationXML inventory, and run **Check data readiness**.
+3. **FK configuration** (left sidebar) — frequency band, window settings, start time, duration, event name, expected source location, the optional origin-time / celerity controls, and the bootstrap option.
+4. **Waveform explorer** — every trace on a shared UTC time axis; click to pick the analysis start time. The analysis window (start time + Duration) is shaded.
+5. **FK beamforming** — status line, progress bar and the **Run FK analysis →** button.
+6. **Array methods** — **Array response**, **Slowness map · Capon / MUSIC**, **PMCC detector** and **Noise levels**, each opening its own window.
 
 ### 2.2 Preparing station metadata (XML inventories)
 
-FK analysis needs **station metadata** — the coordinates and instrument response of every sensor in the array — supplied as **StationXML** files. As noted in the README's *Station metadata* section, the repository does **not** ship station XML files; you supply your own. There are three ways to obtain them:
+FK analysis needs **station metadata** — the coordinates and instrument response of every sensor in the array — supplied as **StationXML** files. The repository ships inventories for the IMS infrasound arrays in `XML_IM/`. For other arrays, there are three ways to obtain them:
 
 - Run `convert_ims.py` against an FDSN StationXML to generate per-station files (see [Section 7](#7-command-line-tools)).
 - Build station arrays interactively with the **XML Creator** (see [Section 5](#5-xml-creator--editor)).
@@ -71,12 +72,14 @@ from a checkout, two directories next to `Infra_Analysis.py`:
 - **`XML_IM/`** — intended for IMS / multi-station array inventories. If it contains any `.xml` files, a single **"★ All IMS Stations (XML_IM/)"** entry appears first in the *Inventory* dropdown; selecting it merges *every* `.xml` file in that directory into one combined inventory. Each individual file is also listed separately, tagged `[IMS]`.
 - **`XML/`** — for individual / custom station files. Each `.xml` file is listed as its own entry.
 
-Click **⟳ Refresh** at any time to rescan these directories — for example, after creating a new XML with the XML Creator.
+Click **Refresh** at any time to rescan these directories — for example, after creating a new XML with the StationXML editor.
 Select the inventory for the waveform's array explicitly. Use **All IMS
 Stations** only when a waveform contains channels from multiple IMS arrays.
-If an inventory has several metadata epochs for one channel, SeismoFK uses the
-waveform trace time for coordinate lookup; resolve overlapping, conflicting
-epochs in the source StationXML.
+If several metadata epochs of one channel cover the waveform (some IMS
+inventories contain a nominal epoch overlapping the dated calibration history),
+SeismoFK uses the epoch with the latest start date — the most recent
+calibration — for coordinates and sensitivity, and **Check data readiness**
+lists the choice for every channel.
 
 ---
 
@@ -86,58 +89,63 @@ This is the core path through SeismoFK: load waveforms → select an inventory �
 
 Use **Check data readiness** after loading a waveform. It reports missing
 metadata, unsuitable array geometry, invalid frequency bands, gaps in common
-time coverage, and channels that cannot provide pressure calibration. Resolve
-blocking issues before interpreting FK or PMCC results.
+time coverage, overlapping metadata epochs, and channels that cannot provide
+pressure calibration. Resolve blocking issues before interpreting FK or PMCC
+results.
+
+![Data readiness check](screenshots/15_data_readiness.png)
 
 ### Step 1 — Load MiniSEED waveform data
 
-In the **File Selection** panel, click **Browse** next to *MiniSEED*. Select **one or more** MiniSEED files (`.mseed`, `.msd`, `.ms`). If you select several files, their traces are read and **merged automatically** into a single stream, and the field shows how many files were merged. Gaps are filled and masked samples are replaced with zeros so processing has a continuous record.
+In the **Data source** card, click **Browse** next to *Waveform · MiniSEED*. Select **one or more** MiniSEED files (`.mseed`, `.msd`, `.ms`). If you select several files, their traces are read and **merged automatically** into a single stream, and the field shows how many files were merged. Gaps are filled and masked samples are replaced with zeros so processing has a continuous record.
 
-Once data is loaded, the **Waveform Preview** populates with one normalised panel per trace, labelled with `network.station.channel`, the sampling rate, and the trace start time.
+Once data is loaded, the **Waveform explorer** shows one normalised trace per channel, labelled with station and channel, on a UTC time axis (the footer gives the date, trace count and sampling rate). Long records are drawn as min/max envelopes, so they display instantly while keeping every spike visible.
 
 ### Step 2 — Select a station inventory
 
-In the **Inventory** dropdown, choose the StationXML entry that matches the array in your waveform data:
+In the **Station metadata · StationXML** dropdown, choose the StationXML entry that matches the array in your waveform data:
 
 - For an IMS array, pick the relevant `[IMS]` entry, or **★ All IMS Stations (XML_IM/)** to merge everything in `XML_IM/`.
 - For a custom array, pick its file from the `XML/` group.
 
-If the inventory you need is not listed, click **+ Add XML** to copy a StationXML file into `~/.seismofk/XML/`, or build one with the XML Creator and then click **⟳ Refresh**. Set `SEISMOFK_DATA_DIR` to change the user data location. Checkout `XML/` and `XML_IM/` files remain discoverable.
+If the inventory you need is not listed, click **+ Add XML** to copy a StationXML file into `~/.seismofk/XML/`, or build one with the StationXML editor and then click **Refresh**. Set `SEISMOFK_DATA_DIR` to change the user data location. Checkout `XML/` and `XML_IM/` files remain discoverable.
 
 > The inventory must contain coordinates and instrument response for every sensor present in the loaded waveform. See [Section 9](#9-troubleshooting-and-tips) for what SeismoFK requires of the response.
 
 ### Step 3 — Preview the waveforms and pick an analysis start time
 
-The **Waveform Preview** is interactive:
+The **Waveform explorer** is interactive:
 
-- **Left-click anywhere on the preview plot** to set the FK analysis **start time**. A red dashed line marks the pick, the *Pick:* label shows the absolute time, and the **Start Time** parameter field below updates to match.
-- Click **✖ Clear Pick** to remove the pick and reset the start time.
-- Click **⤢ Open in Window** to open the larger **Waveform Viewer** dialog. There you can apply a band-pass filter (set *Low* / *High* Hz and click **Apply Filter**, or **Reset** to undo), left-click to pick a start time on the bigger plot, then click **✔ Confirm** to send the pick back to the main window.
+- **Left-click a trace** to set the FK analysis **start time**. A teal line marks the pick, the *Pick:* label shows the absolute time, and the **Start time · UTC** field updates to match. The analysis window — from the start time over **Duration** — is shaded on every trace and follows both fields as you edit them.
+- Click **Clear pick** to remove the pick and reset the start time.
+- Click **Open larger** to open the **Pick analysis start** dialog. There you can apply a band-pass filter (set *Band-pass low / high (Hz)* and click **Apply Filter**, or **Reset** to undo), click a trace to pick a start time on the bigger plot, then click **Use this start time** (enabled once a pick is made) to send it back to the main window.
+
+![Waveform picker](screenshots/04_waveform_viewer.png)
 
 > **Note:** picking a start time is a convenience for setting the *Start Time* parameter. You can also set *Start Time* manually (Step 4).
 
 ### Step 4 — Set the analysis parameters
 
-In the **Analysis Parameters** panel:
+In the **FK configuration** card:
 
 **Row 1 — FK and window settings**
 
 | Field | Meaning | Default |
 |---|---|---|
-| **Min Freq (Hz)** | Lower corner of the band-pass filter / FK band. | 0.5 |
-| **Max Freq (Hz)** | Upper corner of the band-pass filter / FK band. | 6.0 |
-| **Window (s)** | Length of each sliding FK analysis window. | 20.0 |
+| **Minimum frequency · Hz** | Lower corner of the band-pass filter / FK band. | 0.5 |
+| **Maximum frequency · Hz** | Upper corner of the band-pass filter / FK band. | 6.0 |
+| **Window length** | Length of each sliding FK analysis window. | 20.0 |
 | **Window step** | Fraction of window length between FK windows (0.01–0.99); `0.1` means a 10% step and 90% overlap. | 0.1 |
-| **Semb. Threshold** | Semblance value at/above which a window counts as a *detection* in the results plots. | 0.30 |
+| **Semblance threshold** | Semblance value at/above which a window counts as a *detection* in the results plots. | 0.30 |
 
 **Row 2 — event and geometry**
 
 | Field | Meaning | Default |
 |---|---|---|
-| **Start Time** | Analysis start time (`yyyy-MM-dd HH:mm:ss`). Set by a preview pick, or typed manually. | current time |
+| **Start time · UTC** | Analysis start time (`yyyy-MM-dd HH:mm:ss`). Set by a preview pick, or typed manually. | current time |
 | **Duration** | Total length of data analysed, in seconds, from the start time. | 900 |
-| **Event Name** | Label used for output filenames and the database record. | `Event` |
-| **Lat** / **Lon** | Expected **source** latitude / longitude — used to compute the *expected back-azimuth* shown for comparison in the results. | 0 / 0 |
+| **Event name** | Label used for output filenames and the database record. | `Event` |
+| **Event latitude** / **longitude** | Expected **source** latitude / longitude — used to compute the *expected back-azimuth* shown for comparison in the results. | 0 / 0 |
 
 **Row 3 — optional event physics**
 
@@ -157,12 +165,12 @@ When **both** Origin Time and Celerity are set, SeismoFK overlays the **expected
 
 ### Step 5 — Run the FK analysis
 
-Click the green **▶ Run FK Analysis** button. Processing runs in a **background thread**, so the window stays responsive, and the status line and progress bar update as it proceeds through these stages:
+Click **Run FK analysis →**. Processing runs in a **background thread**, so the window stays responsive, and the status line and progress bar update as it proceeds through these stages:
 
 1. Load the (pre-merged) waveform stream.
-2. Load the selected inventory (merging all XMLs if a directory entry was chosen).
+2. Load the selected inventory (merging all XMLs if a directory entry was chosen) and resolve each channel to one metadata epoch (the most recent calibration).
 3. Merge traces and clean masked samples.
-4. **Remove the instrument response** (full ObsPy response removal; if that fails, SeismoFK falls back to dividing by the scalar instrument sensitivity).
+4. **Remove the instrument response** (full ObsPy response removal; if the StationXML has only an overall sensitivity and no response stages, as many IMS inventories do, SeismoFK divides by the scalar sensitivity and says so in the status line). Output units are read from the StationXML: Pa for infrasound sensors.
 5. **Run FK array processing** — band-pass filtering, then `array_processing` over the sliding windows.
 6. Compute the **delay-and-sum beam** steered to the median detected direction.
 
@@ -170,14 +178,16 @@ If any input is missing (no MiniSEED file, no inventory selected) SeismoFK warns
 
 ### Step 6 — Interpret the results
 
-When processing finishes, the **SeismoFK — Analysis Results** window opens with a six-panel figure:
+When processing finishes, the **SeismoFK — Analysis Results** window opens. Summary cards at the top give the median back-azimuth, trace velocity, detected windows and expected direction, above a six-panel figure:
+
+![FK results window](screenshots/12_results_window_synthetic.png)
 
 **Left column (shared time axis):**
 
-1. **Fisher** — Fisher ratio per window. A dashed line marks the threshold corresponding to your semblance threshold; an annotation reports how many windows were detected.
-2. **Back-Az (°)** — back-azimuth per window. A dashed blue line marks the **expected** back-azimuth (from your source Lat/Lon), with a shaded ±20° acceptance band.
-3. **App. Vel. (m/s)** — apparent velocity per window, with a shaded 300–380 m/s reference band (a typical infrasound range).
-4. **Beam waveform** — the delay-and-sum beam (pressure in Pa). If Origin Time and Celerity were set, a dashed orange line marks the expected arrival.
+1. **Fisher** — Fisher ratio per window. A dashed line marks the threshold corresponding to your semblance threshold; the figure title reports how many windows were detected.
+2. **Azimuth (°)** — back-azimuth per window. A dashed blue line marks the **expected** back-azimuth (from your source Lat/Lon), with a shaded ±20° acceptance band.
+3. **Velocity (m/s)** — apparent velocity per window, with a shaded 300–380 m/s reference band (a typical infrasound range).
+4. **Beam** — the delay-and-sum beam, in the units read from StationXML (Pa for infrasound sensors, or raw counts without calibration). If Origin Time and Celerity were set, a dashed orange line marks the expected arrival.
 
 **Right column:**
 
@@ -188,29 +198,33 @@ In all panels, **detections** (windows at/above the semblance threshold) are dra
 
 From the results window you can:
 
-- **💾 Save Figure (300 DPI)** — export the figure as PNG, PDF, or SVG.
-- **🗄 Save to Database** — open the *Save Event* dialog (see [Section 6](#6-event-database)) to classify and archive the run.
-- **✖ Close** — close the results window.
+- **Export figure** — export the figure as PNG, PDF, or SVG at 300 DPI.
+- **Save event** — open the *Save Event to Database* dialog (see [Section 6](#6-event-database)) to classify and archive the run.
+- **Close** — close the results window.
 
 SeismoFK also **auto-saves** the results figure as `FK_<event>.jpg` in the working directory each time results are shown (see [Section 8](#8-output-files)).
 
-### Step 7 — Advanced array methods (v1.2.1)
+### Step 7 — Array methods
 
-Below the **▶ Run FK Analysis** button, an **“Advanced (v1.2.1)”** row provides three
-extra methods that open in their own windows. They reuse the **loaded MiniSEED**
+Below **Run FK analysis →**, the **Array methods** card provides four methods
+that open in their own windows. They reuse the **loaded MiniSEED**
 and the **selected inventory** (and, where relevant, the picked **Start Time** and
 **Window** length), so just load data, pick a window, and click. None of them
 require running the normal FK analysis first, and none change its output.
 
 | Button | What it does | Inputs used |
 |---|---|---|
-| **📡 Array Response** | Plots the theoretical **Array Response Function (ARF)** for the current sensor geometry. Use it to judge slowness resolution (main-lobe width) and spatial **aliasing** (secondary peaks) *before* trusting a slowness estimate. The white contour marks the half-power resolution limit. The dialog has an **Export figure** action. | Inventory geometry, Min/Max Freq. |
-| **🎯 Slowness Map (Capon/MUSIC)** | High-resolution adaptive-beamforming **slowness map** for one window. Pick the method (**Capon / MVDR**, **MUSIC**, or **Bartlett**) in the dialog and click **↻ Recompute**; the peak (white star) gives the back-azimuth, apparent velocity and a sharpness measure (printed below the plot). Reference velocity circles and the expected-azimuth line are overlaid. Use **Export figure** to save the current map. | Picked Start Time + Window, Min/Max Freq; MUSIC source count. |
-| **🔬 PMCC Detector** | Runs a **PMCC-style** detector from the picked start time over **Span** (the main **Duration**, and at least 20 analysis windows), or over the **Whole record**. Four panels share the full time axis. From top to bottom: the band-passed waveform of the first sensor (in Pa when StationXML sensitivities are available); the mean correlation of **every** window and band, with rejected windows in grey so arrivals can be judged against the noise floor and the correlation threshold; back-azimuth; and trace velocity. Accepted pixels are grouped into **families**, one per coherent arrival. Pixels join a family when they are adjacent in time and frequency and agree within **Family Δ azimuth** (10° by default) and 15% in trace velocity; a family needs at least **Family min pixels** (5). Each family's time span is shaded and labelled (for example `F1 87° 346 m/s`). Family pixels are coloured by centre frequency, and isolated pixels are drawn as hollow circles. Tune **Bands**, **Window**, **Min correlation**, **Max closure**, the velocity range and the family settings, then click **Run PMCC**. The summary lists each family's time span, back-azimuth and velocity with **95% confidence intervals**, and pixel count, plus why the other windows were rejected. A family whose direction changes significantly between its early and late pixels, or between its low and high bands, is marked **⚠ mixed**, meaning it probably contains two sources. Grouping uses single linkage, so two nearby sources can chain into one family through intermediate pixels; the flag reduces this risk but doesn't guarantee separation. The intervals come from a statistical error model checked on synthetic plane waves; they haven't been validated against ground-truth field events and exclude model errors such as wavefront curvature or wind shear. **Export families…** saves the family table as CSV, and **Export figure** saves the panels. The hop is a quarter of the window, so each arrival yields enough pixels to form a family. Needs **≥ 3 sensors**. | Start Time + Duration, Min/Max Freq. |
+| **Array response** | Plots the theoretical **Array Response Function (ARF)** for the current sensor geometry. Use it to judge slowness resolution (main-lobe width) and spatial **aliasing** (secondary peaks) *before* trusting a slowness estimate. The white contour marks the half-power resolution limit. The dialog has an **Export figure** action. | Inventory geometry, Min/Max Freq. |
+| **Slowness map · Capon / MUSIC** | High-resolution adaptive-beamforming **slowness map** for one window. Pick the method (**Capon / MVDR**, **MUSIC**, or **Bartlett**) in the dialog and click **Recompute**; the peak (white star) gives the back-azimuth, apparent velocity and a sharpness measure (printed below the plot). Reference velocity circles and the expected-azimuth line are overlaid. Use **Export figure** to save the current map. | Picked Start Time + Window, Min/Max Freq; MUSIC source count. |
+| **PMCC detector** | Runs a **PMCC-style** detector from the picked start time over **Span** (the main **Duration**, and at least 20 analysis windows), or over the **Whole record**. Four panels share the full time axis. From top to bottom: the band-passed waveform of the first sensor (in Pa when StationXML sensitivities are available); the mean correlation of **every** window and band, with rejected windows in grey so arrivals can be judged against the noise floor and the correlation threshold; back-azimuth; and trace velocity. Accepted pixels are grouped into **families**, one per coherent arrival. Pixels join a family when they are adjacent in time and frequency and agree within **Family Δ azimuth** (10° by default) and 15% in trace velocity; a family needs at least **Family min pixels** (5). Each family's time span is shaded and labelled (for example `F1 87° 346 m/s`). Family pixels are coloured by centre frequency, and isolated pixels are drawn as hollow circles. Tune **Bands**, **Window**, **Min correlation**, **Max closure**, the velocity range and the family settings, then click **Run PMCC**. The summary lists each family's time span, back-azimuth and velocity with **95% confidence intervals**, and pixel count, plus why the other windows were rejected. A family whose direction changes significantly between its early and late pixels, or between its low and high bands, is marked **⚠ mixed**, meaning it probably contains two sources. Grouping uses single linkage, so two nearby sources can chain into one family through intermediate pixels; the flag reduces this risk but doesn't guarantee separation. The intervals come from a statistical error model checked on synthetic plane waves; they haven't been validated against ground-truth field events and exclude model errors such as wavefront curvature or wind shear. **Export families…** saves the family table as CSV, and **Export figure** saves the panels. The hop is a quarter of the window, so each arrival yields enough pixels to form a family. Needs **≥ 3 sensors**. | Start Time + Duration, Min/Max Freq. |
+| **Noise levels** | RMS noise level of every sensor over the whole record, in dB re 20 µPa. See [Step 8](#step-8--noise-levels). | Whole record, Min/Max Freq. |
 
-> These dialogs estimate **direction** from inter-sensor time delays, so they work
-> on the raw loaded waveforms (band-pass filtered internally) and do **not** require
-> instrument-response removal. For continuous, long-term batch processing of the
+![PMCC detector with families](screenshots/09_pmcc_synthetic.png)
+
+> These dialogs estimate **direction** from inter-sensor time delays, so they
+> band-pass filter the loaded waveforms internally and don't need full
+> instrument-response removal. Waveform panels are calibrated to Pa with the
+> StationXML sensitivities when available. For continuous, long-term batch processing of the
 > same methods, use the command-line driver in [Section 7.4](#74-seismofk_clipy--long-term-batch-array-analysis).
 
 PMCC aligns sensors to their common time interval and sampling grid before
@@ -218,29 +232,59 @@ cross-correlation. If the result shows *mixed directions* or a low direction
 agreement, inspect the waveform and station coordinates before interpreting
 the summary as a single arrival direction.
 
+### Step 8 — Noise levels
+
+**Noise levels** computes the time-domain RMS level of every sensor in
+consecutive windows over the **whole loaded record**, in **dB re 20 µPa**
+(20·log₁₀(p_rms / 20 µPa)). Levels are calibrated with the StationXML
+sensitivities; without a pressure calibration they are labelled *dB re 1 count*.
+
+![Noise levels](screenshots/14_noise_levels.png)
+
+- **Window** — RMS window length in minutes or seconds (default 1 minute).
+  Windows lie on an absolute UTC grid.
+- **Band min / max (Hz)** — band-pass for the levels (seeded from the FK band),
+  or **Broadband (no filter)**. Levels depend strongly on the band: broadband
+  noise is dominated by microbaroms and wind below 0.5 Hz.
+- **Sensor warning ± / fault ±** — each sensor is compared with the median of
+  the *other* sensors in every window; a persistent median offset of 3 dB
+  (warning) or 6 dB (fault, a factor of two in pressure) is flagged. Steady
+  offsets point to gain or metadata errors, varying ones to wind exposure.
+- **Hour-of-day view** — median level by hour (UTC) instead of the
+  distribution panel; most useful for records longer than a day.
+
+The table lists **L90 / L50 / L10** (levels exceeded 90 / 50 / 10% of the
+time: L90 is the background floor, L10 windy periods and events), **Leq** (an
+average of power, not of dB values), minimum and maximum, and each sensor's
+offset and status. Windows in zero-filled gaps are excluded. **Export
+levels…** saves the per-window levels and the statistics as CSV. For long
+records use `seismofk-cli --method noise` ([Section 7.4](#74-seismofk_clipy--long-term-batch-array-analysis)).
+
 ---
 
 ## 4. Plot Spectrogram
 
-The **Spectrogram** button opens a multi-panel PSD spectrogram viewer for the loaded waveforms.
+The **Spectrogram** button in the header band opens a multi-panel PSD spectrogram viewer for the loaded waveforms.
+
+![Spectrogram](screenshots/05_spectrogram.png)
 
 **Prerequisite:** load a MiniSEED file. StationXML is optional: when valid pressure sensitivity is available for every trace, the plot uses calibrated pressure; otherwise it clearly labels the display as raw counts. Do not compare raw-count PSD values with pressure PSD values.
 
 **Time range:** after a preview pick, the spectrogram runs from the picked start through the main window's **Duration** setting (900 s by default). **Window length** controls FK and PMCC calculations; it does not limit the spectrogram. Without a pick, the whole loaded stream is shown. The spectrogram window displays the actual data range, which may be shorter near the end of a recording. If the picked range contains no samples, SeismoFK warns and uses the full stream.
 
-The **Spectrograms** window shows one panel per trace, with a common colour scale. The default segment length and overlap adapt to the loaded window so short selections produce multiple time slices. Pressure plots use dB re 20 µPa²/Hz; raw-count plots use dB re 1 count²/Hz. It contains:
+The **Spectrograms** window shows one panel per trace, with a common colour scale. The default segment length and overlap adapt to the loaded window so short selections produce multiple time slices. Pressure plots use dB re (20 µPa)²/Hz; raw-count plots use dB re 1 count²/Hz. It contains:
 
-- **Spectrogram Parameters** control row — edit and re-apply:
+- **Control row** — edit and re-apply:
   - **Bandpass min / max (Hz)** — band-pass filter corners applied before the spectrogram (seeded from the main window's Min/Max Freq).
   - **Freq. max (Hz)** — upper frequency limit shown on the panels.
   - **nperseg** — spectrogram segment length in samples.
   - **noverlap** — segment overlap in samples (must satisfy `0 ≤ noverlap < nperseg`).
   - **Smooth** — Gaussian averaging across nearby PSD bins (default 1.0). Set to 0 to inspect unsmoothed bins. This changes the displayed PSD, so use 0 when comparing exact bin values.
-- **↻ Recompute** — re-runs the spectrogram with the current control-row values and redraws in place. Invalid entries (e.g. min ≥ max, non-numeric) raise a clear warning.
+- **Recompute** — re-runs the spectrogram with the current control-row values and redraws in place. Invalid entries (e.g. min ≥ max, non-numeric) raise a clear warning.
 - A matplotlib **navigation toolbar** for pan/zoom.
-- **💾 Save Figure (300 DPI)** — export the spectrogram figure as PNG, PDF, or SVG.
+- **Export figure** — export the spectrogram figure as PNG, PDF, or SVG at 300 DPI.
 - **Save plotted data** — export per-channel frequency bins, UTC time bins, raw PSD, displayed PSD, and filter/smoothing settings to a NumPy `.npz` file. Open it with `numpy.load(path)` and parse `metadata_json` for the processing settings.
-- **✖ Close**.
+- **Close**.
 
 If a trace cannot be processed, the window reports the reason below the controls. When none can be plotted, the canvas shows an explicit no-data state.
 
@@ -248,7 +292,7 @@ If a trace cannot be processed, the window reports the reason below the controls
 
 ## 5. XML Creator / Editor
 
-The **🛠 XML Creator / Editor** button opens the **StationXML Creator** — a tool for building or editing the station inventories that FK analysis requires, without hand-writing XML. It can also be launched standalone:
+The **StationXML editor** button in the header band opens the **StationXML editor** — a tool for building or editing the station inventories that FK analysis requires, without hand-writing XML. It can also be launched standalone:
 
 ```bash
 python xml_creator.py
@@ -267,9 +311,9 @@ Set the **network code**, **source**, and the network **start / end dates** that
 The **Stations** table holds one row per sensor element, with columns *Station Code*, *Latitude*, *Longitude*, *Elevation (m)*, and *Site Name*. Use the buttons to manage rows:
 
 - **+ Add Station** — append a new station row.
-- **⧉ Duplicate** — copy the selected station row.
-- **− Remove** — delete the selected station row.
-- **📂 Import CSV** — bulk-load stations from a CSV file. Each row should provide *code, latitude, longitude, elevation* and, optionally, a *site name*; a header row is auto-detected and skipped.
+- **Duplicate** — copy the selected station row.
+- **Remove** — delete the selected station row.
+- **Import CSV…** — bulk-load stations from a CSV file. Each row should provide *code, latitude, longitude, elevation* and, optionally, a *site name*; a header row is auto-detected and skipped.
 
 ### 5.3 Channels
 
@@ -277,44 +321,48 @@ Select a station first, then edit its channels in the **Channels** table (*Ch. C
 
 - **Preset dropdown + Apply Preset to New Channel** — start a channel from a preset. Presets include *Custom*, generic infrasound configurations, HLW Array configurations, IMS/CTBTO configurations, and seismic velocity channels (HHZ / BHZ). Each preset fills in a sensible channel code, sample rate, sensitivity, reference frequency, and input/output units.
 - **Copy Channels → All Stations** — apply the current station's channel set to every station (handy for arrays where all elements share the same instrument).
-- **+ Add Channel**, **⧉ Duplicate**, **− Remove** — manage individual channel rows.
+- **+ Add Channel**, **Duplicate**, **Remove** — manage individual channel rows.
 
 > Infrasound channels typically use input units **PA** and output units **COUNTS**, with the sensitivity expressed in counts per pascal. The instrument **Sensitivity** value is what SeismoFK uses if full response removal is unavailable — set it correctly for your sensor.
 
 ### 5.4 Validate, preview, and save
 
-- **🔍 Preview XML** — show the generated StationXML text in a dialog.
-- **✔ Validate** — check the entered values (codes present, numeric lat/lon/elevation, numeric sample rate and sensitivity, at least one channel per station). If the basic checks pass, the XML is additionally parsed with ObsPy to confirm it loads correctly.
-- **💾 Save XML** — write the StationXML file. The default save location is `~/.seismofk/XML/`, so the new inventory is auto-discovered the next time you click **⟳ Refresh** in the main window.
-- **📂 Load XML** — open an existing StationXML and populate the editor for editing.
+- **Preview XML** — show the generated StationXML text in a dialog.
+- **Validate** — check the entered values (codes present, numeric lat/lon/elevation, numeric sample rate and sensitivity, at least one channel per station). If the basic checks pass, the XML is additionally parsed with ObsPy to confirm it loads correctly.
+- **Save XML…** — write the StationXML file. The default save location is `~/.seismofk/XML/`, so the new inventory is auto-discovered the next time you click **Refresh** in the main window.
+- **Load XML…** — open an existing StationXML and populate the editor for editing.
 
 ---
 
 ## 6. Event Database
 
-The **🗄 Event Database** button opens a browser onto SeismoFK's local SQLite database of archived analyses (`~/.seismofk/fk_events.db` by default). An existing checkout `fk_events.db` remains in use for backward compatibility.
+The **Event database** button in the header band opens a browser onto SeismoFK's local SQLite database of archived analyses (`~/.seismofk/fk_events.db` by default). An existing checkout `fk_events.db` remains in use for backward compatibility.
 
 ![Event database](screenshots/03_event_database.png)
 
 ### 6.1 Saving an event
 
-After an FK run, click **🗄 Save to Database** in the results window. The **Save Event to Database** dialog shows an analysis summary and lets you:
+After an FK run, click **Save event** in the results window. The **Save Event to Database** dialog shows an analysis summary and lets you:
 
 - Pick an **Event Classification** from a fixed vocabulary: *Unknown, Explosion / Blast, Mining, Volcanic, Earthquake, Meteor / Bolide, Aircraft / Sonic Boom, Ocean / Microbaroms, Industrial, Noise / Artifact*.
 - Add an optional free-text **Note**.
 
-Click **💾 Save**. SeismoFK stores the analysis parameters, the FK results summary (median back-azimuth, median velocity, expected back-azimuth, detection counts), the source location and optional event physics, file references, and a **PNG snapshot of the results figure** — all in one database row. The database (`fk_events.db`) is created automatically on the first save.
+Click **Save to database**. SeismoFK stores the analysis parameters, the FK results summary (median back-azimuth, median velocity, expected back-azimuth, detection counts), the source location and optional event physics, file references, and a **PNG snapshot of the results figure** — all in one database row. The database (`fk_events.db`) is created automatically on the first save.
 
 ### 6.2 Browsing the database
 
 The **Event Database** window lists every archived event in a table (ID, saved time, event name, array, classification, median back-azimuth, median velocity, detections, frequency band, note). From here you can:
 
 - **Filter by classification** — use the dropdown at the top to show only one event type, or *All*.
-- **⟳ Refresh** — reload the table.
-- **✏ Edit Classification / Note** — change the classification or note of the selected event.
-- **🖼 View Figure** — display the stored analysis figure for the selected event; the viewer also offers **💾 Save as PNG** to export it.
-- **🗑 Delete Selected** — permanently delete the selected event (with a confirmation prompt).
-- **📤 Export to CSV** — dump the entire events table to a CSV file.
+- **Refresh** — reload the table.
+- **View figure** — display the stored analysis figure for the selected event; the viewer also offers **Save PNG…** to export it.
+- **Edit classification…** — change the classification or note of the selected event.
+- **Export CSV…** — dump the entire events table to a CSV file.
+- **Delete…** — permanently delete the selected event (with a confirmation prompt).
+
+![Stored event figure](screenshots/06_event_figure.png)
+
+![Edit event dialog](screenshots/07_event_database_edit.png)
 
 ---
 
@@ -524,7 +572,8 @@ where SeismoFK is run. User data is kept in `~/.seismofk/` by default.
 | Spectrogram PNGs | `plot_spectrogram_window.py` (CLI) | Combined spectrogram and filtered-waveform images, in the chosen output directory. |
 | `<NETWORK>_array.xml` | XML Creator *Save XML* | A StationXML inventory, saved to `~/.seismofk/XML/` by default. |
 | Per-station XMLs | `convert_ims.py` / `export_stations.py` | One StationXML file per IMS station, written to `XML_IM/`. |
-| `results/` archive | `seismofk_cli.py` (v1.2.1) | Long-term detection archive: `detections/<run_id>.parquet` (or `.csv`), per-run `<run_id>.json` metadata sidecar, and master `index.csv`. |
+| `results/` archive | `seismofk_cli.py` | Long-term archive: `detections/<run_id>.parquet` (or `.csv`), PMCC `families/`, `noise/` levels with `<run_id>_noise_stats.csv` and `_noise_hourly.csv`, per-run `<run_id>.json` metadata, master `index.csv`, and `figures/` with `--save-figures`. |
+| Family / level CSVs | *Export families…* (PMCC) and *Export levels…* (Noise levels) | PMCC families with 95% intervals; per-window noise levels and per-sensor statistics. |
 
 For `Output_<event>.csv` and `FK_<event>.jpg`, characters outside letters,
 digits, hyphens, and underscores in *Event Name* become underscores. The JPEG
@@ -535,13 +584,13 @@ is saved automatically when results are shown.
 ## 9. Troubleshooting and tips
 
 **No inventory listed on startup.**
-Add a StationXML file with **+ Add XML** (or build one with the XML Creator), then click **⟳ Refresh**. See [Section 2.2](#22-preparing-station-metadata-xml-inventories).
+Add a StationXML file with **+ Add XML** (or build one with the StationXML editor), then click **Refresh**. See [Section 2.2](#22-preparing-station-metadata-xml-inventories).
 
 **"Please select an inventory file" when running.**
 No entry is selected in the *Inventory* dropdown. Choose one, or add an XML with **+ Add XML**.
 
 **"Stream is empty after trimming."**
-The *Start Time* (plus *Duration*) falls outside the time span of the loaded waveform. Check the trace start/end times shown in the Waveform Preview panel labels, and pick a start time inside that window.
+The *Start Time* (plus *Duration*) falls outside the time span of the loaded waveform. Check the time span shown on the Waveform explorer axis, and pick a start time inside that window.
 
 **Response removal fails / falls back to scalar sensitivity.**
 SeismoFK first attempts full ObsPy instrument-response removal. If the inventory lacks full response information, FK processing falls back to scalar **instrument sensitivity**. The GUI spectrogram uses pressure when every channel has valid **PA → COUNTS** sensitivity; otherwise it displays clearly labeled raw-count PSD. Set *Sensitivity*, *Input Units*, and *Output Units* in the XML Creator for calibrated pressure plots.
@@ -550,13 +599,13 @@ SeismoFK first attempts full ObsPy instrument-response removal. If the inventory
 If the loaded traces have mixed sampling rates, SeismoFK resamples them all to a common rate before FK processing — no action needed, but be aware the analysis runs at the lower rate.
 
 **Spectrogram: "noverlap must satisfy 0 ≤ noverlap < nperseg".**
-In the spectrogram window's control row, *noverlap* must be smaller than *nperseg*. Reduce *noverlap* or increase *nperseg* and click **↻ Recompute**.
+In the spectrogram window's control row, *noverlap* must be smaller than *nperseg*. Reduce *noverlap* or increase *nperseg* and click **Recompute**.
 
 **No detections in the results.**
-If few or no windows clear the semblance threshold, try widening the frequency band, adjusting the analysis window length, lowering the *Semb. Threshold*, or confirming the *Start Time* and *Duration* actually bracket the signal.
+If few or no windows clear the semblance threshold, try widening the frequency band, adjusting the analysis window length, lowering the *Semblance threshold*, or confirming the *Start Time* and *Duration* actually bracket the signal.
 
 **Picking vs. typing the start time.**
-Clicking the Waveform Preview is the quickest way to set *Start Time*, but the *Start Time* field can always be edited directly if you know the exact time.
+Clicking the Waveform explorer is the quickest way to set *Start Time*, but the *Start Time* field can always be edited directly if you know the exact time.
 
 The ±20° azimuth band and 300–380 m/s velocity band are visual reference guides,
 not statistical confidence limits. Interpret detections using the array geometry,
