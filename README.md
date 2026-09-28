@@ -317,9 +317,11 @@ If you use SeismoFK in your research, please cite it. Citation metadata is provi
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20301795.svg)](https://doi.org/10.5281/zenodo.20301795)
 
-Hamama, I. (2026). SeismoFK (v1.2.1). Zenodo. https://doi.org/10.5281/zenodo.20301795
+**Please cite SeismoFK with this single reference, whatever version you use:**
 
-The DOI above is the *concept* DOI, which always resolves to the latest version. Each release also has its own version DOI, listed on the Zenodo record (v1.2.0: [10.5281/zenodo.20301796](https://doi.org/10.5281/zenodo.20301796)).
+> Hamama, I. (2026). *SeismoFK* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.20301795
+
+This DOI never changes and always opens the latest release, where every version is listed.
 
 ---
 
